@@ -1,0 +1,2208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | RF Solutions India | Security & Surveillance Solutions</title>
+    <meta name="description" content="Explore our professional surveillance and infrastructure services including Annual Maintenance (AMC), Central Monitoring System (CMS), Networking Solutions, and Product Support.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ============ CORE VARIABLES & SETUP ============ */
+        :root {
+            --primary-950: #0a1f4a;
+            --primary-900: #0d2966;
+            --primary-800: #1145a8;
+            --primary-700: #1652c1;
+            --primary-600: #1d5ce5;
+            --primary-500: #3b82f6;
+            --primary-400: #60a5fa;
+            --primary-300: #93c5fd;
+            --primary-200: #bfdbfe;
+            --primary-100: #dbeafe;
+            --primary-50: #eff6ff;
+            
+            --gray-950: #0f0f0f;
+            --gray-900: #0f172a;
+            --gray-800: #1e293b;
+            --gray-700: #334155;
+            --gray-600: #475569;
+            --gray-500: #64748b;
+            --gray-400: #94a3b8;
+            --gray-300: #cbd5e1;
+            --gray-200: #e2e8f0;
+            --gray-100: #f1f5f9;
+            --gray-50: #f8fafc;
+            
+            --accent-cyan: #06b6d4;
+            --accent-purple: #a855f7;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            color: var(--gray-900);
+            overflow-x: hidden;
+            line-height: 1.6;
+            position: relative;
+        }
+
+        /* ============ GLOBAL BACKGROUND EFFECTS ============ */
+        .global-bg-effects {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .tech-grid-bg {
+            position: fixed;
+            inset: 0;
+            z-index: -2;
+            background-image: radial-gradient(rgba(29, 92, 229, 0.04) 1.5px, transparent 1.5px);
+            background-size: 40px 40px;
+            pointer-events: none;
+        }
+
+        .bg-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(130px);
+            opacity: 0.25;
+            animation: floatOrb 25s ease-in-out infinite alternate;
+            will-change: transform;
+        }
+
+        .orb-1 {
+            width: 550px;
+            height: 550px;
+            background: var(--primary-400);
+            top: -150px;
+            left: -150px;
+        }
+
+        .orb-2 {
+            width: 650px;
+            height: 650px;
+            background: var(--accent-cyan);
+            bottom: -200px;
+            right: -100px;
+            animation-delay: -6s;
+            opacity: 0.18;
+        }
+
+        .orb-3 {
+            width: 500px;
+            height: 500px;
+            background: var(--accent-purple);
+            top: 40%;
+            left: 30%;
+            animation-delay: -12s;
+            opacity: 0.12;
+        }
+
+        @keyframes floatOrb {
+            0% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(60px, -60px) scale(1.12); }
+            66% { transform: translate(-40px, 50px) scale(0.88); }
+            100% { transform: translate(30px, 30px) scale(1.06); }
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            @supports (animation-timeline: scroll()) {
+                @keyframes grid-pan {
+                    from { background-position: 0 0; }
+                    to { background-position: 0 160px; }
+                }
+                @keyframes orb-scroll-1 {
+                    from { transform: translate(0, 0) scale(1); }
+                    to { transform: translate(140px, 240px) scale(1.3); }
+                }
+                @keyframes orb-scroll-2 {
+                    from { transform: translate(0, 0) scale(1); }
+                    to { transform: translate(-140px, -280px) scale(0.7); }
+                }
+                @keyframes orb-scroll-3 {
+                    from { transform: translate(0, 0) scale(1); }
+                    to { transform: translate(180px, -180px) scale(1.2); }
+                }
+
+                .tech-grid-bg {
+                    animation: grid-pan linear;
+                    animation-timeline: scroll(root);
+                }
+
+                .orb-1 {
+                    animation: orb-scroll-1 linear;
+                    animation-timeline: scroll(root);
+                }
+                .orb-2 {
+                    animation: orb-scroll-2 linear;
+                    animation-timeline: scroll(root);
+                }
+                .orb-3 {
+                    animation: orb-scroll-3 linear;
+                    animation-timeline: scroll(root);
+                }
+            }
+        }
+
+        /* ============ TYPOGRAPHY ============ */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            letter-spacing: -0.8px;
+        }
+
+        h1 { font-size: 3.5rem; line-height: 1.1; }
+        h2 { font-size: 2.8rem; line-height: 1.2; }
+        h3 { font-size: 1.8rem; line-height: 1.3; }
+        h4 { font-size: 1.35rem; font-weight: 700; }
+        p { font-size: 1rem; line-height: 1.7; color: var(--gray-600); }
+
+        .text-gradient {
+            background: linear-gradient(135deg, var(--primary-600), var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* ============ SCROLLBAR ============ */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: var(--gray-100); }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, var(--primary-600), var(--primary-400));
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover { background: linear-gradient(180deg, var(--primary-700), var(--primary-500)); }
+
+        /* ============ ANIMATION CLASSES ============ */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: perspective(1000px) translateY(40px) rotateX(10deg) scale(0.95);
+            transform-origin: center top;
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: opacity, transform;
+        }
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: perspective(1000px) translateY(0) rotateX(0deg) scale(1);
+        }
+
+        /* ============ SECTION HEADER STYLING & ANIMATIONS ============ */
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .section-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            font-weight: 800;
+            color: var(--primary-600);
+            letter-spacing: 2px;
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            margin-bottom: 20px;
+            font-size: 2.8rem;
+            color: var(--primary-950);
+            font-weight: 700;
+        }
+
+        .section-description {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.15rem;
+            color: var(--gray-600);
+        }
+
+        /* Heading Text Animation Defaults (Fallback for older browsers) */
+        .section-header.animate-on-scroll .section-label,
+        .section-header.animate-on-scroll span {
+            opacity: 0;
+            transform: translateX(-30px);
+            letter-spacing: 0px;
+            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1), letter-spacing 1s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: opacity, transform, letter-spacing;
+        }
+
+        .section-header.animate-on-scroll .section-title,
+        .section-header.animate-on-scroll h2 {
+            opacity: 0;
+            transform: translateY(30px) scale(0.95);
+            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: opacity, transform;
+        }
+
+        .section-header.animate-on-scroll .section-description,
+        .section-header.animate-on-scroll p {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: opacity, transform;
+        }
+
+        /* Heading Text Animation Active state via Intersection Observer */
+        .section-header.animate-on-scroll.visible .section-label,
+        .section-header.animate-on-scroll.visible span {
+            opacity: 1;
+            transform: translateX(0);
+            letter-spacing: 2px;
+        }
+        .section-header.animate-on-scroll.visible .section-title,
+        .section-header.animate-on-scroll.visible h2 {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+        .section-header.animate-on-scroll.visible .section-description,
+        .section-header.animate-on-scroll.visible p {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Disable parent animation wrapper on scroll observer to prioritize child animations */
+        .section-header.animate-on-scroll {
+            opacity: 1 !important;
+            transform: none !important;
+            transition: none !important;
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            @supports ((animation-timeline: view()) and (animation-range: entry)) {
+                @keyframes scroll-in {
+                    from {
+                        opacity: 0;
+                        transform: perspective(1000px) translateY(60px) rotateX(12deg) scale(0.92);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: perspective(1000px) translateY(0) rotateX(0deg) scale(1);
+                    }
+                }
+                @keyframes scroll-out {
+                    from {
+                        opacity: 1;
+                        transform: perspective(1000px) translateY(0) rotateX(0deg) scale(1);
+                    }
+                    to {
+                        opacity: 0;
+                        transform: perspective(1000px) translateY(-60px) rotateX(-12deg) scale(0.92);
+                    }
+                }
+
+                .animate-on-scroll {
+                    opacity: 1;
+                    transform: none;
+                    transition: none;
+                    animation:
+                        scroll-in auto linear backwards,
+                        scroll-out auto linear forwards;
+                    animation-timeline: view();
+                    animation-range: entry 0% entry 100%, exit 0% exit 100%;
+                }
+
+                /* Scroll-driven Keyframes for Heading Elements */
+                @keyframes label-slide-in {
+                    from { opacity: 0; transform: translateX(-40px); letter-spacing: 0px; }
+                    to { opacity: 1; transform: translateX(0); letter-spacing: 2px; }
+                }
+                @keyframes label-slide-out {
+                    from { opacity: 1; transform: translateX(0); letter-spacing: 2px; }
+                    to { opacity: 0; transform: translateX(40px); letter-spacing: 0px; }
+                }
+
+                @keyframes title-reveal-in {
+                    from { opacity: 0; transform: translateY(40px) scale(0.95); }
+                    to { opacity: 1; transform: translateY(0) scale(1); }
+                }
+                @keyframes title-reveal-out {
+                    from { opacity: 1; transform: translateY(0) scale(1); }
+                    to { opacity: 0; transform: translateY(-40px) scale(0.95); }
+                }
+
+                @keyframes desc-fade-in {
+                    from { opacity: 0; transform: translateY(30px); }
+                    to { opacity: 1; transform: translateY(0); }
+                }
+                @keyframes desc-fade-out {
+                    from { opacity: 1; transform: translateY(0); }
+                    to { opacity: 0; transform: translateY(-30px); }
+                }
+
+                .section-header.animate-on-scroll {
+                    animation: none !important;
+                }
+
+                .section-header.animate-on-scroll .section-label,
+                .section-header.animate-on-scroll span {
+                    opacity: 1;
+                    transform: none;
+                    transition: none;
+                    animation: 
+                        label-slide-in auto linear backwards,
+                        label-slide-out auto linear forwards;
+                    animation-timeline: view();
+                    animation-range: entry 10% entry 90%, exit 0% exit 90%;
+                }
+
+                .section-header.animate-on-scroll .section-title,
+                .section-header.animate-on-scroll h2 {
+                    opacity: 1;
+                    transform: none;
+                    transition: none;
+                    animation: 
+                        title-reveal-in auto linear backwards,
+                        title-reveal-out auto linear forwards;
+                    animation-timeline: view();
+                    animation-range: entry 15% entry 85%, exit 0% exit 85%;
+                }
+
+                .section-header.animate-on-scroll .section-description,
+                .section-header.animate-on-scroll p {
+                    opacity: 1;
+                    transform: none;
+                    transition: none;
+                    animation: 
+                        desc-fade-in auto linear backwards,
+                        desc-fade-out auto linear forwards;
+                    animation-timeline: view();
+                    animation-range: entry 20% entry 80%, exit 0% exit 80%;
+                }
+            }
+        }
+
+        /* ============ NAVBAR ============ */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(29, 92, 229, 0.1);
+            padding: 0 48px;
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+            animation: slideDown 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.4rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--primary-600), var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -1px;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            width: 44px;
+            height: 44px;
+            object-fit: contain;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .logo:hover .logo-img {
+            transform: translateY(-4px) rotate(-4deg);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--gray-700);
+            text-decoration: none;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a.active {
+            color: var(--primary-600);
+        }
+
+        .nav-links a::before {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-600), var(--accent-cyan));
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-links a:hover::before,
+        .nav-links a.active::before {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-600);
+        }
+
+        .btn-nav {
+            padding: 10px 24px;
+            background: linear-gradient(135deg, var(--primary-600), var(--primary-500));
+            color: var(--white);
+            border: none;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            box-shadow: 0 8px 24px rgba(29, 92, 229, 0.25);
+            transition: all 0.3s ease;
+        }
+
+        .btn-nav:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(29, 92, 229, 0.4);
+        }
+
+        /* ============ HERO BANNER ============ */
+        .services-hero {
+            position: relative;
+            height: 70vh;
+            min-height: 500px;
+            background: url('./assets/image/services_banner.png') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 24px 40px;
+            overflow: hidden;
+            margin-bottom: 80px;
+        }
+
+        .services-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(15, 23, 42, 0.4) 0%, rgba(15, 23, 42, 0.85) 100%);
+            z-index: 1;
+        }
+
+        .hero-banner-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 24px;
+            padding: 60px 48px;
+            box-shadow: 0 24px 64px rgba(0, 0, 0, 0.3);
+            animation: heroCardIn 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes heroCardIn {
+            from { transform: translateY(40px) scale(0.96); opacity: 0; }
+            to { transform: translateY(0) scale(1); opacity: 1; }
+        }
+
+        .services-hero h1 {
+            color: var(--white);
+            font-size: 3.5rem;
+            margin-bottom: 24px;
+            line-height: 1.15;
+            letter-spacing: -1.5px;
+        }
+
+        .services-hero h1 span {
+            background: linear-gradient(135deg, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .services-hero p {
+            color: var(--gray-200);
+            font-size: 1.25rem;
+            font-weight: 400;
+            line-height: 1.6;
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        /* ============ SERVICES GRID ============ */
+        .services-section {
+            max-width: 1200px;
+            margin: 0 auto 100px;
+            padding: 0 24px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            font-weight: 800;
+            color: var(--primary-600);
+            letter-spacing: 2px;
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            margin-bottom: 20px;
+            font-size: 2.8rem;
+            color: var(--primary-950);
+        }
+
+        .section-description {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.15rem;
+            color: var(--gray-600);
+        }
+
+        .services-container-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 60px;
+        }
+
+        /* ============ SERVICE CONTAINER ROW ============ */
+        .service-row-card {
+            display: flex;
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(29, 92, 229, 0.08);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.04);
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .service-row-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 24px 64px rgba(29, 92, 229, 0.12);
+            border-color: rgba(29, 92, 229, 0.2);
+        }
+
+        .service-row-card:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .service-image-block {
+            width: 45%;
+            min-height: 380px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .service-image-block img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .service-row-card:hover .service-image-block img {
+            transform: scale(1.05);
+        }
+
+        .service-content-block {
+            width: 55%;
+            padding: 60px 48px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .service-num {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3.2rem;
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, var(--primary-600), var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            opacity: 0.3;
+        }
+
+        .service-content-block h3 {
+            font-size: 2rem;
+            color: var(--primary-950);
+            margin-bottom: 20px;
+        }
+
+        .service-content-block p {
+            font-size: 1.1rem;
+            color: var(--gray-600);
+            margin-bottom: 24px;
+            line-height: 1.8;
+        }
+
+        .service-features-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            list-style: none;
+        }
+
+        .service-features-list li {
+            font-size: 0.95rem;
+            color: var(--gray-700);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .service-features-list li svg {
+            width: 18px;
+            height: 18px;
+            fill: none;
+            stroke: var(--primary-600);
+            stroke-width: 3;
+        }
+
+        /* ============ CTA SECTION ============ */
+        .cta-section {
+            padding: 0 24px 100px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .cta-card {
+            background: linear-gradient(135deg, var(--primary-950) 0%, var(--primary-900) 100%);
+            border-radius: 24px;
+            padding: 80px 48px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 24px 64px rgba(13, 41, 102, 0.35);
+        }
+
+        .cta-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .cta-card h2 {
+            color: var(--white);
+            font-size: 3rem;
+            margin-bottom: 24px;
+        }
+
+        .cta-card p {
+            color: var(--primary-200);
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-size: 1.15rem;
+        }
+
+        .btn-cta {
+            padding: 16px 40px;
+            background: linear-gradient(135deg, var(--white), var(--gray-50));
+            color: var(--primary-950);
+            border: none;
+            border-radius: 30px;
+            font-weight: 800;
+            font-size: 1.1rem;
+            cursor: pointer;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(255, 255, 255, 0.2);
+        }
+
+        /* ============ FOOTER ============ */
+        footer {
+            background: linear-gradient(180deg, var(--gray-950) 0%, #060e1e 100%);
+            padding: 100px 48px 40px;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+            border-top: 1px solid rgba(29, 92, 229, 0.1);
+        }
+
+        .footer-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 80px;
+            margin-bottom: 60px;
+        }
+
+        .footer-brand h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+            background: linear-gradient(135deg, #ffffff, rgba(255,255,255,0.7));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .footer-brand p {
+            color: var(--gray-400);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            font-size: 0.85rem;
+            font-weight: 800;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            color: var(--gray-400);
+            margin-bottom: 24px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .footer-col li {
+            font-size: 0.95rem;
+            color: var(--gray-300);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .footer-col li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 0;
+            height: 1px;
+            background: linear-gradient(90deg, var(--primary-600), var(--accent-cyan));
+            transition: width 0.3s ease;
+        }
+
+        .footer-col li:hover {
+            color: var(--white);
+            transform: translateX(4px);
+        }
+
+        .footer-col li:hover::before {
+            width: 100%;
+        }
+
+        .footer-bottom {
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--gray-400);
+            font-size: 0.85rem;
+        }
+
+        .footer-dots {
+            display: flex;
+            gap: 10px;
+        }
+
+        .footer-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--primary-500);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            animation: pulse 2s infinite;
+        }
+
+        .footer-dot:hover {
+            transform: scale(1.3);
+            box-shadow: 0 0 12px rgba(29, 92, 229, 0.5);
+        }
+
+        .footer-dot:nth-child(2) { background: var(--accent-cyan); animation-delay: 0.3s; }
+        .footer-dot:nth-child(3) { background: rgba(96, 165, 250, 0.6); animation-delay: 0.6s; }
+
+        @keyframes pulseStatus {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+            70% { transform: scale(1.1); box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+        }
+
+        .interactive-contact {
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .interactive-contact .tooltip {
+            position: absolute;
+            bottom: 120%;
+            left: 50%;
+            transform: translateX(-50%) translateY(5px);
+            background: var(--primary-900);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: var(--white);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            z-index: 10;
+        }
+
+        .interactive-contact:hover .tooltip {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .newsletter-input:focus {
+            border-color: var(--primary-400) !important;
+            background: rgba(255, 255, 255, 0.08) !important;
+            box-shadow: 0 0 12px rgba(29, 92, 229, 0.2);
+        }
+
+        .newsletter-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(29, 92, 229, 0.3);
+        }
+
+        /* ============ RESPONSIVE LAYOUTS ============ */
+        @media (max-width: 1024px) {
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+        }
+
+        @media (max-width: 768px) {
+            .navbar { padding: 0 24px; }
+            .nav-links { display: none; } /* Mobile menu toggle would go here in production */
+            h1 { font-size: 2.6rem; }
+            h2 { font-size: 2.2rem; }
+            .services-hero { height: auto; min-height: 400px; padding: 120px 24px 60px; }
+            .hero-banner-content { padding: 40px 24px; }
+            .services-hero h1 { font-size: 2.4rem; }
+            .service-row-card, .service-row-card:nth-child(even) { flex-direction: column; }
+            .service-image-block, .service-content-block { width: 100%; }
+            .service-image-block { min-height: 260px; }
+            .service-content-block { padding: 40px 24px; }
+            .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+            .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
+            .cta-card { padding: 60px 24px; }
+            .cta-card h2 { font-size: 2.2rem; }
+        }
+
+        /* ============ GLASSMORPHISM FULL-PAGE OVERLAY ============ */
+        .drawer-backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.45);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            z-index: 9999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .drawer-backdrop.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+        .drawer-backdrop.active .drawer-glass-card {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .drawer-glass-card {
+            position: relative;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.9) 100%);
+            border: none;
+            width: 100%;
+            height: 100dvh;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            transform: translateY(50px);
+            opacity: 0;
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* Top Navigation Header for Full Page Overlay */
+        .drawer-header-band {
+            display: flex;
+            gap: 32px;
+            padding: 32px 48px;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+            flex-shrink: 0;
+            background: rgba(255,255,255,0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            align-items: center;
+        }
+        .drawer-header-content {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            position: relative;
+        }
+        .drawer-img-wrap {
+            width: 160px;
+            height: 120px;
+            border-radius: 16px;
+            overflow: hidden;
+            flex-shrink: 0;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+        }
+        .drawer-img-wrap img {
+            width: 100%; height: 100%; object-fit: cover;
+        }
+        .drawer-title-block { flex: 1; padding-top: 4px; padding-right: 80px; }
+        .drawer-tag {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #2563eb;
+            background: rgba(59,130,246,0.1);
+            border: 1px solid rgba(59,130,246,0.25);
+            padding: 3px 10px;
+            border-radius: 50px;
+            margin-bottom: 10px;
+        }
+        .drawer-glass-card h2 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin: 0 0 6px;
+            line-height: 1.2;
+        }
+        .drawer-glass-card #drawer-subtitle {
+            font-size: 1rem;
+            color: #64748b;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .drawer-close-btn {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 46px; height: 46px;
+            border-radius: 50%;
+            border: 1px solid rgba(0,0,0,0.08);
+            background: rgba(255,255,255,0.9);
+            color: #64748b;
+            cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            z-index: 10;
+        }
+        .drawer-close-btn:hover {
+            background: #fef2f2;
+            border-color: rgba(239, 68, 68, 0.3);
+            color: #ef4444;
+            transform: translateY(-50%) rotate(90deg) scale(1.1);
+        }
+
+        .drawer-body-scroll {
+            overflow-y: auto;
+            flex: 1;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(99,160,255,0.3) transparent;
+        }
+        .drawer-body-scroll::-webkit-scrollbar { width: 6px; }
+        .drawer-body-scroll::-webkit-scrollbar-track { background: transparent; }
+        .drawer-body-scroll::-webkit-scrollbar-thumb { background: rgba(99,160,255,0.4); border-radius: 6px; }
+
+        .drawer-body-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 48px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .drawer-desc-text {
+            font-size: 1.05rem;
+            color: #334155;
+            line-height: 1.8;
+            margin: 0 0 36px;
+            white-space: pre-wrap;
+        }
+
+        /* SEO Metadata Box */
+        .drawer-seo-box {
+            background: rgba(255, 255, 255, 0.45);
+            border: 1px solid rgba(29, 92, 229, 0.15);
+            border-radius: 18px;
+            padding: 24px;
+            margin-bottom: 36px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .drawer-seo-title {
+            font-size: 0.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #2563eb;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .drawer-seo-title svg { stroke: #2563eb; }
+        .drawer-seo-item {
+            margin-bottom: 14px;
+        }
+        .drawer-seo-item:last-child {
+            margin-bottom: 0;
+        }
+        .drawer-seo-label {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 4px;
+        }
+        .drawer-seo-value {
+            font-size: 0.92rem;
+            color: #475569;
+            line-height: 1.5;
+            background: rgba(255,255,255,0.6);
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 1px solid rgba(0,0,0,0.04);
+        }
+        .drawer-seo-value.code {
+            font-family: monospace;
+            background: rgba(241,245,249,0.7);
+            color: #0f172a;
+            font-size: 0.85rem;
+        }
+
+        .drawer-two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin-bottom: 36px;
+        }
+        .drawer-col {
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            border-radius: 20px;
+            padding: 28px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+        }
+        .drawer-section-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #2563eb;
+            margin-bottom: 18px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(37,99,235,0.15);
+        }
+        .drawer-section-label svg { stroke: #2563eb; }
+        .drawer-list {
+            list-style: none;
+            padding: 0; margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .drawer-list li {
+            font-size: 0.92rem;
+            color: #475569;
+            padding-left: 20px;
+            position: relative;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+        .drawer-list li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: #3b82f6;
+            font-size: 0.65rem;
+            top: 4px;
+        }
+
+        .drawer-note-box {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            background: linear-gradient(135deg, rgba(59,130,246,0.08), rgba(6,182,212,0.06));
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 18px;
+            padding: 20px 24px;
+            margin-bottom: 36px;
+        }
+        .drawer-note-box svg { color: #2563eb; flex-shrink: 0; margin-top: 2px; }
+        .drawer-note-box p {
+            font-size: 0.92rem;
+            color: #1e293b;
+            line-height: 1.65;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        .drawer-cta-row {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+        .drawer-cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #2563eb, #0891b2);
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.95rem;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 18px rgba(37,99,235,0.35);
+        }
+        .drawer-cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(37,99,235,0.5);
+            background: linear-gradient(135deg, #1d4ed8, #0891b2);
+        }
+        .drawer-cta-outline {
+            display: inline-flex;
+            align-items: center;
+            color: #475569;
+            font-weight: 700;
+            font-size: 0.95rem;
+            padding: 14px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            border: 2px solid rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            background: rgba(255,255,255,0.5);
+        }
+        .drawer-cta-outline:hover {
+            color: #0f172a;
+            border-color: rgba(0,0,0,0.25);
+            background: rgba(255,255,255,0.9);
+        }
+
+        /* Read More button */
+        .read-more-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: none;
+            border: 1.5px solid var(--primary-400);
+            color: var(--primary-600);
+            font-weight: 700;
+            font-size: 0.88rem;
+            padding: 7px 18px;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            font-family: inherit;
+            letter-spacing: 0.02em;
+        }
+        .read-more-btn:hover {
+            background: var(--primary-600);
+            color: #fff;
+            border-color: var(--primary-600);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 14px rgba(29,92,229,0.25);
+        }
+        .read-more-btn svg { transition: transform 0.3s ease; }
+
+        @media (max-width: 768px) {
+            .drawer-header-band { padding: 24px; }
+            .drawer-header-content { flex-direction: column; align-items: flex-start; gap: 16px; }
+            .drawer-img-wrap { width: 100%; height: 160px; }
+            .drawer-title-block { padding-right: 0; }
+            .drawer-close-btn { position: fixed; top: 20px; right: 20px; transform: none; }
+            .drawer-close-btn:hover { transform: rotate(90deg) scale(1.1); }
+            .drawer-body-container { padding: 24px; }
+            .drawer-two-col { grid-template-columns: 1fr; gap: 24px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Global Background Elements -->
+    <div class="global-bg-effects">
+        <div class="tech-grid-bg"></div>
+        <div class="bg-orb orb-1"></div>
+        <div class="bg-orb orb-2"></div>
+        <div class="bg-orb orb-3"></div>
+    </div>
+
+    <!-- Navigation Header Bar -->
+    <nav class="navbar">
+        <a href="./index.html" class="logo">
+            <img src="./assets/image/logo.png" alt="RF Solutions Logo" class="logo-img" width="50" height="50"/>
+            RF SOLUTIONS
+        </a>
+        <div class="nav-links">
+            <a href="./index.html">Home</a>
+            <a href="./services.html" class="active">Services</a>
+            <a href="./products.html">Products</a>
+            <a href="./about.html">About</a>
+            <a href="./careers.html">Careers</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <button class="btn-nav">Get Quote</button>
+    </nav>
+
+    <!-- Services Hero Widescreen Banner -->
+    <section class="services-hero">
+        <div class="hero-banner-content">
+            <span class="section-label" style="color:#60a5fa">Our Services</span>
+            <h1 class="ripple-heading">Smart Infrastructure & <span>Surveillance Solutions</span></h1>
+            <p>Reliable monitoring, maintenance, and network support to keep your systems running smoothly 24/7. We design, install, and support compliant mission-critical security environments.</p>
+        </div>
+    </section>
+
+    <!-- Core Services Section -->
+    <section class="services-section">
+        <div class="section-header animate-on-scroll">
+            <span class="section-label">Valued Offerings</span>
+            <h2 class="section-title">Core Infrastructure Services</h2>
+            <p class="section-description">RF Solutions India provides top-tier engineering support, system maintenance, and active centralized monitoring solutions to guard your facilities round-the-clock.</p>
+        </div>
+
+                    <!-- ========== GLASSMORPHISM SIDE DRAWER ========== -->
+        <div id="product-drawer" class="drawer-backdrop" onclick="closeDrawer(event)">
+            <div class="drawer-glass-card">
+                <div class="drawer-header-band">
+                    <div class="drawer-header-content">
+                        <div class="drawer-img-wrap">
+                            <img id="drawer-img" src="" alt=""/>
+                        </div>
+                        <div class="drawer-title-block">
+                            <span class="drawer-tag">RF Solutions India</span>
+                            <h2 id="drawer-title"></h2>
+                            <p id="drawer-subtitle"></p>
+                        </div>
+                        <button class="drawer-close-btn" onclick="closeProductDrawer()">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="drawer-body-scroll">
+                    <div class="drawer-body-container">
+                        <p id="drawer-desc" class="drawer-desc-text"></p>
+                        <!-- SEO Metadata Box -->
+                        <div id="drawer-seo-box" class="drawer-seo-box" style="display: none;">
+                            <div class="drawer-seo-title">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="17" x2="22" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/></svg>
+                                SEO Metadata
+                            </div>
+                            <div class="drawer-seo-item">
+                                <div class="drawer-seo-label">SEO Title</div>
+                                <div id="drawer-seo-title-val" class="drawer-seo-value"></div>
+                            </div>
+                            <div class="drawer-seo-item">
+                                <div class="drawer-seo-label">Meta Description</div>
+                                <div id="drawer-seo-desc-val" class="drawer-seo-value"></div>
+                            </div>
+                            <div class="drawer-seo-item">
+                                <div class="drawer-seo-label">URL Slug</div>
+                                <div id="drawer-seo-slug-val" class="drawer-seo-value code"></div>
+                            </div>
+                        </div>
+                        <div class="drawer-two-col">
+                            <div class="drawer-col">
+                                <div class="drawer-section-label">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 12l2 2 4-4M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"/></svg>
+                                    Solutions We Offer
+                                </div>
+                                <ul id="drawer-solutions" class="drawer-list"></ul>
+                            </div>
+                            <div class="drawer-col">
+                                <div class="drawer-section-label">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+                                    Industries We Serve
+                                </div>
+                                <ul id="drawer-industries" class="drawer-list"></ul>
+                            </div>
+                        </div>
+                        <div class="drawer-note-box">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+                            <p id="drawer-note"></p>
+                        </div>
+                        <div class="drawer-cta-row">
+                            <a href="./services.html" class="drawer-cta-btn">
+                                View Our Services
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                            <a href="#contact" class="drawer-cta-outline" onclick="closeProductDrawer()">Get a Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="services-container-grid">
+            
+            <!-- Service 1: AMC -->
+            <div class="service-row-card animate-on-scroll">
+                <div class="service-image-block">
+                    <img src="./assets/image/amc_service.png" alt="Annual Maintenance Service (AMC)"/>
+                </div>
+                <div class="service-content-block">
+                    <div class="service-num">01</div>
+                    <h3>Annual Maintenance (AMC)</h3>
+                    <p>Regular servicing and quick issue resolution to ensure uninterrupted performance. Our preventative checks reduce hardware fatigue and extend surveillance lifecycle.</p>
+                    <ul class="service-features-list">
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                            Scheduled Inspections
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                            Priority Support Callouts
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                            Equipment Health Checks
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                            Software updates
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <!-- Service 2: CMS -->
+            <div class="service-row-card animate-on-scroll">
+                <div class="service-image-block">
+                    <img src="./assets/image/cms_monitoring.png" alt="Central Monitoring System (CMS)"/>
+                </div>
+                <div class="service-content-block">
+                    <div class="service-num">02</div>
+                    <h3>Central Monitoring System (CMS)</h3>
+                    <p>24/7 monitoring with instant alerts and rapid response. Our modern security operations hub acts as a constant shield, analyzing camera inputs and alerting authorities immediately on threats.</p>
+                    <ul class="service-features-list">
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                            24/7 Threat Watching
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                            Instant SMS / Email Alerts
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                            Emergency Response Link
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                            AI camera analytics
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <!-- Service 3: Networking Solutions -->
+            <div class="service-row-card animate-on-scroll">
+                <div class="service-image-block">
+                    <img src="./assets/image/networking_solutions.png" alt="Networking Solutions"/>
+                </div>
+                <div class="service-content-block">
+                    <div class="service-num">03</div>
+                    <h3>Networking Solutions</h3>
+                    <p>Scalable and reliable network setup for smooth operation. We lay solid ELV connectivity backbones (cabling, switches, fiber opt.) to stream video streams and telemetry data with absolute security.</p>
+                    <ul class="service-features-list">
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                            Ethernet & Fiber Cabling
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                            Network Security Setup
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                            Managed Switch Config
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                            Failover link setup
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <!-- Service 4: Product Support -->
+            <div class="service-row-card animate-on-scroll">
+                <div class="service-image-block">
+                    <img src="./assets/image/product_support.png" alt="Product Support & AMC"/>
+                </div>
+                <div class="service-content-block">
+                    <div class="service-num">04</div>
+                    <h3>Product Support & AMC</h3>
+                    <p>Dedicated support for all installed systems ensuring long-term reliability. Our engineers provide expert diagnostics, replacement assistance, and customized SLA plans to secure maximum uptime.</p>
+                    <ul class="service-features-list">
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                            Expert Troubleshooting
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                            Warranty Management
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                            Custom SLA Contracts
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                            Dedicated Helpdesk
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Product References Section -->
+    <section class="services-section" style="margin-bottom: 60px;">
+        <div class="cta-card animate-on-scroll" style="background: rgba(255, 255, 255, 0.7); border: 1px solid rgba(29, 92, 229, 0.12); box-shadow: 0 16px 48px rgba(29, 92, 229, 0.05); color: var(--gray-900); padding: 50px 32px;">
+            <span class="section-label" style="color: var(--primary-600)">Hardware & Integration</span>
+            <h3 style="color: var(--primary-950); font-size: 2.2rem; margin-bottom: 16px; font-family: 'Poppins', sans-serif; font-weight: 800;">Supported Security Products</h3>
+            <p style="color: var(--gray-600); max-width: 800px; margin: 0 auto 30px; font-size: 1.05rem; line-height: 1.7;">Our AMC and CMS services are designed to optimize and maintain top-tier hardware systems including CCTV surveillance, Intrusion Alarms, Access Control, Fire Safety, ELV Infrastructure, and Video Door Phones. Explore our full certified product catalog.</p>
+            <a href="./products.html" class="btn-nav" style="text-decoration: none; display: inline-block;">View Supported Products</a>
+        </div>
+    </section>
+
+    <!-- Consultation CTA -->
+    <section class="cta-section">
+        <div class="cta-card animate-on-scroll">
+            <h2>Ready to Secure Your Operations?</h2>
+            <p>Connect with our expert security consultants to structure a tailored installation, AMC, or networking program matching your exact corporate scale.</p>
+            <button class="btn-cta">Request Free Consultation</button>
+        </div>
+    </section>
+
+    <!-- Page Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>RF Solutions</h3>
+                    <p style="margin-bottom: 20px;">Delivering innovative security and technology solutions across India since 2014. Trusted by 500+ businesses for protection that works.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="./about.html" style="color: inherit; text-decoration: none;">About Us</a></li>
+                        <li><a href="./services.html" style="color: inherit; text-decoration: none;">Services</a></li>
+                        <li><a href="./products.html" style="color: inherit; text-decoration: none;">Products</a></li>
+                        <li><a href="./careers.html" style="color: inherit; text-decoration: none;">Careers</a></li>
+                        <li><a href="#contact" style="color: inherit; text-decoration: none;">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="./products.html" style="color: inherit; text-decoration: none;">CCTV Systems</a></li>
+                        <li><a href="./products.html" style="color: inherit; text-decoration: none;">Fire Alarms</a></li>
+                        <li><a href="./products.html" style="color: inherit; text-decoration: none;">Access Control</a></li>
+                        <li><a href="./products.html" style="color: inherit; text-decoration: none;">Video Door Phones</a></li>
+                        <li><a href="./products.html" style="color: inherit; text-decoration: none;">ELV Systems</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="footer-contact-list">
+                        <li class="interactive-contact" data-copy="enquires@rfsolutionsindia.in" style="margin-bottom: 12px;">
+                            <a href="mailto:enquires@rfsolutionsindia.in" style="color: inherit; text-decoration: none;">enquires@rfsolutionsindia.in</a>
+                            <span class="tooltip">Copy Email</span>
+                        </li>
+                        <li class="interactive-contact" data-copy="support@rfsolutionsindia.com" style="margin-bottom: 12px;">
+                            <a href="mailto:support@rfsolutionsindia.com" style="color: inherit; text-decoration: none;">support@rfsolutionsindia.com</a>
+                            <span class="tooltip">Copy Email</span>
+                        </li>
+                        <li class="interactive-contact" data-copy="+919600009724" style="margin-bottom: 12px;">
+                            <a href="tel:+919600009724" style="color: inherit; text-decoration: none;">+91 96000 09724</a>
+                            <span class="tooltip">Copy Phone</span>
+                        </li>
+                        <li style="color: var(--gray-400); cursor: default; margin-bottom: 8px;">Plot 30, Ram Nager</li>
+                        <li style="color: var(--gray-400); cursor: default;">Chennai, Tamil Nadu 600100</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2026 RF Solutions India. All Rights Reserved.</span>
+                <div class="footer-dots">
+                    <div class="footer-dot" title="Blue Theme"></div>
+                    <div class="footer-dot" title="Emerald Theme"></div>
+                    <div class="footer-dot" title="Indigo Theme"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Use IntersectionObserver fallback only if native CSS scroll-driven animations are not supported
+        if (!CSS.supports('(animation-timeline: view()) and (animation-range: entry)')) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    } else {
+                        entry.target.classList.remove('visible');
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+            document.querySelectorAll('.animate-on-scroll').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        // Copy to clipboard with success animation in tooltip
+        document.querySelectorAll('.interactive-contact').forEach(item => {
+            item.addEventListener('click', (e) => {
+                const textToCopy = item.getAttribute('data-copy');
+                if (textToCopy) {
+                    navigator.clipboard.writeText(textToCopy).then(() => {
+                        const tooltip = item.querySelector('.tooltip');
+                        if (tooltip) {
+                            const originalText = tooltip.textContent;
+                            tooltip.textContent = 'Copied!';
+                            tooltip.style.background = '#10b981'; // Green status background
+                            setTimeout(() => {
+                                tooltip.textContent = originalText;
+                                tooltip.style.background = '';
+                            }, 2000);
+                        }
+                    });
+                }
+            });
+        });
+
+        // Interactive Newsletter Subscription
+        const newsletterBtn = document.querySelector('.newsletter-btn');
+        const newsletterInput = document.querySelector('.newsletter-input');
+        const newsletterStatus = document.querySelector('.newsletter-status');
+
+        if (newsletterBtn && newsletterInput && newsletterStatus) {
+            newsletterBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const email = newsletterInput.value.trim();
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!email) {
+                    newsletterStatus.textContent = 'Please enter your email.';
+                    newsletterStatus.style.color = '#ef4444';
+                    newsletterStatus.style.opacity = '1';
+                } else if (!emailPattern.test(email)) {
+                    newsletterStatus.textContent = 'Please enter a valid email.';
+                    newsletterStatus.style.color = '#ef4444';
+                    newsletterStatus.style.opacity = '1';
+                } else {
+                    newsletterStatus.textContent = 'Subscribing...';
+                    newsletterStatus.style.color = 'var(--accent-cyan)';
+                    newsletterStatus.style.opacity = '1';
+                    
+                    setTimeout(() => {
+                        newsletterStatus.textContent = 'Subscription successful! ✓';
+                        newsletterStatus.style.color = '#10b981';
+                        newsletterInput.value = '';
+                        setTimeout(() => {
+                            newsletterStatus.style.opacity = '0';
+                        }, 4000);
+                    }, 1200);
+                }
+            });
+        }
+
+        // Interactive Theme Switcher from Footer Dots
+        const footerDots = document.querySelectorAll('.footer-dot');
+        const themes = [
+            { 
+                primary950: '#0a1f4a', primary900: '#0d2966', primary800: '#1145a8', primary700: '#1652c1', 
+                primary600: '#1d5ce5', primary500: '#3b82f6', primary400: '#60a5fa', primary300: '#93c5fd', 
+                primary200: '#bfdbfe', primary100: '#dbeafe', primary50: '#eff6ff', accent: '#06b6d4' 
+            }, // Classic Blue
+            { 
+                primary950: '#022c22', primary900: '#064e3b', primary800: '#065f46', primary700: '#047857', 
+                primary600: '#059669', primary500: '#10b981', primary400: '#34d399', primary300: '#6ee7b7', 
+                primary200: '#a7f3d0', primary100: '#d1fae5', primary50: '#ecfdf5', accent: '#14b8a6' 
+            }, // Emerald/Mint
+            { 
+                primary950: '#1e1b4b', primary900: '#312e81', primary800: '#3730a3', primary700: '#4338ca', 
+                primary600: '#4f46e5', primary500: '#6366f1', primary400: '#818cf8', primary300: '#a5b4fc', 
+                primary200: '#c7d2fe', primary100: '#e0e7ff', primary50: '#f5f3ff', accent: '#a855f7' 
+            }  // Indigo/Purple
+        ];
+        
+        footerDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                const theme = themes[index];
+                document.documentElement.style.setProperty('--primary-950', theme.primary950);
+                document.documentElement.style.setProperty('--primary-900', theme.primary900);
+                document.documentElement.style.setProperty('--primary-800', theme.primary800);
+                document.documentElement.style.setProperty('--primary-700', theme.primary700);
+                document.documentElement.style.setProperty('--primary-600', theme.primary600);
+                document.documentElement.style.setProperty('--primary-500', theme.primary500);
+                document.documentElement.style.setProperty('--primary-400', theme.primary400);
+                document.documentElement.style.setProperty('--primary-300', theme.primary300);
+                document.documentElement.style.setProperty('--primary-200', theme.primary200);
+                document.documentElement.style.setProperty('--primary-100', theme.primary100);
+                document.documentElement.style.setProperty('--primary-50', theme.primary50);
+                document.documentElement.style.setProperty('--accent-cyan', theme.accent);
+                
+                // Click animation
+                dot.style.transform = 'scale(1.4)';
+                setTimeout(() => {
+                    dot.style.transform = '';
+                }, 200);
+            });
+        });
+    </script>
+
+    <script>
+        /* ======= MODAL PRODUCT DATA ======= */
+        const productData = {
+            amc: {
+                title: 'Annual Maintenance (AMC)',
+                subtitle: 'Comprehensive Maintenance for Surveillance Systems',
+                img: './assets/image/amc_service.png',
+                desc: 'Regular servicing and quick issue resolution to ensure uninterrupted performance. Our preventative checks reduce hardware fatigue and extend surveillance lifecycle for maximum ROI.',
+                solutions: ['Scheduled Inspections', 'Priority Support Callouts', 'Equipment Health Checks', 'Software & Firmware Updates'],
+                industries: ['Preventive Maintenance Reports', 'Replacement Part Management', 'Camera Alignment & Cleaning', 'System Performance Audits'],
+                note: 'Our AMC plans cover CCTV, Fire Alarm, Intrusion, Access Control, ELV, and Video Door Phone systems — with flexible monthly, quarterly, or annual contracts to suit every budget.'
+            },
+            cms: {
+                title: 'Central Monitoring System (CMS)',
+                subtitle: '24/7 Security Operations & Rapid Response',
+                img: './assets/image/cms_monitoring.png',
+                desc: '24/7 monitoring with instant alerts and rapid response. Our modern security operations hub acts as a constant shield, analyzing camera inputs and alerting authorities immediately on threats.',
+                solutions: ['24/7 Threat Watching', 'Instant SMS / Email Alerts', 'Emergency Response Link', 'AI Camera Analytics'],
+                industries: ['Multi-Site Monitoring', 'Video Verification', 'Incident Logging & Reporting', 'Police & Authority Escalation'],
+                note: 'Our CMS platform supports integration with CCTV, fire alarms, and intrusion detection systems, providing a unified security command center for all your facilities.'
+            },
+            net: {
+                title: 'Networking Solutions',
+                subtitle: 'Robust ELV Connectivity & Infrastructure',
+                img: './assets/image/networking_solutions.png',
+                desc: 'Scalable and reliable network setup for smooth operation. We lay solid ELV connectivity backbones — structured cabling, switches, fiber optics — to stream video and telemetry data with absolute security.',
+                solutions: ['Ethernet & Fiber Cabling', 'Network Security Setup', 'Managed Switch Config', 'Failover Link Setup'],
+                industries: ['Wi-Fi & Access Point Config', 'VLAN & Firewall Setup', 'PoE Switch Deployment', 'Network Monitoring & Support'],
+                note: 'Our networking solutions are designed to support high-bandwidth CCTV streams, cloud connectivity, and secure inter-site communication for enterprise environments.'
+            },
+            support: {
+                title: 'Product Support & Lifecycle Management',
+                subtitle: 'Expert Diagnostics & Hardware Upgrades',
+                img: './assets/image/product_support.png',
+                desc: 'Dedicated support for all installed systems ensuring long-term reliability. Our engineers provide expert diagnostics, replacement assistance, and customized SLA plans to secure maximum uptime.',
+                solutions: ['Expert Troubleshooting', 'Warranty Management', 'Custom SLA Contracts', 'Dedicated Helpdesk'],
+                industries: ['Remote Diagnostic Support', 'On-Site Engineer Visits', 'Spare Parts Availability', 'End-of-Life System Upgrades'],
+                note: 'From day-one post-installation support to long-term lifecycle management, our product support team ensures your security infrastructure remains operational and compliant at all times.'
+            }
+        };
+
+        /* ======= OPEN DRAWER ======= */
+        function openModal(key) {
+            const d = productData[key];
+            document.getElementById('drawer-img').src = d.img;
+            document.getElementById('drawer-img').alt = d.title;
+            document.getElementById('drawer-title').textContent = d.title;
+            document.getElementById('drawer-subtitle').textContent = d.subtitle;
+            document.getElementById('drawer-desc').textContent = d.desc;
+
+            const solList = document.getElementById('drawer-solutions');
+            solList.innerHTML = d.solutions.map(s => `<li>${s}</li>`).join('');
+
+            const indList = document.getElementById('drawer-industries');
+            indList.innerHTML = d.industries.map(i => `<li>${i}</li>`).join('');
+
+            document.getElementById('drawer-note').textContent = d.note;
+
+            // Handle SEO Box visibility and data
+            const seoBox = document.getElementById('drawer-seo-box');
+            if (d.seoTitle && d.metaDesc && d.urlSlug) {
+                document.getElementById('drawer-seo-title-val').textContent = d.seoTitle;
+                document.getElementById('drawer-seo-desc-val').textContent = d.metaDesc;
+                document.getElementById('drawer-seo-slug-val').textContent = d.urlSlug;
+                seoBox.style.display = 'block';
+            } else {
+                seoBox.style.display = 'none';
+            }
+
+            const drawer = document.getElementById('product-drawer');
+            drawer.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        /* ======= CLOSE DRAWER ======= */
+        function closeProductDrawer() {
+            const drawer = document.getElementById('product-drawer');
+            drawer.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function closeProductModal() {
+            closeProductDrawer();
+        }
+
+        function closeDrawer(e) {
+            if (e.target === document.getElementById('product-drawer')) {
+                closeProductDrawer();
+            }
+        }
+
+        function closeModal(e) {
+            closeDrawer(e);
+        }
+
+        
+        // Dynamic Get Quote Popup & Heading Ripple Effect
+        function initQuotePopup() {
+            if (document.getElementById('quote-modal')) return;
+
+            const style = document.createElement('style');
+            style.textContent = `
+                #quote-modal {
+                    position: fixed;
+                    inset: 0;
+                    z-index: 10000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    opacity: 0;
+                    pointer-events: none;
+                    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                    perspective: 1200px;
+                }
+                #quote-modal.active {
+                    opacity: 1;
+                    pointer-events: auto;
+                }
+                .quote-modal-overlay {
+                    position: absolute;
+                    inset: 0;
+                    background: rgba(10, 25, 47, 0.6);
+                    backdrop-filter: blur(12px);
+                }
+                .quote-modal-content {
+                    position: relative;
+                    background: rgba(255, 255, 255, 0.75);
+                    backdrop-filter: blur(30px);
+                    border: 1px solid rgba(255, 255, 255, 0.45);
+                    box-shadow: 0 30px 70px rgba(29, 92, 229, 0.18), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+                    border-radius: 24px;
+                    width: 92%;
+                    max-width: 460px;
+                    padding: 40px 32px;
+                    z-index: 2;
+                    transform: rotateX(20deg) rotateY(-10deg) scale(0.85) translateY(40px);
+                    opacity: 0;
+                    transform-style: preserve-3d;
+                    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.6s ease;
+                    text-align: center;
+                    color: var(--gray-900);
+                }
+                [data-theme="dark"] .quote-modal-content {
+                    background: rgba(15, 23, 42, 0.75);
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5);
+                    color: #f8fafc;
+                }
+                #quote-modal.active .quote-modal-content {
+                    transform: rotateX(0deg) rotateY(0deg) scale(1) translateY(0);
+                    opacity: 1;
+                }
+                .quote-modal-close {
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                    background: rgba(0, 0, 0, 0.05);
+                    border: none;
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    color: var(--gray-700);
+                    transition: all 0.3s ease;
+                }
+                [data-theme="dark"] .quote-modal-close {
+                    background: rgba(255, 255, 255, 0.08);
+                    color: #94a3b8;
+                }
+                .quote-modal-close:hover {
+                    background: rgba(239, 68, 68, 0.1);
+                    color: #ef4444;
+                    transform: rotate(90deg);
+                }
+                .quote-icon-container {
+                    width: 72px;
+                    height: 72px;
+                    background: linear-gradient(135deg, rgba(29, 92, 229, 0.1), rgba(6, 182, 212, 0.1));
+                    border-radius: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0 auto 24px;
+                    border: 1px solid rgba(29, 92, 229, 0.2);
+                    transform: translateZ(30px);
+                }
+                .quote-icon-container svg {
+                    width: 36px;
+                    height: 36px;
+                    stroke: var(--primary-600);
+                }
+                .quote-modal-content h3 {
+                    font-size: 1.8rem;
+                    font-weight: 800;
+                    margin-bottom: 8px;
+                    background: linear-gradient(135deg, var(--primary-600), var(--accent-cyan));
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    transform: translateZ(20px);
+                }
+                .quote-modal-content p {
+                    font-size: 0.95rem;
+                    color: var(--gray-600);
+                    margin-bottom: 30px;
+                    transform: translateZ(15px);
+                    line-height: 1.6;
+                }
+                [data-theme="dark"] .quote-modal-content p {
+                    color: #94a3b8;
+                }
+                .quote-contact-info {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                    transform: translateZ(10px);
+                }
+                .quote-contact-card {
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+                    background: rgba(255, 255, 255, 0.45);
+                    border: 1px solid rgba(255, 255, 255, 0.5);
+                    padding: 16px;
+                    border-radius: 16px;
+                    text-decoration: none;
+                    color: inherit;
+                    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                    text-align: left;
+                }
+                [data-theme="dark"] .quote-contact-card {
+                    background: rgba(255, 255, 255, 0.03);
+                    border: 1px solid rgba(255, 255, 255, 0.05);
+                }
+                .quote-contact-card:hover {
+                    transform: translateY(-4px) scale(1.02) translateZ(15px);
+                    background: rgba(255, 255, 255, 0.7);
+                    border-color: rgba(29, 92, 229, 0.3);
+                    box-shadow: 0 15px 30px rgba(29, 92, 229, 0.1);
+                }
+                [data-theme="dark"] .quote-contact-card:hover {
+                    background: rgba(255, 255, 255, 0.08);
+                    border-color: rgba(6, 182, 212, 0.3);
+                    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+                }
+                .quote-card-icon {
+                    width: 48px;
+                    height: 48px;
+                    background: var(--white);
+                    border-radius: 12px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px solid rgba(0, 0, 0, 0.05);
+                }
+                [data-theme="dark"] .quote-card-icon {
+                    background: rgba(15, 23, 42, 0.8);
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                }
+                .quote-card-icon svg {
+                    width: 24px;
+                    height: 24px;
+                    stroke: var(--primary-600);
+                }
+                [data-theme="dark"] .quote-card-icon svg {
+                    stroke: var(--accent-cyan);
+                }
+                .quote-card-details span {
+                    font-size: 0.75rem;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    color: var(--gray-500);
+                    font-weight: 700;
+                    display: block;
+                    margin-bottom: 2px;
+                }
+                .quote-card-details strong {
+                    font-size: 1.05rem;
+                    color: var(--gray-800);
+                    font-weight: 600;
+                    transition: color 0.3s ease;
+                }
+                [data-theme="dark"] .quote-card-details strong {
+                    color: #e2e8f0;
+                }
+                .quote-contact-card:hover .quote-card-details strong {
+                    color: var(--primary-600);
+                }
+                [data-theme="dark"] .quote-contact-card:hover .quote-card-details strong {
+                    color: var(--accent-cyan);
+                }
+
+                /* Ripple Heading Styles */
+                @keyframes ripple-text {
+                    0% {
+                        opacity: 0;
+                        transform: translateY(20px) scale(0.9) rotateX(10deg);
+                        filter: blur(4px);
+                    }
+                    50% {
+                        opacity: 0.8;
+                        transform: translateY(-8px) scale(1.05) rotateX(-5deg);
+                        filter: blur(0);
+                        color: var(--primary-500);
+                    }
+                    100% {
+                        opacity: 1;
+                        transform: translateY(0) scale(1) rotateX(0deg);
+                        filter: blur(0);
+                    }
+                }
+                .ripple-letter {
+                    display: inline-block;
+                    opacity: 0;
+                    transform-origin: bottom center;
+                    animation: ripple-text 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+                }
+            `;
+            document.head.appendChild(style);
+
+            const modal = document.createElement('div');
+            modal.id = 'quote-modal';
+            modal.innerHTML = `
+                <div class="quote-modal-overlay"></div>
+                <div class="quote-modal-content">
+                    <button class="quote-modal-close" aria-label="Close modal">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                    </button>
+                    <div class="quote-icon-container">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                    </div>
+                    <h3>Get a Quote</h3>
+                    <p>Get in touch with us via phone or email, and our experts will help you with a customized security proposal.</p>
+                    <div class="quote-contact-info">
+                        <a href="mailto:enquires@rfsolutionsindia.in" class="quote-contact-card">
+                            <div class="quote-card-icon">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            </div>
+                            <div class="quote-card-details">
+                                <span>Email Us</span>
+                                <strong>enquires@rfsolutionsindia.in</strong>
+                            </div>
+                        </a>
+                        <a href="tel:+919600009724" class="quote-contact-card">
+                            <div class="quote-card-icon">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            </div>
+                            <div class="quote-card-details">
+                                <span>Call Us</span>
+                                <strong>+91 96000 09724</strong>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(modal);
+
+            const overlay = modal.querySelector('.quote-modal-overlay');
+            const closeBtn = modal.querySelector('.quote-modal-close');
+            const content = modal.querySelector('.quote-modal-content');
+
+            function openModal() {
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeModal() {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            overlay.addEventListener('click', closeModal);
+            closeBtn.addEventListener('click', closeModal);
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') closeModal();
+            });
+
+            // 3D Mouse Move Tilt Effect
+            content.addEventListener('mousemove', (e) => {
+                const rect = content.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                const rX = -(y / rect.height) * 15;
+                const rY = (x / rect.width) * 15;
+                content.style.transform = `rotateX(${rX}deg) rotateY(${rY}deg) scale(1.02) translateY(0)`;
+            });
+
+            content.addEventListener('mouseleave', () => {
+                content.style.transform = '';
+            });
+
+            // Attach to all elements with class .btn-nav or other quote triggers
+            document.addEventListener('click', (e) => {
+                const trigger = e.target.closest('.btn-nav, [href="#quote"], .get-quote-trigger, .drawer-cta-outline');
+                if (trigger) {
+                    e.preventDefault();
+                    openModal();
+                }
+            });
+        }
+
+        // Letter-by-letter Ripple Effect Function
+        function initRippleHeadings() {
+            const headings = document.querySelectorAll('.ripple-heading');
+            headings.forEach(heading => {
+                applyTextRipple(heading);
+            });
+        }
+
+        function applyTextRipple(element) {
+            if (!element) return;
+            let delay = 0;
+            function processNode(node, parent) {
+                if (node.nodeType === Node.TEXT_NODE) {
+                    const text = node.textContent;
+                    const fragment = document.createDocumentFragment();
+                    const words = text.split(/(\s+)/);
+                    words.forEach(word => {
+                        if (/\s+/.test(word)) {
+                            fragment.appendChild(document.createTextNode(word));
+                        } else {
+                            const wordSpan = document.createElement('span');
+                            wordSpan.style.display = 'inline-block';
+                            wordSpan.style.whiteSpace = 'nowrap';
+                            for (let i = 0; i < word.length; i++) {
+                                const letterSpan = document.createElement('span');
+                                letterSpan.textContent = word[i];
+                                letterSpan.className = 'ripple-letter';
+                                letterSpan.style.animationDelay = `${delay}s`;
+                                delay += 0.03;
+                                wordSpan.appendChild(letterSpan);
+                            }
+                            fragment.appendChild(wordSpan);
+                        }
+                    });
+                    parent.replaceChild(fragment, node);
+                } else if (node.nodeType === Node.ELEMENT_NODE) {
+                    const children = Array.from(node.childNodes);
+                    children.forEach(child => processNode(child, node));
+                }
+            }
+            processNode(element, element);
+        }
+
+        // Initialize on DOMContentLoaded
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => {
+                initQuotePopup();
+                initRippleHeadings();
+            });
+        } else {
+            initQuotePopup();
+            initRippleHeadings();
+        }
+    </script>
+</body>
+</html>
