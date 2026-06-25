@@ -2005,7 +2005,7 @@
         }
         .brands-marquee-track {
             display: flex;
-            gap: 50px;
+            gap: 100px;
             animation: scrollMarquee 30s linear infinite;
             width: max-content;
         }
@@ -2024,49 +2024,50 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 200px;
-            height: 90px;
-            padding: 18px;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(10px);
-            border: 2px solid var(--gray-200);
-            border-radius: 16px;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            width: 180px;
+            height: 100px;
+            padding: 15px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
             cursor: pointer;
+            transition: all 0.4s ease;
         }
-        .brand-logo-card svg {
+        
+        .brand-logo-card img {
+            display: block;
             width: 100%;
             height: 100%;
-            fill: var(--gray-400);
-            color: var(--gray-400);
-            transition: all 0.3s ease;
+            max-width: 150px;
+            max-height: 70px;
+            padding: 10px 14px;
+            background: #ffffff;
+            border-radius: 8px;
+            object-fit: contain;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
+        
+        .brand-logo-card .brand-name {
+            display: none;
+        }
+        
+        /* HOVER EFFECTS */
         .brand-logo-card:hover {
-            transform: translateY(-5px) scale(1.05);
-            border-color: var(--primary-500);
-            box-shadow: 0 10px 25px -5px rgba(29, 92, 229, 0.15);
-            background: var(--white);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(29, 92, 229, 0.15);
         }
-        .brand-logo-card:hover svg {
-            fill: var(--primary-600);
-            color: var(--primary-600);
-            filter: drop-shadow(0 0 8px rgba(29, 92, 229, 0.3));
+        
+        .brand-logo-card:hover img {
+            transform: scale(1.1);
         }
+        
         [data-theme="dark"] .brand-logo-card {
-            background: rgba(30, 41, 59, 0.4);
-            border-color: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.95);
         }
         [data-theme="dark"] .brand-logo-card:hover {
-            background: rgba(30, 41, 59, 0.8);
-            border-color: var(--accent-cyan);
-            box-shadow: 0 10px 25px -5px rgba(6, 182, 212, 0.2);
+            box-shadow: 0 8px 25px rgba(6, 182, 212, 0.2);
         }
-        [data-theme="dark"] .brand-logo-card:hover svg {
-            fill: var(--accent-cyan);
-            color: var(--accent-cyan);
-            filter: drop-shadow(0 0 8px rgba(6, 182, 212, 0.4));
-        }
-
+        
         /* ============ CLIENT PORTFOLIO ============ */
         .client-portfolio {
             padding: 100px 48px;
@@ -2215,6 +2216,11 @@
             .brand-logo-card {
                 width: 160px;
                 height: 80px;
+            }
+            .brand-logo-card img {
+                max-width: 130px;
+                max-height: 56px;
+                padding: 8px 12px;
             }
         }
 
@@ -2809,6 +2815,244 @@
             .drawer-body-container { padding: 24px; }
             .drawer-two-col { grid-template-columns: 1fr; gap: 24px; }
         }
+        /* ============ SITE-WIDE DEVICE SUPPORT ============ */
+        img,
+        video,
+        iframe {
+            max-width: 100%;
+        }
+
+        @media (max-width: 1100px) {
+            .hero-container,
+            .services-intro,
+            .why-container,
+            .contact-container,
+            .mv-container {
+                grid-template-columns: 1fr;
+            }
+
+            .products-grid,
+            .products-container-grid,
+            .portfolio-grid,
+            .values-grid,
+            .team-grid,
+            .jobs-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            html,
+            body {
+                width: 100%;
+                overflow-x: hidden;
+            }
+
+            .navbar {
+                height: auto;
+                min-height: 76px;
+                padding: 12px 18px;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .logo {
+                flex: 1 1 auto;
+                min-width: 0;
+            }
+
+            .btn-nav {
+                padding: 10px 16px;
+                font-size: 0.82rem;
+                white-space: nowrap;
+            }
+
+            .nav-links {
+                order: 3;
+                display: flex !important;
+                width: 100%;
+                gap: 8px;
+                overflow-x: auto;
+                padding: 4px 0 2px;
+                scrollbar-width: none;
+            }
+
+            .nav-links::-webkit-scrollbar {
+                display: none;
+            }
+
+            .nav-links a {
+                flex: 0 0 auto;
+                padding: 8px 10px;
+                font-size: 0.84rem;
+                white-space: nowrap;
+            }
+
+            .hero,
+            .page-hero,
+            .services-hero,
+            .products-hero,
+            .contact-hero {
+                height: auto;
+                min-height: auto;
+                padding: 150px 20px 56px;
+            }
+
+            .hero-container,
+            .hero-banner-content,
+            .hero-card,
+            .services-intro,
+            .contact-form-card,
+            .cta-card {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .hero-title,
+            .page-hero h1,
+            .services-hero h1,
+            .products-hero h1,
+            .contact-hero h1,
+            h1 {
+                font-size: 2.25rem !important;
+                line-height: 1.15;
+                letter-spacing: 0;
+            }
+
+            .section-title,
+            h2 {
+                font-size: 1.9rem !important;
+                line-height: 1.2;
+                letter-spacing: 0;
+            }
+
+            section,
+            .services-section,
+            .products-section,
+            .contact-section,
+            .why-section,
+            .stats-section,
+            .brands-we-deal,
+            .client-portfolio {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .products-grid,
+            .products-container-grid,
+            .portfolio-grid,
+            .values-grid,
+            .team-grid,
+            .jobs-grid,
+            .contact-container,
+            .form-row,
+            .stats-container {
+                grid-template-columns: 1fr !important;
+            }
+
+            .service-row-card,
+            .service-row-card:nth-child(even),
+            .map-card,
+            .footer-bottom {
+                flex-direction: column;
+            }
+
+            .service-image-block,
+            .service-content-block,
+            .map-visual,
+            .map-info {
+                width: 100% !important;
+            }
+
+            .service-content-block,
+            .hero-banner-content,
+            .contact-form-card,
+            .cta-card,
+            .portfolio-card {
+                padding: 28px 20px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .drawer-glass-card {
+                width: 100%;
+                height: 100%;
+                border-radius: 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar {
+                padding: 10px 14px;
+            }
+
+            .logo span {
+                font-size: 0.95rem;
+            }
+
+            .btn-nav {
+                padding: 9px 12px;
+                font-size: 0.76rem;
+            }
+
+            .hero,
+            .page-hero,
+            .services-hero,
+            .products-hero,
+            .contact-hero {
+                padding: 145px 16px 44px;
+            }
+
+            .hero-title,
+            .page-hero h1,
+            .services-hero h1,
+            .products-hero h1,
+            .contact-hero h1,
+            h1 {
+                font-size: 1.9rem !important;
+            }
+
+            .section-title,
+            h2 {
+                font-size: 1.55rem !important;
+            }
+
+            section,
+            .services-section,
+            .products-section,
+            .contact-section,
+            .why-section,
+            .stats-section,
+            .brands-we-deal,
+            .client-portfolio,
+            footer {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            .hero-banner-content,
+            .hero-card,
+            .services-intro,
+            .service-content-block,
+            .contact-form-card,
+            .cta-card,
+            .portfolio-card,
+            .drawer-body-container,
+            .drawer-header-band {
+                padding: 22px 16px;
+            }
+
+            .brand-logo-card {
+                width: 140px;
+                height: 76px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -2822,7 +3066,7 @@
 
     <nav class="navbar">
         <a href="./index.html" class="logo">
-            <img src="./assets/image/logo.png" alt="RF Solutions Logo" class="logo-img" width="50" height="50"/>
+            <img width="160" height="60" src="./assets/image/logo.png" alt="RF Solutions Logo" class="logo-img" width="50" height="50"/>
             RF SOLUTIONS
         </a>
         <div class="nav-links">
@@ -3246,97 +3490,72 @@
             <div class="brands-marquee-wrapper animate-on-scroll">
                 <div class="brands-marquee">
                     <div class="brands-marquee-track">
-                        <!-- Brand 1: Hikvision -->
-                        <div class="brand-logo-card" title="Hikvision CCTV & Surveillance">
-                            <svg viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
-                                <text x="10" y="28" font-family="'Poppins', sans-serif" font-weight="900" font-size="20" letter-spacing="1">HIKVISION</text>
-                                <circle cx="165" cy="21" r="8" fill="none" stroke="currentColor" stroke-width="4"/>
-                                <circle cx="165" cy="21" r="3" fill="currentColor"/>
-                            </svg>
+                        <div class="brand-logo-card" title="DSC neo Security">
+                            <img width="160" height="60" src="./assets/image/brands/dsc-neo.png" onerror="this.onerror=null; this.src='https://dummyimage.com/160x60/ffffff/1d5ce5.png?text=DSC+Neo'" alt="DSC Neo Logo" />
+                            <span class="brand-name">DSC Neo</span>
                         </div>
-                        <!-- Brand 2: Dahua -->
-                        <div class="brand-logo-card" title="Dahua Security Technology">
-                            <svg viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
-                                <text x="10" y="28" font-family="'Poppins', sans-serif" font-weight="800" font-size="22" letter-spacing="0.5">dahua</text>
-                                <rect x="110" y="10" width="8" height="8" rx="2" fill="currentColor"/>
-                                <rect x="122" y="10" width="8" height="8" rx="2" fill="currentColor"/>
-                                <rect x="110" y="22" width="20" height="4" rx="1" fill="currentColor"/>
-                            </svg>
+                        <div class="brand-logo-card" title="Hikvision Surveillance">
+                            <img width="160" height="60" src="./assets/image/brands/hikvision.png" onerror="this.onerror=null; this.src='https://dummyimage.com/160x60/ffffff/1d5ce5.png?text=Hik+Vision'" alt="Hik Vision Logo" />
+                            <span class="brand-name">Hik Vision</span>
                         </div>
-                        <!-- Brand 3: Honeywell -->
-                        <div class="brand-logo-card" title="Honeywell Automation Systems">
-                            <svg viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
-                                <text x="10" y="28" font-family="'Poppins', sans-serif" font-weight="800" font-size="21" letter-spacing="0.5">Honeywell</text>
-                                <path d="M150,14 L162,14 L156,26 Z" fill="none" stroke="currentColor" stroke-width="3"/>
-                            </svg>
+                        <div class="brand-logo-card" title="Texecom Security">
+                            <img width="160" height="60" src="./assets/image/brands/texecom.png" onerror="this.onerror=null; this.src='https://dummyimage.com/160x60/ffffff/1d5ce5.png?text=Texecom'" alt="Texecom Logo" />
+                            <span class="brand-name">Texecom</span>
                         </div>
-                        <!-- Brand 4: Bosch -->
-                        <div class="brand-logo-card" title="Bosch Security & Communication">
-                            <svg viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
-                                <text x="50" y="28" font-family="'Poppins', sans-serif" font-weight="800" font-size="21" letter-spacing="2">BOSCH</text>
-                                <circle cx="25" cy="20" r="14" fill="none" stroke="currentColor" stroke-width="3"/>
-                                <circle cx="25" cy="20" r="6" fill="currentColor"/>
-                                <line x1="25" y1="6" x2="25" y2="34" stroke="currentColor" stroke-width="2"/>
-                            </svg>
+                        <div class="brand-logo-card" title="CP Plus">
+                            <img width="160" height="60" src="./assets/image/brands/cpplus.png" onerror="this.onerror=null; this.src='https://dummyimage.com/160x60/ffffff/1d5ce5.png?text=CP+Plus'" alt="CP Plus Logo" />
+                            <span class="brand-name">CP Plus</span>
                         </div>
-                        <!-- Brand 5: CP Plus -->
-                        <div class="brand-logo-card" title="CP Plus Security Solutions">
-                            <svg viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
-                                <text x="10" y="28" font-family="'Poppins', sans-serif" font-weight="900" font-size="22" letter-spacing="1">CP PLUS</text>
-                                <path d="M140,10 L155,5 L170,10 L170,25 C170,32 155,37 155,37 C155,37 140,32 140,25 Z" fill="none" stroke="currentColor" stroke-width="3"/>
-                            </svg>
+                        <div class="brand-logo-card" title="Securico">
+                            <img width="160" height="60" src="./assets/image/brands/securico.png" onerror="this.onerror=null; this.src='https://dummyimage.com/160x60/ffffff/1d5ce5.png?text=Securico'" alt="Securico Logo" />
+                            <span class="brand-name">Securico</span>
                         </div>
-                        <!-- Brand 6: Matrix -->
-                        <div class="brand-logo-card" title="Matrix Telecom & Security">
-                            <svg viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
-                                <text x="10" y="28" font-family="'Poppins', sans-serif" font-weight="800" font-size="22" letter-spacing="3">MATRIX</text>
-                                <path d="M140,12 L150,28 L160,12 L170,28" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
+                        <div class="brand-logo-card" title="Ravel Fire">
+                            <img width="160" height="60" src="./assets/image/brands/ravel.png" onerror="this.onerror=null; this.src='https://dummyimage.com/160x60/ffffff/1d5ce5.png?text=Ravel'" alt="Ravel Logo" />
+                            <span class="brand-name">Ravel</span>
                         </div>
-                        <!-- DUPLICATES FOR MARQUEE LOOP -->
-                        <div class="brand-logo-card" title="Hikvision CCTV & Surveillance">
-                            <svg viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
-                                <text x="10" y="28" font-family="'Poppins', sans-serif" font-weight="900" font-size="20" letter-spacing="1">HIKVISION</text>
-                                <circle cx="165" cy="21" r="8" fill="none" stroke="currentColor" stroke-width="4"/>
-                                <circle cx="165" cy="21" r="3" fill="currentColor"/>
-                            </svg>
+                        <div class="brand-logo-card" title="Sparsh CCTV">
+                            <img width="160" height="60" src="./assets/image/brands/sparsh.png" onerror="this.onerror=null; this.src='https://dummyimage.com/160x60/ffffff/1d5ce5.png?text=Sparsh'" alt="Sparsh Logo" />
+                            <span class="brand-name">Sparsh</span>
                         </div>
-                        <div class="brand-logo-card" title="Dahua Security Technology">
-                            <svg viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
-                                <text x="10" y="28" font-family="'Poppins', sans-serif" font-weight="800" font-size="22" letter-spacing="0.5">dahua</text>
-                                <rect x="110" y="10" width="8" height="8" rx="2" fill="currentColor"/>
-                                <rect x="122" y="10" width="8" height="8" rx="2" fill="currentColor"/>
-                                <rect x="110" y="22" width="20" height="4" rx="1" fill="currentColor"/>
-                            </svg>
+                        <div class="brand-logo-card" title="EZVIZ Smart Home">
+                            <img width="160" height="60" src="./assets/image/brands/ezviz.png" onerror="this.onerror=null; this.src='https://dummyimage.com/160x60/ffffff/1d5ce5.png?text=EZVIZ'" alt="EZVIZ Logo" />
+                            <span class="brand-name">EZVIZ</span>
                         </div>
-                        <div class="brand-logo-card" title="Honeywell Automation Systems">
-                            <svg viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
-                                <text x="10" y="28" font-family="'Poppins', sans-serif" font-weight="800" font-size="21" letter-spacing="0.5">Honeywell</text>
-                                <path d="M150,14 L162,14 L156,26 Z" fill="none" stroke="currentColor" stroke-width="3"/>
-                            </svg>
+                        <!-- Duplicate for seamless scroll -->
+                        <div class="brand-logo-card" title="DSC neo Security">
+                            <img width="160" height="60" src="./assets/image/brands/dsc-neo.png" onerror="this.onerror=null; this.src='https://dummyimage.com/160x60/ffffff/1d5ce5.png?text=DSC+Neo'" alt="DSC Neo Logo" />
+                            <span class="brand-name">DSC Neo</span>
                         </div>
-                        <div class="brand-logo-card" title="Bosch Security & Communication">
-                            <svg viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
-                                <text x="50" y="28" font-family="'Poppins', sans-serif" font-weight="800" font-size="21" letter-spacing="2">BOSCH</text>
-                                <circle cx="25" cy="20" r="14" fill="none" stroke="currentColor" stroke-width="3"/>
-                                <circle cx="25" cy="20" r="6" fill="currentColor"/>
-                                <line x1="25" y1="6" x2="25" y2="34" stroke="currentColor" stroke-width="2"/>
-                            </svg>
+                        <div class="brand-logo-card" title="Hikvision Surveillance">
+                            <img width="160" height="60" src="./assets/image/brands/hikvision.png" onerror="this.onerror=null; this.src='https://dummyimage.com/160x60/ffffff/1d5ce5.png?text=Hik+Vision'" alt="Hik Vision Logo" />
+                            <span class="brand-name">Hik Vision</span>
                         </div>
-                        <div class="brand-logo-card" title="CP Plus Security Solutions">
-                            <svg viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
-                                <text x="10" y="28" font-family="'Poppins', sans-serif" font-weight="900" font-size="22" letter-spacing="1">CP PLUS</text>
-                                <path d="M140,10 L155,5 L170,10 L170,25 C170,32 155,37 155,37 C155,37 140,32 140,25 Z" fill="none" stroke="currentColor" stroke-width="3"/>
-                            </svg>
+                        <div class="brand-logo-card" title="Texecom Security">
+                            <img width="160" height="60" src="./assets/image/brands/texecom.png" onerror="this.onerror=null; this.src='https://dummyimage.com/160x60/ffffff/1d5ce5.png?text=Texecom'" alt="Texecom Logo" />
+                            <span class="brand-name">Texecom</span>
                         </div>
-                        <div class="brand-logo-card" title="Matrix Telecom & Security">
-                            <svg viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
-                                <text x="10" y="28" font-family="'Poppins', sans-serif" font-weight="800" font-size="22" letter-spacing="3">MATRIX</text>
-                                <path d="M140,12 L150,28 L160,12 L170,28" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
+                        <div class="brand-logo-card" title="CP Plus">
+                            <img width="160" height="60" src="./assets/image/brands/cpplus.png" onerror="this.onerror=null; this.src='https://dummyimage.com/160x60/ffffff/1d5ce5.png?text=CP+Plus'" alt="CP Plus Logo" />
+                            <span class="brand-name">CP Plus</span>
+                        </div>
+                        <div class="brand-logo-card" title="Securico">
+                            <img width="160" height="60" src="./assets/image/brands/securico.png" onerror="this.onerror=null; this.src='https://dummyimage.com/160x60/ffffff/1d5ce5.png?text=Securico'" alt="Securico Logo" />
+                            <span class="brand-name">Securico</span>
+                        </div>
+                        <div class="brand-logo-card" title="Ravel Fire">
+                            <img width="160" height="60" src="./assets/image/brands/ravel.png" onerror="this.onerror=null; this.src='https://dummyimage.com/160x60/ffffff/1d5ce5.png?text=Ravel'" alt="Ravel Logo" />
+                            <span class="brand-name">Ravel</span>
+                        </div>
+                        <div class="brand-logo-card" title="Sparsh CCTV">
+                            <img width="160" height="60" src="./assets/image/brands/sparsh.png" onerror="this.onerror=null; this.src='https://dummyimage.com/160x60/ffffff/1d5ce5.png?text=Sparsh'" alt="Sparsh Logo" />
+                            <span class="brand-name">Sparsh</span>
+                        </div>
+                        <div class="brand-logo-card" title="EZVIZ Smart Home">
+                            <img width="160" height="60" src="./assets/image/brands/ezviz.png" onerror="this.onerror=null; this.src='https://dummyimage.com/160x60/ffffff/1d5ce5.png?text=EZVIZ'" alt="EZVIZ Logo" />
+                            <span class="brand-name">EZVIZ</span>
                         </div>
                     </div>
-                </div>
             </div>
         </div>
     </section>
@@ -4056,6 +4275,30 @@
         }
 
         // Explore Services — smooth 3D scroll
+        
+        function initBrands3DScroll() {
+            const section = document.querySelector(".brands-we-deal");
+            if (!section) return;
+            
+            section.style.opacity = "0";
+            section.style.transform = "rotateX(20deg) translateY(50px) scale(0.95)";
+            section.style.transition = "all 0.8s cubic-bezier(0.16, 1, 0.3, 1)";
+            section.style.transformOrigin = "center top";
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = "1";
+                        entry.target.style.transform = "rotateX(0deg) translateY(0) scale(1)";
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+            
+            observer.observe(section);
+        }
+
+
         function initExploreServicesBtn() {
             const btn = document.getElementById('explore-services-btn');
             if (!btn) return;
@@ -4124,11 +4367,13 @@
                 initQuotePopup();
                 initRippleHeadings();
                 initExploreServicesBtn();
+                initBrands3DScroll();
             });
         } else {
             initQuotePopup();
             initRippleHeadings();
             initExploreServicesBtn();
+                initBrands3DScroll();
         }
     </script>
 </body>
