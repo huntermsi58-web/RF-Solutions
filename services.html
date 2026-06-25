@@ -193,9 +193,10 @@
         p { font-size: 1rem; line-height: 1.7; color: var(--gray-600); }
 
         .text-gradient {
+            color: var(--primary-600);
             background: linear-gradient(135deg, var(--primary-600), var(--accent-cyan));
             -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            -webkit-text-fill-color: var(--primary-600);
             background-clip: text;
         }
 
@@ -437,12 +438,10 @@
             gap: 12px;
             font-size: 1.4rem;
             font-weight: 900;
-            background: linear-gradient(135deg, var(--primary-600), var(--accent-cyan));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: var(--primary-600);
             letter-spacing: -1px;
             text-decoration: none;
+            transition: opacity 0.3s ease;
         }
 
         .logo-img {
@@ -800,8 +799,8 @@
 
         .footer-grid {
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 80px;
+            grid-template-columns: 1.5fr 1fr 1fr 1.2fr 1.5fr;
+            gap: 40px;
             margin-bottom: 60px;
         }
 
@@ -1260,6 +1259,172 @@
         }
         .read-more-btn svg { transition: transform 0.3s ease; }
 
+        /* ===== RICH CONTENT SECTIONS & 3D EFFECTS ===== */
+        .drawer-rich-heading {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #0a1f4a;
+            margin: 0 0 18px 0;
+            padding-bottom: 12px;
+            border-bottom: 2px solid rgba(37,99,235,0.15);
+            font-family: 'Poppins', sans-serif;
+        }
+        .drawer-rich-paras p {
+            font-size: 0.95rem;
+            color: #475569;
+            line-height: 1.75;
+            margin: 0 0 14px 0;
+        }
+        .drawer-rich-paras p:last-child { margin-bottom: 0; }
+        .drawer-rich-note {
+            font-size: 0.93rem;
+            color: #475569;
+            line-height: 1.7;
+            margin: 14px 0 0 0;
+        }
+        .drawer-detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        .drawer-detail-card {
+            background: rgba(255,255,255,0.55);
+            border: 1px solid rgba(255,255,255,0.8);
+            border-radius: 16px;
+            padding: 20px 22px;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .drawer-detail-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(37,99,235,0.08);
+        }
+        .drawer-detail-card h4 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin: 0 0 8px 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        .drawer-detail-card p {
+            font-size: 0.87rem;
+            color: #64748b;
+            line-height: 1.6;
+            margin: 0;
+        }
+        .drawer-choose-list {
+            list-style: none;
+            padding: 0; margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .drawer-choose-list li {
+            font-size: 0.93rem;
+            color: #1e293b;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 16px;
+            background: rgba(37,99,235,0.05);
+            border-radius: 10px;
+            border-left: 3px solid #3b82f6;
+        }
+        .drawer-choose-list li::before {
+            content: '✓';
+            color: #2563eb;
+            font-weight: 900;
+            font-size: 0.85rem;
+            flex-shrink: 0;
+        }
+        .drawer-survey-box {
+            background: linear-gradient(135deg, rgba(37,99,235,0.08), rgba(6,182,212,0.06));
+            border: 1px solid rgba(37,99,235,0.18);
+            border-radius: 24px;
+            padding: 36px 32px;
+            text-align: center;
+        }
+        .drawer-survey-heading {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #0a1f4a;
+            margin: 0 0 12px 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        .drawer-survey-intro {
+            font-size: 0.95rem;
+            color: #334155;
+            font-weight: 600;
+            margin: 0 0 10px 0;
+        }
+        .drawer-survey-body {
+            font-size: 0.92rem;
+            color: #64748b;
+            line-height: 1.7;
+            margin: 0 0 28px 0;
+        }
+        .drawer-survey-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+        }
+        .drawer-survey-btn {
+            display: inline-flex;
+            align-items: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+            padding: 12px 26px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .drawer-survey-btn.primary {
+            background: linear-gradient(135deg, #2563eb, #0891b2);
+            color: #fff;
+            box-shadow: 0 4px 18px rgba(37,99,235,0.3);
+        }
+        .drawer-survey-btn.primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(37,99,235,0.45); color:#fff; }
+        .drawer-survey-btn.secondary {
+            background: rgba(255,255,255,0.7);
+            color: #1e3a8a;
+            border: 2px solid rgba(37,99,235,0.25);
+        }
+        .drawer-survey-btn.secondary:hover { background: rgba(255,255,255,0.95); border-color: rgba(37,99,235,0.5); }
+        .drawer-survey-btn.outline {
+            background: transparent;
+            color: #475569;
+            border: 2px solid rgba(0,0,0,0.12);
+        }
+        .drawer-survey-btn.outline:hover { background: rgba(255,255,255,0.7); color: #0f172a; }
+        
+        /* 3D Effects */
+        .text-3d-effect {
+            text-shadow: 1px 1px 0 #cbd5e1, 2px 2px 0 #94a3b8;
+            transition: transform 0.3s ease;
+        }
+        .text-3d-effect:hover {
+            transform: translateZ(5px) rotateX(2deg);
+        }
+        .scroll-3d-element {
+            opacity: 0;
+            transform: perspective(1000px) rotateX(25deg) translateY(30px) scale(0.95);
+            transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.7s ease;
+        }
+        .scroll-3d-element.visible-3d {
+            opacity: 1;
+            transform: perspective(1000px) rotateX(0deg) translateY(0) scale(1);
+        }
+
+        @media (max-width: 768px) {
+            .drawer-detail-grid { grid-template-columns: 1fr; }
+            .drawer-survey-actions { flex-direction: column; align-items: stretch; }
+            .drawer-survey-btn { text-align: center; justify-content: center; }
+        }
+
         @media (max-width: 768px) {
             .drawer-header-band { padding: 24px; }
             .drawer-header-content { flex-direction: column; align-items: flex-start; gap: 16px; }
@@ -1289,12 +1454,12 @@
             RF SOLUTIONS
         </a>
         <div class="nav-links">
-            <a href="./index.html">Home</a>
-            <a href="./services.html" class="active">Services</a>
+            <a href="./index.html" class="active">Home</a>
+            <a href="./services.html">Services</a>
             <a href="./products.html">Products</a>
             <a href="./about.html">About</a>
             <a href="./careers.html">Careers</a>
-            <a href="#contact">Contact</a>
+            <a href="./contact.html">Contact</a>
         </div>
         <button class="btn-nav">Get Quote</button>
     </nav>
@@ -1303,7 +1468,7 @@
     <section class="services-hero">
         <div class="hero-banner-content">
             <span class="section-label" style="color:#60a5fa">Our Services</span>
-            <h1 class="ripple-heading">Smart Infrastructure & <span>Surveillance Solutions</span></h1>
+            <h1 class="ripple-heading" class=\"ripple-heading\">Smart Infrastructure & <span>Surveillance Solutions</span></h1>
             <p>Reliable monitoring, maintenance, and network support to keep your systems running smoothly 24/7. We design, install, and support compliant mission-critical security environments.</p>
         </div>
     </section>
@@ -1326,7 +1491,7 @@
                         </div>
                         <div class="drawer-title-block">
                             <span class="drawer-tag">RF Solutions India</span>
-                            <h2 id="drawer-title"></h2>
+                            <h2 id="drawer-title" class="text-3d-effect"></h2>
                             <p id="drawer-subtitle"></p>
                         </div>
                         <button class="drawer-close-btn" onclick="closeProductDrawer()">
@@ -1337,32 +1502,54 @@
                 <div class="drawer-body-scroll">
                     <div class="drawer-body-container">
                         <p id="drawer-desc" class="drawer-desc-text"></p>
-                        <div class="drawer-two-col">
-                            <div class="drawer-col">
-                                <div class="drawer-section-label">
-                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 12l2 2 4-4M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"/></svg>
-                                    Solutions We Offer
-                                </div>
-                                <ul id="drawer-solutions" class="drawer-list"></ul>
-                            </div>
-                            <div class="drawer-col">
-                                <div class="drawer-section-label">
-                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
-                                    Industries We Serve
-                                </div>
-                                <ul id="drawer-industries" class="drawer-list"></ul>
-                            </div>
+
+                        <!-- ===== RICH CONTENT SECTIONS ===== -->
+                        <!-- Why Essential -->
+                        <div id="drawer-why-essential" class="scroll-3d-element" style="display:none; margin-top:32px;">
+                            <h3 id="drawer-why-essential-title" class="drawer-rich-heading text-3d-effect"></h3>
+                            <div id="drawer-why-essential-body" class="drawer-rich-paras"></div>
                         </div>
-                        <div class="drawer-note-box">
-                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
-                            <p id="drawer-note"></p>
+
+                        <!-- Solution Details -->
+                        <div id="drawer-solution-details" class="scroll-3d-element" style="display:none; margin-top:32px;">
+                            <h3 id="drawer-solution-details-title" class="drawer-rich-heading text-3d-effect"></h3>
+                            <div id="drawer-solution-details-list" class="drawer-detail-grid"></div>
                         </div>
-                        <div class="drawer-cta-row">
-                            <a href="./services.html" class="drawer-cta-btn">
-                                View Our Services
-                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                            </a>
-                            <a href="#contact" class="drawer-cta-outline" onclick="closeProductDrawer()">Get a Quote</a>
+
+                        <!-- Industry Details -->
+                        <div id="drawer-industry-details" class="scroll-3d-element" style="display:none; margin-top:32px;">
+                            <h3 id="drawer-industry-details-title" class="drawer-rich-heading text-3d-effect"></h3>
+                            <div id="drawer-industry-details-list" class="drawer-detail-grid"></div>
+                        </div>
+
+                        <!-- Benefits -->
+                        <div id="drawer-benefits" class="scroll-3d-element" style="display:none; margin-top:32px;">
+                            <h3 id="drawer-benefits-title" class="drawer-rich-heading text-3d-effect"></h3>
+                            <ul id="drawer-benefits-list" class="drawer-choose-list"></ul>
+                        </div>
+
+                        <!-- Why Choose Us -->
+                        <div id="drawer-why-choose" class="scroll-3d-element" style="display:none; margin-top:32px;">
+                            <h3 id="drawer-why-choose-title" class="drawer-rich-heading text-3d-effect"></h3>
+                            <div id="drawer-why-choose-list"></div>
+                            <p id="drawer-why-choose-note" class="drawer-rich-note"></p>
+                        </div>
+
+                        <!-- Implementation Process (Not used in services currently, but keeping for compatibility) -->
+                        <div id="drawer-impl-process" class="scroll-3d-element" style="display:none; margin-top:32px;">
+                            <h3 id="drawer-impl-process-title" class="drawer-rich-heading text-3d-effect"></h3>
+                            <div id="drawer-impl-process-list" class="drawer-detail-grid"></div>
+                        </div>
+
+                        <!-- Request Free Survey CTA -->
+                        <div id="drawer-survey-cta" class="drawer-survey-box scroll-3d-element" style="display:none; margin-top:40px;">
+                            <h3 id="drawer-survey-title" class="drawer-survey-heading text-3d-effect"></h3>
+                            <p id="drawer-survey-intro" class="drawer-survey-intro"></p>
+                            <p id="drawer-survey-body" class="drawer-survey-body"></p>
+                            <div class="drawer-survey-actions">
+                                <a href="./contact.html" id="drawer-survey-btn-1" class="drawer-survey-btn primary" onclick="closeProductDrawer()">Get Free Consultation</a>
+                                <a href="./contact.html" id="drawer-survey-btn-2" class="drawer-survey-btn secondary" onclick="closeProductDrawer()">Schedule a Site Survey</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1398,7 +1585,7 @@
                             Software updates
                         </li>
                     </ul>
-
+                    <button class="read-more-btn" onclick="openModal('amc')">Read More <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
                 </div>
             </div>
 
@@ -1429,7 +1616,7 @@
                             AI camera analytics
                         </li>
                     </ul>
-
+                    <button class="read-more-btn" onclick="openModal('cms')">Read More <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
                 </div>
             </div>
 
@@ -1460,7 +1647,7 @@
                             Failover link setup
                         </li>
                     </ul>
-
+                    <button class="read-more-btn" onclick="openModal('net')">Read More <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
                 </div>
             </div>
 
@@ -1491,7 +1678,7 @@
                             Dedicated Helpdesk
                         </li>
                     </ul>
-
+                    <button class="read-more-btn" onclick="openModal('support')">Read More <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
                 </div>
             </div>
 
@@ -1512,7 +1699,7 @@
         <div class="cta-card animate-on-scroll">
             <h2>Ready to Secure Your Operations?</h2>
             <p>Connect with our expert security consultants to structure a tailored installation, AMC, or networking program matching your exact corporate scale.</p>
-            <button class="btn-cta">Request Free Consultation</button>
+            <button class="btn-cta" onclick="window.location.href='./contact.html'">Request Free Consultation</button>
         </div>
     </section>
 
@@ -1532,7 +1719,7 @@
                         <li><a href="./services.html" style="color: inherit; text-decoration: none;">Services</a></li>
                         <li><a href="./products.html" style="color: inherit; text-decoration: none;">Products</a></li>
                         <li><a href="./careers.html" style="color: inherit; text-decoration: none;">Careers</a></li>
-                        <li><a href="#contact" style="color: inherit; text-decoration: none;">Contact</a></li>
+                        <li><a href="./contact.html" style="color: inherit; text-decoration: none;">Contact</a></li>
                     </ul>
                 </div>
 
@@ -1562,14 +1749,22 @@
                             <a href="tel:+919600009724" style="color: inherit; text-decoration: none;">+91 96000 09724</a>
                             <span class="tooltip">Copy Phone</span>
                         </li>
-                        <li style="color: var(--gray-400); cursor: default; margin-bottom: 8px;">Plot 30, Ram Nager</li>
-                        <li style="color: var(--gray-400); cursor: default;">Chennai, Tamil Nadu 600100</li>
+                        <li style="color: var(--gray-400); cursor: default; margin-bottom: 8px; font-size: 0.9rem;">Plot No. 30, 1st Floor, 1st Main Rd,</li>
+                        <li style="color: var(--gray-400); cursor: default; margin-bottom: 8px; font-size: 0.9rem;">Ram Nagar South Ext, Madipakkam,</li>
+                        <li style="color: var(--gray-400); cursor: default; font-size: 0.9rem;">Chennai - 600100</li>
                     </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Location Map</h4>
+                    <div style="width: 100%; height: 130px; border-radius: 12px; overflow: hidden; margin-top: 15px; border: 1px solid rgba(255,255,255,0.1);">
+                        <iframe src="https://maps.google.com/maps?q=12.951159,80.207632&t=&z=14&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <span>© 2026 RF Solutions India. All Rights Reserved.</span>
+                <span>© 2026 RF SOLUTIONS. All Rights Reserved.</span>
                 <div class="footer-dots">
                     <div class="footer-dot" title="Blue Theme"></div>
                     <div class="footer-dot" title="Emerald Theme"></div>
@@ -1699,43 +1894,289 @@
     </script>
 
     <script>
+        /* ======= INTERSECTION OBSERVER FOR 3D SCROLL EFFECTS ======= */
+        const observerOptions = {
+            root: document.querySelector('.drawer-body-scroll'),
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const scrollObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible-3d');
+                }
+            });
+        }, observerOptions);
+
+        function resetScrollAnimations() {
+            const elements = document.querySelectorAll('.scroll-3d-element');
+            elements.forEach(el => {
+                el.classList.remove('visible-3d');
+                scrollObserver.observe(el);
+            });
+        }
+
         /* ======= MODAL PRODUCT DATA ======= */
         const productData = {
             amc: {
-                title: 'Annual Maintenance (AMC)',
-                subtitle: 'Comprehensive Maintenance for Surveillance Systems',
+                title: 'Annual Maintenance Contract (AMC)',
+                subtitle: 'Reliable Maintenance & Support for Security Systems',
                 img: './assets/image/amc_service.png',
-                desc: 'Regular servicing and quick issue resolution to ensure uninterrupted performance. Our preventative checks reduce hardware fatigue and extend surveillance lifecycle for maximum ROI.',
-                solutions: ['Scheduled Inspections', 'Priority Support Callouts', 'Equipment Health Checks', 'Software & Firmware Updates'],
-                industries: ['Preventive Maintenance Reports', 'Replacement Part Management', 'Camera Alignment & Cleaning', 'System Performance Audits'],
-                note: 'Our AMC plans cover CCTV, Fire Alarm, Intrusion, Access Control, ELV, and Video Door Phone systems — with flexible monthly, quarterly, or annual contracts to suit every budget.'
+                desc: 'At RF Solutions India, we provide comprehensive Annual Maintenance Contract (AMC) Services to ensure your security and surveillance systems operate efficiently throughout the year. Our maintenance solutions help reduce downtime, improve system performance, and extend the lifespan of your security infrastructure through regular inspections, preventive maintenance, and technical support.',
+                whyEssential: {
+                    title: 'Why AMC Services are Important',
+                    paras: [
+                        'Regular maintenance is essential to ensure security systems continue to operate efficiently and reliably. Without periodic inspections and servicing, systems may experience performance issues, equipment failures, or unexpected downtime that can impact overall security.',
+                        'An Annual Maintenance Contract (AMC) helps identify and resolve potential issues before they become major problems. Through preventive maintenance, system testing, and technical support, AMC services improve system reliability, extend equipment lifespan, reduce repair costs, and ensure continuous protection for people, property, and business operations.'
+                    ]
+                },
+                solutionDetails: {
+                    title: 'AMC Solutions We Offer',
+                    items: [
+                        { name: 'CCTV System Maintenance', desc: 'Inspection and maintenance of cameras, DVR/NVR systems, storage devices, and network connectivity to ensure uninterrupted surveillance.' },
+                        { name: 'Intrusion Alarm Maintenance', desc: 'Testing and servicing of motion detectors, door contacts, control panels, and alarm communication to ensure immediate threat detection.' },
+                        { name: 'Fire Alarm System Maintenance', desc: 'Testing and servicing of smoke detectors, heat detectors, control panels, alarm devices, and emergency notification systems.' },
+                        { name: 'Access Control System Maintenance', desc: 'Maintenance of biometric devices, card readers, controllers, software platforms, and access management systems.' },
+                        { name: 'ELV & Networking Maintenance', desc: 'Maintenance of networking infrastructure, structured cabling, and integrated ELV systems to ensure smooth operation.' },
+                        { name: 'Video Door Phone Maintenance', desc: 'Inspection and servicing of indoor monitors, outdoor units, communication systems, and access devices.' }
+                    ]
+                },
+                benefitsSection: {
+                    title: 'Benefits of Our AMC Services',
+                    items: ['Reduced System Downtime', 'Improved Equipment Performance', 'Faster Technical Support', 'Extended Equipment Life', 'Preventive Issue Detection', 'Cost-Effective Maintenance', 'Enhanced Security Reliability', 'Better System Efficiency']
+                },
+                industryDetails: {
+                    title: 'Industries We Serve',
+                    items: [
+                        { name: 'Industrial & Manufacturing Facilities', desc: 'Ensure continuous monitoring and protection of critical operations.' },
+                        { name: 'Warehouses & Logistics Facilities', desc: 'Protect inventory and assets through properly maintained security systems.' },
+                        { name: 'Residential Communities', desc: 'Support uninterrupted security and access management for residents.' },
+                        { name: 'Educational Institutions', desc: 'Maintain safety through reliable surveillance and security infrastructure.' },
+                        { name: 'Commercial Buildings', desc: 'Ensure security systems operate efficiently and consistently.' }
+                    ]
+                },
+                whyChooseUs: {
+                    title: 'Why Choose RF Solutions India?',
+                    items: [
+                        'Experienced Maintenance Professionals',
+                        'Customized AMC Plans',
+                        'Preventive Maintenance Approach',
+                        'Fast Response & Technical Support',
+                        'Comprehensive Security System Expertise',
+                        'End-to-End Maintenance Solutions'
+                    ],
+                    note: 'Our team focuses on proactive maintenance and timely support to help clients maximize the performance and lifespan of their security systems.'
+                },
+                surveySection: {
+                    title: 'Request an AMC Consultation',
+                    intro: 'Looking for a reliable Annual Maintenance Contract for your security systems?',
+                    body: 'Schedule a Site Assessment or Get Free Consultation today.',
+                    cta1: 'Get Free Consultation',
+                    cta2: 'Schedule a Site Assessment'
+                }
             },
             cms: {
                 title: 'Central Monitoring System (CMS)',
-                subtitle: '24/7 Security Operations & Rapid Response',
+                subtitle: 'Centralized Security Monitoring for Complete Protection',
                 img: './assets/image/cms_monitoring.png',
-                desc: '24/7 monitoring with instant alerts and rapid response. Our modern security operations hub acts as a constant shield, analyzing camera inputs and alerting authorities immediately on threats.',
-                solutions: ['24/7 Threat Watching', 'Instant SMS / Email Alerts', 'Emergency Response Link', 'AI Camera Analytics'],
-                industries: ['Multi-Site Monitoring', 'Video Verification', 'Incident Logging & Reporting', 'Police & Authority Escalation'],
-                note: 'Our CMS platform supports integration with CCTV, fire alarms, and intrusion detection systems, providing a unified security command center for all your facilities.'
+                desc: 'At RF Solutions India, we provide advanced Central Monitoring System (CMS) solutions that enable real-time monitoring and centralized management of security systems from a single platform. Our solutions integrate CCTV surveillance, fire alarm systems, intrusion alarms, and access control systems to improve security visibility and operational efficiency. Designed for commercial, industrial, residential, and institutional facilities, CMS solutions help organizations monitor critical events, receive instant alerts, and respond quickly to incidents while ensuring continuous protection of people, property, and assets.',
+                whyEssential: {
+                    title: 'Why Central Monitoring Systems are Important',
+                    paras: [
+                        'Managing multiple security systems independently can be complex and time-consuming. A Central Monitoring System simplifies security operations by bringing all monitoring functions into one centralized platform. It enables real-time event tracking, faster incident response, and improved control over security infrastructure. By providing instant alerts and continuous monitoring, CMS solutions help reduce risks, improve operational efficiency, and ensure that security personnel can respond effectively to emergencies, unauthorized access attempts, or other critical incidents.'
+                    ]
+                },
+                solutionDetails: {
+                    title: 'CMS Solutions We Offer',
+                    items: [
+                        { name: 'CCTV Surveillance Monitoring', desc: 'Monitor live and recorded video feeds from multiple locations through a centralized platform for enhanced security management.' },
+                        { name: 'Fire Alarm Monitoring', desc: 'Receive instant alerts and notifications when fire detection systems identify smoke, heat, or emergency conditions.' },
+                        { name: 'Intrusion Alarm Monitoring', desc: 'Track unauthorized access attempts and security breaches through integrated intrusion detection systems.' },
+                        { name: 'Access Control Monitoring', desc: 'Monitor entry and exit activities, user access logs, and restricted area access from a single dashboard.' },
+                        { name: 'Multi-Site Monitoring Solutions', desc: 'Manage security operations across multiple offices, facilities, warehouses, and business locations from one centralized monitoring center.' },
+                        { name: 'Remote Security Management', desc: 'Access monitoring systems remotely through secure web and mobile platforms for continuous visibility and control.' }
+                    ]
+                },
+                benefitsSection: {
+                    title: 'Benefits of Our CMS Solutions',
+                    items: [
+                        'Centralized Security Management',
+                        'Real-Time Monitoring & Alerts',
+                        'Faster Incident Response',
+                        'Improved Operational Efficiency',
+                        'Multi-Site Monitoring Capability',
+                        'Enhanced Security Visibility',
+                        'Remote Access & Control',
+                        'Reduced Security Risks'
+                    ]
+                },
+                industryDetails: {
+                    title: 'Industries We Serve',
+                    items: [
+                        { name: 'Corporate Offices', desc: 'Monitor employee access, visitor activities, and security operations efficiently.' },
+                        { name: 'Industrial & Manufacturing Facilities', desc: 'Protect production areas, operational assets, and critical infrastructure.' },
+                        { name: 'Warehouses & Logistics Facilities', desc: 'Monitor inventory, loading bays, storage areas, and perimeter security.' },
+                        { name: 'Educational Institutions', desc: 'Improve campus safety through centralized monitoring of surveillance and security systems.' },
+                        { name: 'Residential Communities', desc: 'Enhance resident safety with integrated monitoring and security management.' },
+                        { name: 'Commercial Buildings', desc: 'Maintain continuous monitoring of access points, common areas, and security infrastructure.' }
+                    ]
+                },
+                whyChooseUs: {
+                    title: 'Why Choose RF Solutions India?',
+                    items: [
+                        'Experienced Security Professionals',
+                        'Customized Monitoring Solutions',
+                        'Advanced Security Technologies',
+                        'End-to-End Project Execution',
+                        'Reliable AMC & Technical Support',
+                        'Scalable Security Infrastructure'
+                    ],
+                    note: 'Our team delivers customized Central Monitoring System solutions that help organizations improve security management, streamline operations, and maintain continuous protection across multiple locations.'
+                },
+                surveySection: {
+                    title: 'Request a Free Consultation',
+                    intro: 'Our security experts will assess your requirements and recommend the most effective CMS solution to help you monitor, manage, and protect your facilities from a centralized platform.',
+                    body: '',
+                    cta1: 'Get Free Consultation',
+                    cta2: 'Schedule a Site Survey'
+                }
             },
             net: {
                 title: 'Networking Solutions',
-                subtitle: 'Robust ELV Connectivity & Infrastructure',
+                subtitle: 'Reliable Network Infrastructure for Seamless Connectivity',
                 img: './assets/image/networking_solutions.png',
-                desc: 'Scalable and reliable network setup for smooth operation. We lay solid ELV connectivity backbones — structured cabling, switches, fiber optics — to stream video and telemetry data with absolute security.',
-                solutions: ['Ethernet & Fiber Cabling', 'Network Security Setup', 'Managed Switch Config', 'Failover Link Setup'],
-                industries: ['Wi-Fi & Access Point Config', 'VLAN & Firewall Setup', 'PoE Switch Deployment', 'Network Monitoring & Support'],
-                note: 'Our networking solutions are designed to support high-bandwidth CCTV streams, cloud connectivity, and secure inter-site communication for enterprise environments.'
+                desc: 'At RF Solutions India, we provide professional networking solutions designed to deliver secure, reliable, and high-performance connectivity for businesses and organizations. Our networking services help create a strong communication infrastructure that supports daily operations, improves productivity, and ensures seamless data transmission across your facility. From structured cabling and LAN setup to wireless networking and network management, we deliver customized solutions tailored to the specific requirements of commercial, industrial, educational, healthcare, and residential environments.',
+                whyEssential: {
+                    title: 'Why Networking Solutions are Important',
+                    paras: [
+                        'A reliable network infrastructure is essential for modern business operations. Whether it\'s communication, data sharing, security monitoring, or cloud connectivity, a well-designed network ensures smooth and uninterrupted performance.',
+                        'Professional networking solutions help organizations improve connectivity, enhance data security, reduce downtime, and support future growth. A properly structured network also enables seamless integration of CCTV systems, access control systems, servers, and other business applications.',
+                        'By investing in a robust networking infrastructure, businesses can improve efficiency, collaboration, and overall operational performance.'
+                    ]
+                },
+                solutionDetails: {
+                    title: 'Networking Solutions We Offer',
+                    items: [
+                        { name: 'Structured Cabling Systems', desc: 'Organized and scalable cabling solutions that support efficient communication and future network expansion.' },
+                        { name: 'LAN (Local Area Network) Solutions', desc: 'Reliable wired networking solutions that connect computers, servers, printers, and other devices within a facility.' },
+                        { name: 'WAN (Wide Area Network) Solutions', desc: 'Network connectivity solutions designed to connect multiple branches, offices, or remote locations.' },
+                        { name: 'Wi-Fi Networking Solutions', desc: 'Secure wireless networking systems that provide stable internet connectivity and seamless coverage throughout your premises.' },
+                        { name: 'Fiber Optic Cabling', desc: 'High-speed fiber optic infrastructure designed for fast data transmission and reliable communication.' },
+                        { name: 'Network Rack & Server Room Setup', desc: 'Professional installation and organization of network racks, switches, patch panels, and server room infrastructure.' }
+                    ]
+                },
+                benefitsSection: {
+                    title: 'Benefits of Our Networking Solutions',
+                    items: [
+                        'Reliable & Secure Connectivity',
+                        'Improved Network Performance',
+                        'Reduced Downtime',
+                        'Enhanced Data Security',
+                        'Scalable Infrastructure',
+                        'Faster Data Transmission',
+                        'Seamless Device Integration',
+                        'Long-Term Operational Efficiency'
+                    ]
+                },
+                industryDetails: {
+                    title: 'Industries We Serve',
+                    items: [
+                        { name: 'Corporate Offices', desc: 'Support communication, collaboration, and business applications through reliable networking infrastructure.' },
+                        { name: 'Industrial & Manufacturing Facilities', desc: 'Enable seamless connectivity between operational systems, production equipment, and monitoring platforms.' },
+                        { name: 'Educational Institutions', desc: 'Provide secure and efficient network access for students, faculty, and administrative operations.' },
+                        { name: 'Healthcare Facilities', desc: 'Ensure reliable network performance for medical systems, patient records, and staff communication.' },
+                        { name: 'Warehouses & Logistics Facilities', desc: 'Ensure reliable connectivity for inventory management, surveillance systems, and operational processes.' },
+                        { name: 'Commercial Buildings', desc: 'Create scalable networking infrastructure for business operations and integrated security systems.' }
+                    ]
+                },
+                whyChooseUs: {
+                    title: 'Why Choose RF Solutions India?',
+                    items: [
+                        'Experienced Networking Professionals',
+                        'Customized Network Design',
+                        'High-Quality Infrastructure Solutions',
+                        'Structured Cabling Expertise',
+                        'End-to-End Project Execution',
+                        'Reliable Technical Support'
+                    ],
+                    note: 'Our team delivers reliable networking solutions that support business growth, improve communication, and ensure seamless connectivity across your organization.'
+                },
+                surveySection: {
+                    title: 'Request a Free Consultation',
+                    intro: 'Looking for a reliable networking solution for your business or facility?',
+                    body: 'Our experts will assess your requirements and recommend the most effective network infrastructure solution to ensure secure, stable, and high-performance connectivity.',
+                    cta1: 'Get Free Consultation',
+                    cta2: 'Schedule a Site Survey'
+                }
             },
             support: {
-                title: 'Product Support & Lifecycle Management',
-                subtitle: 'Expert Diagnostics & Hardware Upgrades',
+                title: 'Product Support & AMC',
+                subtitle: 'Comprehensive Support & Maintenance for Security Systems',
                 img: './assets/image/product_support.png',
-                desc: 'Dedicated support for all installed systems ensuring long-term reliability. Our engineers provide expert diagnostics, replacement assistance, and customized SLA plans to secure maximum uptime.',
-                solutions: ['Expert Troubleshooting', 'Warranty Management', 'Custom SLA Contracts', 'Dedicated Helpdesk'],
-                industries: ['Remote Diagnostic Support', 'On-Site Engineer Visits', 'Spare Parts Availability', 'End-of-Life System Upgrades'],
-                note: 'From day-one post-installation support to long-term lifecycle management, our product support team ensures your security infrastructure remains operational and compliant at all times.'
+                desc: 'At RF Solutions India, we provide reliable Product Support and Annual Maintenance Contract (AMC) services to ensure your security and technology systems operate efficiently throughout their lifecycle. Our support services are designed to maximize system performance, reduce downtime, and help businesses maintain uninterrupted security and operational continuity. From troubleshooting and preventive maintenance to system upgrades and technical assistance, our experienced team delivers timely support for CCTV systems, fire alarm systems, access control solutions, intrusion alarms, networking infrastructure, and ELV systems.',
+                whyEssential: {
+                    title: 'Why Product Support & AMC are Important',
+                    paras: [
+                        'Security and surveillance systems require regular maintenance and technical support to ensure consistent performance and reliability. Without proper servicing, systems may experience technical issues, reduced efficiency, or unexpected downtime that can impact security operations.',
+                        'Product Support and AMC services help identify potential issues early, improve equipment lifespan, and ensure all devices continue to function effectively. Regular inspections, updates, and maintenance also help reduce repair costs and minimize operational disruptions.',
+                        'By investing in professional support services, organizations can ensure their systems remain secure, reliable, and ready to perform when needed.'
+                    ]
+                },
+                solutionDetails: {
+                    title: 'Support Services We Offer',
+                    items: [
+                        { name: 'CCTV System Support', desc: 'Maintenance, troubleshooting, camera health checks, DVR/NVR support, and performance optimization for surveillance systems.' },
+                        { name: 'Fire Alarm System Support', desc: 'Inspection, testing, detector maintenance, panel servicing, and system performance verification.' },
+                        { name: 'Access Control System Support', desc: 'Maintenance of biometric devices, card readers, controllers, software platforms, and user management systems.' },
+                        { name: 'Intrusion Alarm System Support', desc: 'Testing and servicing of sensors, alarm panels, motion detectors, and communication devices.' },
+                        { name: 'Networking & ELV Support', desc: 'Support for structured cabling, network infrastructure, connectivity issues, and integrated ELV systems.' },
+                        { name: 'System Upgrades & Enhancements', desc: 'Recommendations and implementation of technology upgrades to improve security and system performance.' }
+                    ]
+                },
+                benefitsSection: {
+                    title: 'Benefits of Our Product Support & AMC Services',
+                    items: [
+                        'Reduced System Downtime',
+                        'Improved Equipment Performance',
+                        'Extended Product Lifespan',
+                        'Faster Issue Resolution',
+                        'Preventive Maintenance Approach',
+                        'Enhanced Security Reliability',
+                        'Cost-Effective Maintenance',
+                        'Continuous Technical Support'
+                    ]
+                },
+                industryDetails: {
+                    title: 'Industries We Serve',
+                    items: [
+                        { name: 'Corporate Offices', desc: 'Maintain reliable security, networking, and access management systems.' },
+                        { name: 'Industrial & Manufacturing Facilities', desc: 'Ensure continuous operation of security and monitoring infrastructure.' },
+                        { name: 'Warehouses & Logistics Facilities', desc: 'Protect inventory and assets through properly maintained surveillance and alarm systems.' },
+                        { name: 'Educational Institutions', desc: 'Support campus safety with reliable security system maintenance.' },
+                        { name: 'Residential Communities', desc: 'Ensure consistent operation of residential security and intercom systems.' },
+                        { name: 'Commercial Buildings', desc: 'Maintain efficient and secure building infrastructure through regular support services.' }
+                    ]
+                },
+                whyChooseUs: {
+                    title: 'Why Choose RF Solutions India?',
+                    items: [
+                        'Experienced Technical Support Team',
+                        'Customized AMC Plans',
+                        'Preventive & Corrective Maintenance',
+                        'Quick Response Time',
+                        'End-to-End Support Services',
+                        'Reliable On-Site Assistance'
+                    ],
+                    note: 'Our experts focus on delivering proactive maintenance and responsive technical support to ensure your security systems continue operating at peak performance.'
+                },
+                surveySection: {
+                    title: 'Request a Free Consultation',
+                    intro: 'Looking for reliable product support and AMC services for your security systems?',
+                    body: 'Our team will assess your infrastructure and recommend the most suitable maintenance plan to ensure long-term reliability, performance, and protection.',
+                    cta1: 'Get Free Consultation',
+                    cta2: 'Schedule a Service Visit'
+                }
             }
         };
 
@@ -1748,13 +2189,77 @@
             document.getElementById('drawer-subtitle').textContent = d.subtitle;
             document.getElementById('drawer-desc').textContent = d.desc;
 
-            const solList = document.getElementById('drawer-solutions');
-            solList.innerHTML = d.solutions.map(s => `<li>${s}</li>`).join('');
+            // Handle Why Essential
+            const whyEssEl = document.getElementById('drawer-why-essential');
+            if (d.whyEssential) {
+                document.getElementById('drawer-why-essential-title').textContent = d.whyEssential.title;
+                document.getElementById('drawer-why-essential-body').innerHTML = d.whyEssential.paras.map(p => `<p>${p}</p>`).join('');
+                whyEssEl.style.display = 'block';
+            } else { whyEssEl.style.display = 'none'; }
 
-            const indList = document.getElementById('drawer-industries');
-            indList.innerHTML = d.industries.map(i => `<li>${i}</li>`).join('');
+            // Handle Solution Details
+            const solDetailsEl = document.getElementById('drawer-solution-details');
+            if (d.solutionDetails) {
+                document.getElementById('drawer-solution-details-title').textContent = d.solutionDetails.title;
+                document.getElementById('drawer-solution-details-list').innerHTML = d.solutionDetails.items.map(item =>
+                    `<div class="drawer-detail-card"><h4>${item.name}</h4><p>${item.desc}</p></div>`
+                ).join('');
+                solDetailsEl.style.display = 'block';
+            } else { solDetailsEl.style.display = 'none'; }
 
-            document.getElementById('drawer-note').textContent = d.note;
+            // Handle Industry Details
+            const indDetailsEl = document.getElementById('drawer-industry-details');
+            if (d.industryDetails) {
+                document.getElementById('drawer-industry-details-title').textContent = d.industryDetails.title;
+                document.getElementById('drawer-industry-details-list').innerHTML = d.industryDetails.items.map(item =>
+                    `<div class="drawer-detail-card"><h4>${item.name}</h4><p>${item.desc}</p></div>`
+                ).join('');
+                indDetailsEl.style.display = 'block';
+            } else { indDetailsEl.style.display = 'none'; }
+
+            // Handle Benefits
+            const benefitsEl = document.getElementById('drawer-benefits');
+            if (d.benefitsSection) {
+                document.getElementById('drawer-benefits-title').textContent = d.benefitsSection.title;
+                document.getElementById('drawer-benefits-list').innerHTML = d.benefitsSection.items.map(item => `<li>${item}</li>`).join('');
+                benefitsEl.style.display = 'block';
+            } else { benefitsEl.style.display = 'none'; }
+
+            // Handle Why Choose Us
+            const whyChooseEl = document.getElementById('drawer-why-choose');
+            if (d.whyChooseUs) {
+                document.getElementById('drawer-why-choose-title').textContent = d.whyChooseUs.title;
+                document.getElementById('drawer-why-choose-list').innerHTML = d.whyChooseUs.items.map(item =>
+                    typeof item === 'string'
+                        ? `<div class="drawer-detail-card"><h4>${item}</h4></div>`
+                        : `<div class="drawer-detail-card"><h4>${item.name}</h4><p>${item.desc}</p></div>`
+                ).join('');
+                document.getElementById('drawer-why-choose-note').textContent = d.whyChooseUs.note || '';
+                whyChooseEl.style.display = 'block';
+            } else { whyChooseEl.style.display = 'none'; }
+
+            // Handle Implementation Process
+            const implEl = document.getElementById('drawer-impl-process');
+            if (d.implementationProcess) {
+                document.getElementById('drawer-impl-process-title').textContent = d.implementationProcess.title;
+                document.getElementById('drawer-impl-process-list').innerHTML = d.implementationProcess.steps.map((step, i) =>
+                    `<div class="drawer-detail-card"><h4>${i + 1}. ${step.name}</h4><p>${step.desc}</p></div>`
+                ).join('');
+                implEl.style.display = 'block';
+            } else { implEl.style.display = 'none'; }
+
+            // Handle Survey CTA
+            const surveyEl = document.getElementById('drawer-survey-cta');
+            if (d.surveySection) {
+                document.getElementById('drawer-survey-title').textContent = d.surveySection.title;
+                document.getElementById('drawer-survey-intro').textContent = d.surveySection.intro;
+                document.getElementById('drawer-survey-body').textContent = d.surveySection.body;
+                document.getElementById('drawer-survey-btn-1').textContent = d.surveySection.cta1 || 'Get Free Consultation';
+                document.getElementById('drawer-survey-btn-2').textContent = d.surveySection.cta2 || 'Schedule a Site Assessment';
+                surveyEl.style.display = 'block';
+            } else { surveyEl.style.display = 'none'; }
+
+            resetScrollAnimations();
 
             const drawer = document.getElementById('product-drawer');
             drawer.classList.add('active');
@@ -2146,5 +2651,17 @@
             initRippleHeadings();
         }
     </script>
+<script>
+        // Auto-set active link
+        document.addEventListener("DOMContentLoaded", () => {
+            const currentPath = window.location.pathname.split("/").pop() || "index.html";
+            document.querySelectorAll(".nav-links a").forEach(link => {
+                link.classList.remove("active");
+                if (link.getAttribute("href").includes(currentPath)) {
+                    link.classList.add("active");
+                }
+            });
+        });
+</script>
 </body>
 </html>

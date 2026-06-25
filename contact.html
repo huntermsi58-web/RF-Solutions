@@ -1,0 +1,2042 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: Primary Meta -->
+    <title>Contact Us | RF Solutions India | CCTV, Fire Alarm & Security Integration</title>
+    <meta name="description" content="Get in touch with RF Solutions India. Contact us for professional CCTV installation, fire alarms, biometric access systems, and ELV integration across India.">
+    <meta name="keywords" content="Contact RF Solutions India, security system installer Chennai, CCTV support India, fire alarm installation company">
+    <meta name="author" content="RF Solutions India">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.rfsolutionsindia.in/contact.html">
+
+    <!-- SEO: Open Graph (Facebook / LinkedIn / WhatsApp) -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="RF Solutions India">
+    <meta property="og:title" content="Contact Us | RF Solutions India | CCTV & Security Systems">
+    <meta property="og:description" content="Reach out to RF Solutions India. Trusted integrator of CCTV, access control, and fire security systems across India. Get a free site survey.">
+    <meta property="og:url" content="https://www.rfsolutionsindia.in/contact.html">
+    <meta property="og:image" content="https://www.rfsolutionsindia.in/assets/image/logo.png">
+
+    <!-- SEO: Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact Us | RF Solutions India">
+    <meta name="twitter:description" content="Professional CCTV installation, fire alarm systems, and security integration across India. Contact our expert team today.">
+    <meta name="twitter:image" content="https://www.rfsolutionsindia.in/assets/image/logo.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <style>
+        :root {
+            --primary-950: #0a1f4a;
+            --primary-900: #0d2966;
+            --primary-800: #1145a8;
+            --primary-700: #1652c1;
+            --primary-600: #1d5ce5;
+            --primary-500: #3b82f6;
+            --primary-400: #60a5fa;
+            --primary-300: #93c5fd;
+            --primary-200: #bfdbfe;
+            --primary-100: #dbeafe;
+            --primary-50: #eff6ff;
+
+            --gray-950: #0f0f0f;
+            --gray-900: #0f172a;
+            --gray-800: #1e293b;
+            --gray-700: #334155;
+            --gray-600: #475569;
+            --gray-500: #64748b;
+            --gray-400: #94a3b8;
+            --gray-300: #cbd5e1;
+            --gray-200: #e2e8f0;
+            --gray-100: #f1f5f9;
+            --gray-50: #f8fafc;
+
+            --accent-cyan: #06b6d4;
+            --accent-purple: #a855f7;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            color: var(--gray-900);
+            overflow-x: hidden;
+            line-height: 1.6;
+            position: relative;
+        }
+
+        /* Dark mode settings */
+        body[data-theme="dark"] {
+            background: linear-gradient(135deg, #0a0a0c 0%, #0f0f12 100%);
+            color: var(--gray-100);
+        }
+
+        #webgl-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            pointer-events: none;
+            opacity: 0.7;
+        }
+
+        .global-bg-effects {
+            position: fixed;
+            inset: 0;
+            z-index: -3;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .tech-grid-bg {
+            position: fixed;
+            inset: 0;
+            z-index: -4;
+            background-image: radial-gradient(rgba(29, 92, 229, 0.04) 1.5px, transparent 1.5px);
+            background-size: 40px 40px;
+            pointer-events: none;
+        }
+
+        body[data-theme="dark"] .tech-grid-bg {
+            background-image: radial-gradient(rgba(6, 182, 212, 0.05) 1.5px, transparent 1.5px);
+        }
+
+        .bg-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(130px);
+            opacity: 0.15;
+            z-index: -3;
+            pointer-events: none;
+        }
+
+        .orb-1 {
+            top: -10%;
+            left: 70%;
+            width: 500px;
+            height: 500px;
+            background: var(--primary-400);
+        }
+
+        .orb-2 {
+            top: 50%;
+            left: -10%;
+            width: 600px;
+            height: 600px;
+            background: var(--accent-cyan);
+        }
+
+        /* ============ NAVBAR ============ */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(29, 92, 229, 0.1);
+            padding: 0 48px;
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+            animation: slideDown 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body[data-theme="dark"] .navbar {
+            background: rgba(15, 23, 42, 0.7);
+            border-bottom-color: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.4rem;
+            font-weight: 900;
+            color: var(--primary-600);
+            letter-spacing: -1px;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .logo:hover {
+            opacity: 0.9;
+        }
+
+        .logo-img {
+            width: 44px;
+            height: 44px;
+            object-fit: contain;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .logo:hover .logo-img {
+            transform: translateY(-4px) rotate(-4deg);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--gray-700);
+            text-decoration: none;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        body[data-theme="dark"] .nav-links a {
+            color: var(--gray-300);
+        }
+
+        .nav-links a.active {
+            color: var(--primary-600);
+        }
+
+        body[data-theme="dark"] .nav-links a.active {
+            color: var(--accent-cyan);
+        }
+
+        .nav-links a::before {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-600), var(--accent-cyan));
+            transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .nav-links a.active::before {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-600);
+        }
+
+        body[data-theme="dark"] .nav-links a:hover {
+            color: var(--accent-cyan);
+        }
+
+        .nav-links a:hover::before {
+            width: 100%;
+        }
+
+        .btn-nav {
+            background: linear-gradient(135deg, var(--primary-600), var(--primary-500));
+            color: var(--white);
+            border: none;
+            padding: 11px 28px;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 20px rgba(29, 92, 229, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        body[data-theme="dark"] .btn-nav {
+            background: linear-gradient(135deg, var(--accent-cyan), var(--primary-500));
+            color: var(--gray-950);
+            box-shadow: 0 8px 20px rgba(6, 182, 212, 0.2);
+            font-weight: 700;
+        }
+
+        .btn-nav::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .btn-nav:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .btn-nav:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(29, 92, 229, 0.4);
+        }
+
+        body[data-theme="dark"] .btn-nav:hover {
+            box-shadow: 0 12px 32px rgba(6, 182, 212, 0.4);
+        }
+
+        /* ============ CONTACT HERO ============ */
+        .contact-hero {
+            padding: 150px 48px 40px;
+            text-align: center;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .contact-hero h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            color: var(--primary-950);
+            margin-bottom: 20px;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: -1px;
+        }
+
+        body[data-theme="dark"] .contact-hero h1 {
+            color: var(--white);
+        }
+
+        .contact-hero p {
+            font-size: 1.15rem;
+            color: var(--gray-600);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        body[data-theme="dark"] .contact-hero p {
+            color: var(--gray-400);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, var(--primary-600), var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* ============ CONTACT CONTENT SECTION ============ */
+        .contact-section {
+            padding: 40px 48px 100px;
+            position: relative;
+        }
+
+        .contact-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        /* ============ LEFT COLUMN: CONTACT INFO CARDS ============ */
+        .info-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 2px solid var(--gray-200);
+            border-radius: 20px;
+            padding: 30px;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .info-card:hover {
+            border-color: var(--primary-400);
+            box-shadow: 0 15px 30px -10px rgba(29, 92, 229, 0.15);
+            transform: translateY(-5px);
+        }
+
+        body[data-theme="dark"] .info-card {
+            background: rgba(30, 41, 59, 0.4);
+            border-color: rgba(255, 255, 255, 0.05);
+        }
+
+        body[data-theme="dark"] .info-card:hover {
+            border-color: var(--accent-cyan);
+            box-shadow: 0 15px 30px -10px rgba(6, 182, 212, 0.2);
+        }
+
+        .info-icon {
+            width: 54px;
+            height: 54px;
+            border-radius: 14px;
+            background: var(--primary-50);
+            color: var(--primary-600);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+        }
+
+        .info-icon svg {
+            width: 26px;
+            height: 26px;
+            fill: currentColor;
+        }
+
+        body[data-theme="dark"] .info-icon {
+            background: rgba(6, 182, 212, 0.1);
+            color: var(--accent-cyan);
+        }
+
+        .info-card:hover .info-icon {
+            background: var(--primary-600);
+            color: var(--white);
+            transform: scale(1.1);
+        }
+
+        body[data-theme="dark"] .info-card:hover .info-icon {
+            background: var(--accent-cyan);
+            color: var(--gray-950);
+        }
+
+        .info-details h3 {
+            font-size: 1.2rem;
+            margin-bottom: 6px;
+            color: var(--primary-950);
+            font-weight: 700;
+        }
+
+        body[data-theme="dark"] .info-details h3 {
+            color: var(--white);
+        }
+
+        .info-details p {
+            color: var(--gray-600);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        body[data-theme="dark"] .info-details p {
+            color: var(--gray-400);
+        }
+
+        /* ============ RIGHT COLUMN: 3D TILT CONTACT FORM ============ */
+        .contact-form-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border: 2px solid var(--gray-200);
+            border-radius: 24px;
+            padding: 48px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            transition: border-color 0.3s, box-shadow 0.3s, transform 0.1s ease;
+            position: relative;
+        }
+
+        .contact-form-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at var(--form-mouse-x, 50%) var(--form-mouse-y, 50%), rgba(29, 92, 229, 0.08) 0%, transparent 60%);
+            opacity: 0;
+            transition: opacity 0.5s;
+            pointer-events: none;
+            border-radius: 24px;
+        }
+
+        .contact-form-card:hover::before {
+            opacity: 1;
+        }
+
+        body[data-theme="dark"] .contact-form-card {
+            background: rgba(30, 41, 59, 0.4);
+            border-color: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        body[data-theme="dark"] .contact-form-card:hover {
+            border-color: var(--accent-cyan);
+            box-shadow: 0 25px 60px rgba(6, 182, 212, 0.15);
+        }
+
+        body[data-theme="dark"] .contact-form-card::before {
+            background: radial-gradient(circle at var(--form-mouse-x, 50%) var(--form-mouse-y, 50%), rgba(6, 182, 212, 0.1) 0%, transparent 60%);
+        }
+
+        .form-inner {
+            transform: translateZ(30px);
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group label {
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: var(--primary-900);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        body[data-theme="dark"] .form-group label {
+            color: var(--gray-300);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            background: rgba(255, 255, 255, 0.8);
+            border: 2px solid var(--gray-200);
+            border-radius: 12px;
+            padding: 14px 18px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            color: inherit;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        body[data-theme="dark"] .form-group input,
+        body[data-theme="dark"] .form-group select,
+        body[data-theme="dark"] .form-group textarea {
+            background: rgba(15, 23, 42, 0.6);
+            border-color: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary-500);
+            background: var(--white);
+            box-shadow: 0 0 0 4px rgba(29, 92, 229, 0.1);
+        }
+
+        body[data-theme="dark"] .form-group input:focus,
+        body[data-theme="dark"] .form-group select:focus,
+        body[data-theme="dark"] .form-group textarea:focus {
+            border-color: var(--accent-cyan);
+            background: rgba(15, 23, 42, 0.9);
+            box-shadow: 0 0 0 4px rgba(6, 182, 212, 0.15);
+        }
+
+        .btn-submit {
+            background: linear-gradient(135deg, var(--primary-600), var(--primary-500));
+            color: var(--white);
+            border: none;
+            padding: 16px;
+            border-radius: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(29, 92, 229, 0.25);
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px rgba(29, 92, 229, 0.35);
+        }
+
+        body[data-theme="dark"] .btn-submit {
+            background: linear-gradient(135deg, var(--accent-cyan), var(--primary-500));
+            color: var(--gray-950);
+            box-shadow: 0 8px 20px rgba(6, 182, 212, 0.2);
+            font-weight: 700;
+        }
+
+        body[data-theme="dark"] .btn-submit:hover {
+            box-shadow: 0 12px 28px rgba(6, 182, 212, 0.35);
+        }
+
+        .btn-submit svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-submit:hover svg {
+            transform: translateX(4px) translateY(-2px);
+        }
+
+        /* ============ STYLED MAP / DIRECTIONS CARD ============ */
+        .map-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 2px solid var(--gray-200);
+            border-radius: 24px;
+            padding: 40px;
+            margin-top: 60px;
+            grid-column: span 2;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+        }
+
+        body[data-theme="dark"] .map-card {
+            background: rgba(30, 41, 59, 0.4);
+            border-color: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .map-visual {
+            width: 50%;
+            height: 250px;
+            background: rgba(29, 92, 229, 0.05);
+            border: 2px dashed rgba(29, 92, 229, 0.2);
+            border-radius: 16px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        body[data-theme="dark"] .map-visual {
+            background: rgba(6, 182, 212, 0.05);
+            border-color: rgba(6, 182, 212, 0.2);
+        }
+
+        .map-grid-pattern {
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(rgba(29, 92, 229, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(29, 92, 229, 0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        body[data-theme="dark"] .map-grid-pattern {
+            background-image: linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px);
+        }
+
+        .map-marker {
+            position: relative;
+            width: 64px;
+            height: 64px;
+            background: rgba(29, 92, 229, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulseMarkerBlue 2s infinite;
+        }
+
+        body[data-theme="dark"] .map-marker {
+            background: rgba(6, 182, 212, 0.2);
+            animation: pulseMarkerCyan 2s infinite;
+        }
+
+        @keyframes pulseMarkerBlue {
+            0% { box-shadow: 0 0 0 0 rgba(29, 92, 229, 0.4); }
+            70% { box-shadow: 0 0 0 20px rgba(29, 92, 229, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(29, 92, 229, 0); }
+        }
+
+        @keyframes pulseMarkerCyan {
+            0% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.4); }
+            70% { box-shadow: 0 0 0 20px rgba(6, 182, 212, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0); }
+        }
+
+        .map-marker svg {
+            width: 32px;
+            height: 32px;
+            fill: var(--primary-600);
+        }
+
+        body[data-theme="dark"] .map-marker svg {
+            fill: var(--accent-cyan);
+        }
+
+        .map-info {
+            width: 50%;
+        }
+
+        .map-info h2 {
+            font-size: 2rem;
+            color: var(--primary-950);
+            margin-bottom: 14px;
+            font-weight: 800;
+        }
+
+        body[data-theme="dark"] .map-info h2 {
+            color: var(--white);
+        }
+
+        .map-info p {
+            color: var(--gray-600);
+            margin-bottom: 24px;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        body[data-theme="dark"] .map-info p {
+            color: var(--gray-400);
+        }
+
+        .btn-directions {
+            background: rgba(29, 92, 229, 0.1);
+            color: var(--primary-600);
+            border: 2px solid var(--primary-200);
+            padding: 12px 28px;
+            border-radius: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-directions:hover {
+            background: var(--primary-600);
+            color: var(--white);
+            border-color: var(--primary-600);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(29, 92, 229, 0.2);
+        }
+
+        body[data-theme="dark"] .btn-directions {
+            background: rgba(6, 182, 212, 0.1);
+            color: var(--accent-cyan);
+            border-color: rgba(6, 182, 212, 0.3);
+        }
+
+        body[data-theme="dark"] .btn-directions:hover {
+            background: var(--accent-cyan);
+            color: var(--gray-950);
+            border-color: var(--accent-cyan);
+            box-shadow: 0 10px 20px rgba(6, 182, 212, 0.3);
+        }
+
+        /* ============ FAQs SECTION ============ */
+        .faq-section {
+            padding: 80px 48px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .faq-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary-950);
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        body[data-theme="dark"] .faq-header h2 {
+            color: var(--white);
+        }
+
+        .faq-header p {
+            color: var(--gray-600);
+            font-size: 1.1rem;
+        }
+
+        body[data-theme="dark"] .faq-header p {
+            color: var(--gray-400);
+        }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.7);
+            border: 2px solid var(--gray-200);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        body[data-theme="dark"] .faq-item {
+            background: rgba(30, 41, 59, 0.3);
+            border-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .faq-question {
+            padding: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .faq-question h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary-950);
+            margin: 0;
+        }
+
+        body[data-theme="dark"] .faq-question h3 {
+            color: var(--white);
+        }
+
+        .faq-toggle-icon {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-600);
+            transition: transform 0.3s ease;
+        }
+
+        body[data-theme="dark"] .faq-toggle-icon {
+            color: var(--accent-cyan);
+        }
+
+        .faq-toggle-icon svg {
+            width: 100%;
+            height: 100%;
+            fill: currentColor;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0, 1, 0, 1), padding 0.3s ease;
+            padding: 0 24px;
+            color: var(--gray-600);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        body[data-theme="dark"] .faq-answer {
+            color: var(--gray-400);
+        }
+
+        .faq-item.active {
+            border-color: var(--primary-500);
+            box-shadow: 0 10px 20px -5px rgba(29, 92, 229, 0.08);
+        }
+
+        body[data-theme="dark"] .faq-item.active {
+            border-color: var(--accent-cyan);
+            box-shadow: 0 10px 20px -5px rgba(6, 182, 212, 0.15);
+        }
+
+        .faq-item.active .faq-toggle-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding-bottom: 24px;
+            transition: max-height 0.4s cubic-bezier(0.5, 0, 0.1, 1), padding 0.3s ease;
+        }
+
+        /* ============ 3D SCROLL ANIMATION DEFAULTS ============ */
+        .animate-3d-scroll {
+            transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.8s ease;
+            opacity: 0;
+            transform: perspective(1000px) rotateX(15deg) translateY(50px) scale(0.95);
+        }
+
+        .animate-3d-scroll.visible {
+            opacity: 1;
+            transform: perspective(1000px) rotateX(0deg) translateY(0) scale(1);
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            @supports ((animation-timeline: view()) and (animation-range: entry)) {
+                @keyframes flipIn3D {
+                    from {
+                        transform: perspective(1000px) rotateX(25deg) rotateY(-10deg) translateY(80px) translateZ(-50px) scale(0.9);
+                        opacity: 0;
+                    }
+                    to {
+                        transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0) translateZ(0) scale(1);
+                        opacity: 1;
+                    }
+                }
+                .animate-3d-scroll {
+                    animation: flipIn3D auto cubic-bezier(0.25, 1, 0.5, 1) both;
+                    animation-timeline: view();
+                    animation-range: entry 10% entry 60%;
+                }
+                /* Disable transform transition if CSS scroll timelines are running to prevent conflict */
+                .animate-3d-scroll {
+                    transition: opacity 0.3s ease;
+                }
+            }
+        }
+
+        /* ============ RESPONSIVE MEDIA QUERIES ============ */
+        @media (max-width: 1024px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+            .map-card {
+                grid-column: span 1;
+                flex-direction: column;
+                gap: 30px;
+            }
+            .map-visual, .map-info {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 0 24px;
+            }
+            .nav-links {
+                display: none; /* simple drawer or hidden on mobile for simplicity, keeping navbar matches */
+            }
+            .contact-hero {
+                padding: 120px 24px 20px;
+            }
+            .contact-hero h1 {
+                font-size: 2.5rem;
+            }
+            .contact-section {
+                padding: 20px 24px 60px;
+            }
+            .contact-form-card {
+                padding: 30px;
+            }
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            .faq-section {
+                padding: 60px 24px;
+            }
+        }
+
+        /* ============ FOOTER ============ */
+        footer {
+            background: linear-gradient(135deg, var(--gray-900) 0%, var(--gray-950) 100%);
+            color: var(--white);
+            padding: 80px 48px 30px;
+            position: relative;
+            overflow: hidden;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-600), var(--accent-cyan));
+        }
+
+        .footer-content {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1.2fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .footer-brand h3 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, var(--white), var(--primary-200));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .footer-brand p {
+            color: var(--gray-400);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .footer-col h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: var(--white);
+            position: relative;
+        }
+
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            width: 30px;
+            height: 2px;
+            background: var(--accent-cyan);
+        }
+
+        .footer-col ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-col li {
+            color: var(--gray-400);
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-col li a:hover {
+            color: var(--accent-cyan) !important;
+            transform: translateX(4px);
+        }
+
+        .footer-contact-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            color: var(--gray-400);
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .footer-contact-list li:hover {
+            color: var(--accent-cyan);
+        }
+
+        .footer-contact-list svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+
+        .footer-bottom {
+            max-width: 1280px;
+            margin: 0 auto;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-bottom p {
+            color: var(--gray-500);
+            font-size: 0.9rem;
+        }
+
+        .footer-dots {
+            display: flex;
+            gap: 12px;
+        }
+
+        .footer-dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--primary-600);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .footer-dot:nth-child(2) { background: #10b981; }
+        .footer-dot:nth-child(3) { background: #6366f1; }
+
+        .footer-dot:hover {
+            transform: scale(1.3);
+            box-shadow: 0 0 10px currentColor;
+        }
+
+        @media (max-width: 900px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* Success banner popup */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #10b981;
+            color: white;
+            padding: 16px 28px;
+            border-radius: 12px;
+            font-weight: 700;
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .toast.error {
+            background: #ef4444;
+            box-shadow: 0 10px 25px rgba(239, 68, 68, 0.3);
+        }
+
+        .btn-submit:disabled {
+            background: var(--gray-400) !important;
+            color: var(--gray-600) !important;
+            cursor: not-allowed;
+            box-shadow: none !important;
+            transform: none !important;
+        }
+
+        body[data-theme="dark"] .btn-submit:disabled {
+            background: var(--gray-800) !important;
+            color: var(--gray-600) !important;
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2px solid rgba(0,0,0,0.15);
+            border-radius: 50%;
+            border-top-color: currentColor;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        body[data-theme="dark"] .spinner {
+            border: 2px solid rgba(255,255,255,0.15);
+            border-top-color: currentColor;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- WebGL Canvas for 3D Background -->
+    <canvas id="webgl-canvas"></canvas>
+
+    <div class="global-bg-effects">
+        <div class="tech-grid-bg"></div>
+        <div class="bg-orb orb-1"></div>
+        <div class="bg-orb orb-2"></div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="./index.html" class="logo">
+            <img src="./assets/image/logo.png" alt="RF Solutions Logo" class="logo-img" width="50" height="50"/>
+            RF SOLUTIONS
+        </a>
+        <div class="nav-links">
+            <a href="./index.html" class="active">Home</a>
+            <a href="./services.html">Services</a>
+            <a href="./products.html">Products</a>
+            <a href="./about.html">About</a>
+            <a href="./careers.html">Careers</a>
+            <a href="./contact.html">Contact</a>
+        </div>
+        <button class="btn-nav">Get Quote</button>
+    </nav>
+
+    <!-- HERO -->
+    <header class="contact-hero">
+        <h1 class=\"ripple-heading\">Connect with <span class="text-gradient">Security Experts</span></h1>
+        <p>Whether you need a new ELV installation, a site survey, or support for an existing system, our certified team is ready to secure your facility.</p>
+    </header>
+
+    <!-- MAIN CONTACT SECTION -->
+    <section class="contact-section">
+        <div class="contact-container">
+            
+            <!-- LEFT COLUMN: CONTACT INFO -->
+            <div class="info-grid">
+                
+                <!-- General Sales Card -->
+                <a href="mailto:enquires@rfsolutionsindia.in" class="info-card animate-3d-scroll">
+                    <div class="info-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                    </div>
+                    <div class="info-details">
+                        <h3>General & Sales Enquiries</h3>
+                        <p>For custom security systems design, quotes, and commercial partnerships.</p>
+                        <p style="margin-top: 8px; font-weight: 700; color: var(--primary-600);" class="contact-value">enquires@rfsolutionsindia.in</p>
+                    </div>
+                </a>
+
+                <!-- Support Card -->
+                <a href="mailto:support@rfsolutionsindia.com" class="info-card animate-3d-scroll">
+                    <div class="info-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M20 8h-2.81c-.45-.78-1.07-1.45-1.82-1.96L17 4.41 15.59 3l-2.17 2.17C12.96 5.06 12.49 5 12 5c-.49 0-.96.06-1.41.17L8.41 3 7 4.41l1.62 1.63C7.88 6.55 7.26 7.22 6.81 8H4v2h2.09c-.05.33-.09.66-.09 1v1H4v2h2v1c0 .34.04.67.09 1H4v2h2.81c.46.78 1.07 1.45 1.82 1.96L7 20.59 8.41 22l2.17-2.17c.45.11.92.17 1.42.17s.97-.06 1.42-.17L15.59 22 17 20.59l-1.62-1.62c.75-.51 1.37-1.18 1.82-1.96H20v-2h-2.09c.05-.33.09-.66.09-1v-1h2v-2h-2v-1c0-.34-.04-.67-.09-1H20V8zm-6 8h-4v-2h4v2zm0-4h-4V10h4v2z"/>
+                        </svg>
+                    </div>
+                    <div class="info-details">
+                        <h3>Technical Support & AMC</h3>
+                        <p>For troubleshooting, maintenance requests, and active contract customer support.</p>
+                        <p style="margin-top: 8px; font-weight: 700; color: var(--primary-600);" class="contact-value">support@rfsolutionsindia.com</p>
+                    </div>
+                </a>
+
+                <!-- Call Card -->
+                <a href="tel:+919600009724" class="info-card animate-3d-scroll">
+                    <div class="info-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                    </div>
+                    <div class="info-details">
+                        <h3>Call Our Experts</h3>
+                        <p>Available Mon-Sat from 9:00 AM to 6:00 PM for direct phone consultations.</p>
+                        <p style="margin-top: 8px; font-weight: 700; color: var(--primary-600);" class="contact-value">+91 96000 09724</p>
+                    </div>
+                </a>
+
+                <!-- Address Card -->
+                <div class="info-card animate-3d-scroll">
+                    <div class="info-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                    </div>
+                    <div class="info-details">
+                        <h3>Head Office Address</h3>
+                        <p>No. 45, 2nd Floor, Grand Tech Square, Landmark Road, Chennai, Tamil Nadu - 600097, India</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RIGHT COLUMN: 3D FORM CARD -->
+            <div class="contact-form-card animate-3d-scroll" id="form-card">
+                <div class="form-inner">
+                    <div style="margin-bottom: 10px;">
+                        <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--primary-950); margin-bottom: 8px;" class="form-title">Send a Message</h2>
+                        <p style="color: var(--gray-600); font-size: 0.95rem;">Fill out the form below and our security engineer will call you back within 24 hours.</p>
+                    </div>
+                    
+                    <form id="contact-form" onsubmit="handleFormSubmit(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" required placeholder="John Doe">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" required placeholder="john@example.com">
+                            </div>
+                        </div>
+
+                        <div class="form-row" style="margin-top: 20px;">
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" required placeholder="+91 98765 43210">
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company Name</label>
+                                <input type="text" id="company" placeholder="Acme Corp">
+                            </div>
+                        </div>
+
+                        <div class="form-group" style="margin-top: 20px;">
+                            <label for="interest">Security System Required *</label>
+                            <select id="interest" required>
+                                <option value="" disabled selected>Select service interest...</option>
+                                <option value="cctv">CCTV & Surveillance System</option>
+                                <option value="fire">Fire Alarm & Evacuation Systems</option>
+                                <option value="access">Access Control & Biometrics</option>
+                                <option value="elv">ELV Systems Integration</option>
+                                <option value="doorphone">Video Door Phone & Intercom</option>
+                                <option value="amc">AMC & Central Monitoring</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group" style="margin-top: 20px;">
+                            <label for="message">Message *</label>
+                            <textarea id="message" rows="5" required placeholder="Describe your site details, number of cameras/sensors needed, or project scope..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit">
+                            Send Enquiry
+                            <svg viewBox="0 0 24 24">
+                                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- GEOLOCATION MAP CARD -->
+            <div class="map-card animate-3d-scroll">
+                <div class="map-visual" style="border: none; padding: 0;">
+                    <iframe src="https://maps.google.com/maps?q=12.951159,80.207632&t=&z=16&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0; border-radius: 16px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="map-info">
+                    <h2>Our Location</h2>
+                    <p>Visit our head office in Chennai to view system demos. We have a live experience center showcasing fire detection, face recognition gates, and AI-enabled PTZ surveillance cameras.</p>
+                    <a href="https://maps.app.goo.gl/jmVypRz5G8fTmjBJ8" target="_blank" class="btn-directions">
+                        Get Directions
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M22.41 11.59l-9.59-9.59c-.77-.77-2.03-.77-2.8 0l-9.59 9.59c-.78.78-.78 2.03 0 2.8l9.59 9.59c.78.78 2.03.78 2.8 0l9.59-9.59c.78-.78.78-2.03 0-2.8zM14 14.5V12h-4v3H8v-4c0-.55.45-1 1-1h5V7.5L18.5 11 14 14.5z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FAQs SECTION -->
+    <section class="faq-section animate-3d-scroll">
+        <div class="faq-header">
+            <h2>Frequently Asked Questions</h2>
+            <p>Common questions about our sales, installation process, and maintenance contracts.</p>
+        </div>
+        
+        <div class="faq-list">
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Do you charge for site survey consultations?</h3>
+                    <div class="faq-toggle-icon">
+                        <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+                    </div>
+                </div>
+                <div class="faq-answer">
+                    <p>No, we provide complimentary site surveys and consultations for corporate offices, residential communities, and industrial facilities across India. Our engineers will visit your property, assess entry points and security layouts, and provide an integrated solution blueprint.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What brands of security devices do you install?</h3>
+                    <div class="faq-toggle-icon">
+                        <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+                    </div>
+                </div>
+                <div class="faq-answer">
+                    <p>We are authorized dealers and integrators for world-class brands including Hikvision, Dahua, Honeywell, Bosch, CP Plus, and Matrix. This ensures all cameras, biometrics, and alarm sensors we install carry official manufacturer warranties and reliable firmware support.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Do you support existing security setups?</h3>
+                    <div class="faq-toggle-icon">
+                        <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+                    </div>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, we offer Annual Maintenance Contracts (AMC) to optimize, monitor, and repair existing systems installed by other vendors. We perform routine system checks, cleaning, cabling replacement, and DVR/NVR storage integrity tests.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What is your response time for technical faults?</h3>
+                    <div class="faq-toggle-icon">
+                        <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+                    </div>
+                </div>
+                <div class="faq-answer">
+                    <p>For corporate clients with active AMCs, we offer a 4-hour response time in major metro areas and a 24-hour turnaround for remote sites. Our phone support is active 24/7 to triage critical security breaches or server crashes.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>RF Solutions</h3>
+                    <p style="margin-bottom: 20px;">Delivering innovative security and technology solutions across India since 2017. Trusted by 500+ businesses for protection that works.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="./about.html" style="color: inherit; text-decoration: none;">About Us</a></li>
+                        <li><a href="./services.html" style="color: inherit; text-decoration: none;">Services</a></li>
+                        <li><a href="./products.html" style="color: inherit; text-decoration: none;">Products</a></li>
+                        <li><a href="./careers.html" style="color: inherit; text-decoration: none;">Careers</a></li>
+                        <li><a href="./contact.html" style="color: inherit; text-decoration: none;">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="./products.html" style="color: inherit; text-decoration: none;">CCTV Systems</a></li>
+                        <li><a href="./products.html" style="color: inherit; text-decoration: none;">Fire Alarms</a></li>
+                        <li><a href="./products.html" style="color: inherit; text-decoration: none;">Access Control</a></li>
+                        <li><a href="./products.html" style="color: inherit; text-decoration: none;">Video Door Phones</a></li>
+                        <li><a href="./products.html" style="color: inherit; text-decoration: none;">ELV Systems</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="footer-contact-list">
+                        <li class="interactive-contact" data-copy="enquires@rfsolutionsindia.in" style="margin-bottom: 12px;">
+                            <a href="mailto:enquires@rfsolutionsindia.in" style="color: inherit; text-decoration: none;">enquires@rfsolutionsindia.in</a>
+                            <span class="tooltip">Copy Email</span>
+                        </li>
+                        <li class="interactive-contact" data-copy="support@rfsolutionsindia.com" style="margin-bottom: 12px;">
+                            <a href="mailto:support@rfsolutionsindia.com" style="color: inherit; text-decoration: none;">support@rfsolutionsindia.com</a>
+                            <span class="tooltip">Copy Email</span>
+                        </li>
+                        <li class="interactive-contact" data-copy="+919600009724" style="margin-bottom: 12px;">
+                            <a href="tel:+919600009724" style="color: inherit; text-decoration: none;">+91 96000 09724</a>
+                            <span class="tooltip">Copy Phone</span>
+                        </li>
+                        <li style="color: var(--gray-400); cursor: default; margin-bottom: 8px; font-size: 0.9rem;">Plot No. 30, 1st Floor, 1st Main Rd,</li>
+                        <li style="color: var(--gray-400); cursor: default; margin-bottom: 8px; font-size: 0.9rem;">Ram Nagar South Ext, Madipakkam,</li>
+                        <li style="color: var(--gray-400); cursor: default; font-size: 0.9rem;">Chennai - 600100</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Location Map</h4>
+                    <div style="width: 100%; height: 130px; border-radius: 12px; overflow: hidden; margin-top: 15px; border: 1px solid rgba(255,255,255,0.1);">
+                        <iframe src="https://maps.google.com/maps?q=12.951159,80.207632&t=&z=14&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2026 RF SOLUTIONS. All Rights Reserved.</span>
+                <div class="footer-dots">
+                    <div class="footer-dot" title="Blue Theme"></div>
+                    <div class="footer-dot" title="Emerald Theme"></div>
+                    <div class="footer-dot" title="Indigo Theme"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Form submitted success toast -->
+    <div id="success-toast" class="toast">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+        </svg>
+        Message sent successfully!
+    </div>
+
+    <!-- SCRIPTS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        // EmailJS Configuration
+        const EMAILJS_PUBLIC_KEY = "g4f0KRhliczIqSQrr"; 
+        const EMAILJS_TEMPLATE_ID = "template_4i9h5gj"; 
+        const EMAILJS_SERVICE_ID = "service_gjbizs3"; 
+
+        // Custom dynamic Toast notification helper
+        function showToast(message, isError = false) {
+            const toast = document.getElementById('success-toast');
+            if (isError) {
+                toast.classList.add('error');
+            } else {
+                toast.classList.remove('error');
+            }
+            
+            const successSvg = `<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block; vertical-align:middle; margin-right:8px;">
+                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+            </svg>`;
+            
+            const errorSvg = `<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block; vertical-align:middle; margin-right:8px;">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+            </svg>`;
+            
+            toast.innerHTML = (isError ? errorSvg : successSvg) + `<span>${message}</span>`;
+            toast.classList.add('show');
+            
+            if (window.toastTimer) clearTimeout(window.toastTimer);
+            window.toastTimer = setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3500);
+        }
+
+        // Copy footer details to clipboard
+        document.querySelectorAll('.footer-contact-list li').forEach(item => {
+            item.addEventListener('click', () => {
+                const text = item.getAttribute('data-copy');
+                navigator.clipboard.writeText(text).then(() => {
+                    showToast('Copied to clipboard: ' + text);
+                });
+            });
+        });
+
+        // Theme Switcher support matching index.html
+        const footerDots = document.querySelectorAll('.footer-dot');
+        const themes = [
+            { 
+                primary950: '#0a1f4a', primary900: '#0d2966', primary800: '#1145a8', primary700: '#1652c1', 
+                primary600: '#1d5ce5', primary500: '#3b82f6', primary400: '#60a5fa', primary300: '#93c5fd', 
+                primary200: '#bfdbfe', primary100: '#dbeafe', primary50: '#eff6ff', accent: '#06b6d4' 
+            },
+            { 
+                primary950: '#022c22', primary900: '#064e3b', primary800: '#065f46', primary700: '#047857', 
+                primary600: '#059669', primary500: '#10b981', primary400: '#34d399', primary300: '#6ee7b7', 
+                primary200: '#a7f3d0', primary100: '#d1fae5', primary50: '#ecfdf5', accent: '#14b8a6' 
+            },
+            { 
+                primary950: '#1e1b4b', primary900: '#312e81', primary800: '#3730a3', primary700: '#4338ca', 
+                primary600: '#4f46e5', primary500: '#6366f1', primary400: '#818cf8', primary300: '#a5b4fc', 
+                primary200: '#c7d2fe', primary100: '#e0e7ff', primary50: '#f5f3ff', accent: '#a855f7' 
+            }
+        ];
+        
+        // Read theme from localStorage if set by other pages, or default
+        const savedTheme = localStorage.getItem('theme-index');
+        if (savedTheme !== null) {
+            applyTheme(parseInt(savedTheme));
+        }
+
+        footerDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                applyTheme(index);
+                localStorage.setItem('theme-index', index);
+                
+                dot.style.transform = 'scale(1.4)';
+                setTimeout(() => {
+                    dot.style.transform = '';
+                }, 200);
+            });
+        });
+
+        function applyTheme(index) {
+            const theme = themes[index];
+            document.documentElement.style.setProperty('--primary-950', theme.primary950);
+            document.documentElement.style.setProperty('--primary-900', theme.primary900);
+            document.documentElement.style.setProperty('--primary-800', theme.primary800);
+            document.documentElement.style.setProperty('--primary-700', theme.primary700);
+            document.documentElement.style.setProperty('--primary-600', theme.primary600);
+            document.documentElement.style.setProperty('--primary-500', theme.primary500);
+            document.documentElement.style.setProperty('--primary-400', theme.primary400);
+            document.documentElement.style.setProperty('--primary-300', theme.primary300);
+            document.documentElement.style.setProperty('--primary-200', theme.primary200);
+            document.documentElement.style.setProperty('--primary-100', theme.primary100);
+            document.documentElement.style.setProperty('--primary-50', theme.primary50);
+            document.documentElement.style.setProperty('--accent-cyan', theme.accent);
+            
+            // Sync 3D WebGL network color dynamically on theme switch
+            if (window.updateNetworkColors) {
+                window.updateNetworkColors(theme.accent, theme.primary500);
+            }
+        }
+
+        // FAQs Accordion
+        document.querySelectorAll('.faq-question').forEach(q => {
+            q.addEventListener('click', () => {
+                const item = q.parentElement;
+                const isActive = item.classList.contains('active');
+                
+                // Close all other FAQs
+                document.querySelectorAll('.faq-item').forEach(i => {
+                    i.classList.remove('active');
+                });
+                
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // 3D Card mouse tilt effects on Form Card
+        const formCard = document.getElementById('form-card');
+        if (formCard) {
+            formCard.addEventListener('mousemove', (e) => {
+                const rect = formCard.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                formCard.style.setProperty('--form-mouse-x', `${x}px`);
+                formCard.style.setProperty('--form-mouse-y', `${y}px`);
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = ((y - centerY) / centerY) * -6; // max 6deg
+                const rotateY = ((x - centerX) / centerX) * 6;  // max 6deg
+                
+                formCard.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-2px)`;
+                formCard.style.boxShadow = '0 25px 60px rgba(29, 92, 229, 0.18)';
+            });
+            
+            formCard.addEventListener('mouseleave', () => {
+                formCard.style.transform = '';
+                formCard.style.boxShadow = '';
+            });
+        }
+
+        // Form Submit handler
+        async function handleFormSubmit(e) {
+            e.preventDefault();
+            
+            const form = document.getElementById('contact-form');
+            const submitBtn = form.querySelector('.btn-submit');
+            const originalBtnContent = submitBtn.innerHTML;
+            
+            // Disable button and show sending state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `Sending... <span class="spinner"></span>`;
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const company = document.getElementById('company').value || 'Not Provided';
+            const interestSelect = document.getElementById('interest');
+            const interestLabel = interestSelect.options[interestSelect.selectedIndex].text;
+            const message = document.getElementById('message').value;
+            
+            // Check if credentials are placeholders
+            if (!EMAILJS_PUBLIC_KEY || EMAILJS_PUBLIC_KEY === "YOUR_PUBLIC_KEY" || !EMAILJS_TEMPLATE_ID || EMAILJS_TEMPLATE_ID === "YOUR_TEMPLATE_ID") {
+                console.warn("EmailJS is not fully configured yet. Please configure EMAILJS_PUBLIC_KEY and EMAILJS_TEMPLATE_ID in contact.html.");
+                showToast("Submission failed: Please configure your EmailJS Public Key and Template ID constants in contact.html.", true);
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnContent;
+                return;
+            }
+
+            // Format current date and time in IST (Indian Standard Time)
+            const timeString = new Date().toLocaleString("en-IN", {
+                timeZone: "Asia/Kolkata",
+                dateStyle: "medium",
+                timeStyle: "short"
+            }) + " IST";
+
+            // Format a rich email message body including all contact inputs (using HTML breaks)
+            const richMessage = `<strong>Email Address:</strong> ${email}<br>
+<strong>Phone Number:</strong> ${phone}<br>
+<strong>Company Name:</strong> ${company}<br>
+<strong>Security System Required:</strong> ${interestLabel}<br>
+<br>
+<strong>User Message:</strong><br>
+${message.replace(/\n/g, '<br>')}`;
+
+            const templateParams = {
+                name: name,
+                time: timeString,
+                message: richMessage,
+                // Individual keys in case you want to bind them separately later
+                full_name: name,
+                email_address: email,
+                phone_number: phone,
+                company_name: company,
+                security_system: interestLabel,
+                user_message: message
+            };
+            
+            try {
+                // Initialize EmailJS
+                emailjs.init({
+                    publicKey: EMAILJS_PUBLIC_KEY,
+                });
+
+                const response = await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams);
+                
+                if (response.status === 200) {
+                    showToast("Thank you! We will get in touch with you shortly.", false);
+                    form.reset();
+                } else {
+                    throw new Error(`EmailJS responded with status: ${response.status} - ${response.text}`);
+                }
+            } catch (error) {
+                console.error("EmailJS submission error:", error);
+                showToast(error.message || error || "Oops! Something went wrong. Please try again.", true);
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnContent;
+            }
+        }
+
+        // Fallback Intersection Observer for 3D Scroll effects (for older Safari, Firefox, etc.)
+        if (!CSS.supports('(animation-timeline: view()) and (animation-range: entry)')) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    } else {
+                        entry.target.classList.remove('visible');
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: "0px 0px -40px 0px" });
+
+            document.querySelectorAll('.animate-3d-scroll').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        /* ============ THREE.JS INTERACTIVE BACKGROUND NETWORK ============ */
+        let scene, camera, renderer, particles;
+        const particleCount = 140;
+        const maxDistance = 90;
+        let mouseX = 0, mouseY = 0;
+        let targetX = 0, targetY = 0;
+        let lineMesh;
+        let particleData = [];
+
+        function initThree() {
+            const canvas = document.getElementById('webgl-canvas');
+            scene = new THREE.Scene();
+            
+            camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 1000);
+            camera.position.z = 250;
+
+            renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+            // Generate particles
+            const geometry = new THREE.BufferGeometry();
+            const positions = new Float32Array(particleCount * 3);
+            
+            const wRange = window.innerWidth > 768 ? 400 : 250;
+            const hRange = window.innerHeight > 768 ? 300 : 200;
+
+            for (let i = 0; i < particleCount; i++) {
+                const x = (Math.random() - 0.5) * wRange;
+                const y = (Math.random() - 0.5) * hRange;
+                const z = (Math.random() - 0.5) * 200;
+
+                positions[i * 3] = x;
+                positions[i * 3 + 1] = y;
+                positions[i * 3 + 2] = z;
+
+                particleData.push({
+                    velocity: new THREE.Vector3(
+                        (Math.random() - 0.5) * 0.4,
+                        (Math.random() - 0.5) * 0.4,
+                        (Math.random() - 0.5) * 0.2
+                    ),
+                    numConnections: 0
+                });
+            }
+
+            geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+
+            // Materials
+            // Glow color matches primary-500 / cyan
+            const isDark = document.body.getAttribute('data-theme') === 'dark';
+            const particleColor = getComputedStyle(document.documentElement).getPropertyValue('--accent-cyan').trim() || '#06b6d4';
+            
+            // Circular texture for points
+            const pTexture = createCircleTexture(particleColor);
+
+            const material = new THREE.PointsMaterial({
+                color: new THREE.Color(particleColor),
+                size: 4,
+                map: pTexture,
+                transparent: true,
+                opacity: 0.8,
+                blending: THREE.AdditiveBlending,
+                depthWrite: false
+            });
+
+            particles = new THREE.Points(geometry, material);
+            scene.add(particles);
+
+            // Lines container
+            const lineGeometry = new THREE.BufferGeometry();
+            const linePositions = new Float32Array(particleCount * particleCount * 6);
+            const lineColors = new Float32Array(particleCount * particleCount * 6);
+
+            lineGeometry.setAttribute('position', new THREE.BufferAttribute(linePositions, 3));
+            lineGeometry.setAttribute('color', new THREE.BufferAttribute(lineColors, 3));
+
+            const lineMaterial = new THREE.LineBasicMaterial({
+                vertexColors: true,
+                transparent: true,
+                opacity: 0.15,
+                blending: THREE.AdditiveBlending
+            });
+
+            lineMesh = new THREE.LineSegments(lineGeometry, lineMaterial);
+            scene.add(lineMesh);
+
+            // Event Listeners
+            window.addEventListener('mousemove', onMouseMove);
+            window.addEventListener('scroll', onScroll);
+            window.addEventListener('resize', onResize);
+
+            animate();
+        }
+
+        function createCircleTexture(colorStr) {
+            const canvas = document.createElement('canvas');
+            canvas.width = 16;
+            canvas.height = 16;
+            const ctx = canvas.getContext('2d');
+            const grad = ctx.createRadialGradient(8, 8, 0, 8, 8, 8);
+            grad.addColorStop(0, '#ffffff');
+            grad.addColorStop(0.3, colorStr);
+            grad.addColorStop(1, 'rgba(0,0,0,0)');
+            ctx.fillStyle = grad;
+            ctx.fillRect(0, 0, 16, 16);
+            
+            const tex = new THREE.Texture(canvas);
+            tex.needsUpdate = true;
+            return tex;
+        }
+
+        // Dynamically update Three.js point and line colors on theme switcher click
+        window.updateNetworkColors = function(accentColor, primaryColor) {
+            if (particles) {
+                particles.material.color.set(accentColor);
+                particles.material.map = createCircleTexture(accentColor);
+                particles.material.needsUpdate = true;
+            }
+        };
+
+        function onMouseMove(e) {
+            mouseX = (e.clientX - window.innerWidth / 2) * 0.1;
+            mouseY = (e.clientY - window.innerHeight / 2) * 0.1;
+        }
+
+        let scrollYOffset = 0;
+        function onScroll() {
+            scrollYOffset = window.scrollY * 0.15;
+        }
+
+        function onResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+
+        function animate() {
+            requestAnimationFrame(animate);
+
+            // Camera Parallax & scroll response
+            targetX += (mouseX - targetX) * 0.05;
+            targetY += (-mouseY - targetY) * 0.05;
+            
+            camera.position.x = targetX;
+            camera.position.y = targetY - scrollYOffset;
+            camera.lookAt(scene.position);
+
+            // Update particle drift
+            const positions = particles.geometry.attributes.position.array;
+            const linePositions = lineMesh.geometry.attributes.position.array;
+            const lineColors = lineMesh.geometry.attributes.position.array;
+
+            let lineIndex = 0;
+
+            const wLimit = window.innerWidth > 768 ? 200 : 130;
+            const hLimit = window.innerHeight > 768 ? 160 : 110;
+
+            for (let i = 0; i < particleCount; i++) {
+                // Update position with velocity
+                positions[i * 3] += particleData[i].velocity.x;
+                positions[i * 3 + 1] += particleData[i].velocity.y;
+                positions[i * 3 + 2] += particleData[i].velocity.z;
+
+                // Boundary collision
+                if (positions[i * 3] < -wLimit || positions[i * 3] > wLimit) particleData[i].velocity.x *= -1;
+                if (positions[i * 3 + 1] < -hLimit || positions[i * 3 + 1] > hLimit) particleData[i].velocity.y *= -1;
+                if (positions[i * 3 + 2] < -120 || positions[i * 3 + 2] > 120) particleData[i].velocity.z *= -1;
+            }
+
+            // Draw line connections between close particles
+            let vertexIndex = 0;
+            const lineAttribute = lineMesh.geometry.attributes.position;
+            const colorAttribute = lineMesh.geometry.attributes.color;
+            const lineArray = lineAttribute.array;
+            const colorArray = colorAttribute.array;
+
+            for (let i = 0; i < particleCount; i++) {
+                const x1 = positions[i * 3];
+                const y1 = positions[i * 3 + 1];
+                const z1 = positions[i * 3 + 2];
+
+                for (let j = i + 1; j < particleCount; j++) {
+                    const x2 = positions[j * 3];
+                    const y2 = positions[j * 3 + 1];
+                    const z2 = positions[j * 3 + 2];
+
+                    const dx = x1 - x2;
+                    const dy = y1 - y2;
+                    const dz = z1 - z2;
+                    const dist = Math.sqrt(dx * dx + dy * dy + dz * dz);
+
+                    if (dist < maxDistance) {
+                        // Connection line coordinates
+                        lineArray[vertexIndex] = x1;
+                        lineArray[vertexIndex + 1] = y1;
+                        lineArray[vertexIndex + 2] = z1;
+                        
+                        lineArray[vertexIndex + 3] = x2;
+                        lineArray[vertexIndex + 4] = y2;
+                        lineArray[vertexIndex + 5] = z2;
+
+                        // Fade lines out as particles get farther apart
+                        const alpha = 1 - (dist / maxDistance);
+                        
+                        // Line colors (white to cyan)
+                        colorArray[vertexIndex] = alpha * 0.3;
+                        colorArray[vertexIndex + 1] = alpha * 0.7;
+                        colorArray[vertexIndex + 2] = alpha * 0.9;
+                        
+                        colorArray[vertexIndex + 3] = alpha * 0.3;
+                        colorArray[vertexIndex + 4] = alpha * 0.7;
+                        colorArray[vertexIndex + 5] = alpha * 0.9;
+
+                        vertexIndex += 6;
+                    }
+                }
+            }
+
+            lineAttribute.needsUpdate = true;
+            colorAttribute.needsUpdate = true;
+            lineMesh.geometry.setDrawRange(0, vertexIndex / 3);
+
+            particles.geometry.attributes.position.needsUpdate = true;
+
+            // Slow drift rotation of point cloud
+            particles.rotation.y += 0.0006;
+            lineMesh.rotation.y += 0.0006;
+
+            renderer.render(scene, camera);
+        }
+
+        // Initialize Three.js
+        window.addEventListener('DOMContentLoaded', initThree);
+    </script>
+<script>
+        function initRippleHeadings() {
+            const headings = document.querySelectorAll('.ripple-heading');
+            headings.forEach(heading => {
+                applyTextRipple(heading);
+            });
+        }
+
+        function applyTextRipple(element) {
+            if (!element) return;
+            let delay = 0;
+            function processNode(node, parent) {
+                if (node.nodeType === Node.TEXT_NODE) {
+                    const text = node.textContent;
+                    const fragment = document.createDocumentFragment();
+                    const words = text.split(/(\s+)/);
+                    words.forEach(word => {
+                        if (/\s+/.test(word)) {
+                            fragment.appendChild(document.createTextNode(word));
+                        } else {
+                            const span = document.createElement('span');
+                            span.textContent = word;
+                            span.style.display = 'inline-block';
+                            span.style.opacity = '0';
+                            span.style.animation = `ripple 0.6s ease forwards ${delay}s`;
+                            delay += 0.05;
+                            fragment.appendChild(span);
+                        }
+                    });
+                    parent.replaceChild(fragment, node);
+                } else if (node.nodeType === Node.ELEMENT_NODE) {
+                    node.childNodes.forEach(child => processNode(child, node));
+                }
+            }
+            element.childNodes.forEach(child => processNode(child, element));
+        }
+
+        document.addEventListener("DOMContentLoaded", () => { initRippleHeadings(); });
+
+        // Auto-set active link
+        document.addEventListener("DOMContentLoaded", () => {
+            const currentPath = window.location.pathname.split("/").pop() || "index.html";
+            document.querySelectorAll(".nav-links a").forEach(link => {
+                link.classList.remove("active");
+                if (link.getAttribute("href").includes(currentPath)) {
+                    link.classList.add("active");
+                }
+            });
+        });
+</script>
+</body>
+</html>

@@ -438,12 +438,10 @@
             gap: 12px;
             font-size: 1.4rem;
             font-weight: 900;
-            background: linear-gradient(135deg, var(--primary-600), var(--accent-cyan));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: var(--primary-600);
             letter-spacing: -1px;
             text-decoration: none;
+            transition: opacity 0.3s ease;
         }
 
         .logo-img {
@@ -930,8 +928,8 @@
 
         .footer-grid {
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 80px;
+            grid-template-columns: 1.5fr 1fr 1fr 1.2fr 1.5fr;
+            gap: 40px;
             margin-bottom: 60px;
         }
 
@@ -1099,19 +1097,19 @@
             RF SOLUTIONS
         </a>
         <div class="nav-links">
-            <a href="./index.html">Home</a>
+            <a href="./index.html" class="active">Home</a>
             <a href="./services.html">Services</a>
             <a href="./products.html">Products</a>
-            <a href="./about.html" class="active">About</a>
+            <a href="./about.html">About</a>
             <a href="./careers.html">Careers</a>
-            <a href="#contact">Contact</a>
+            <a href="./contact.html">Contact</a>
         </div>
         <button class="btn-nav">Get Quote</button>
     </nav>
 
     <section class="page-hero">
         <div class="hero-badge">About RF Solutions</div>
-        <h1 class="ripple-heading">Who We Are — <span class="text-gradient">Trusted Security</span> Experts Since 2017</h1>
+        <h1 class="ripple-heading" class=\"ripple-heading\">Who We Are — <span class="text-gradient">Trusted Security</span> Experts Since 2017</h1>
         <p>RF Solutions India is a trusted provider of integrated security and surveillance solutions, delivering advanced technologies that protect people, assets, and businesses. Our expertise includes CCTV Surveillance Systems, Fire Alarm Systems, Access Control Systems, Intrusion Detection Systems, Networking Solutions, and Annual Maintenance Services. We provide end-to-end security solutions tailored to the unique needs of commercial, industrial, institutional, and residential clients. Combining technical expertise, quality products, and dedicated support, we help create safer, smarter, and more secure environments.</p>
     </section>
 
@@ -1148,14 +1146,13 @@
             <h2>Our Core Values</h2>
             <p>The principles that guide our engineering, our customer service, and our daily operations.</p>
         </div>
-        
+
         <div class="values-grid">
             <div class="value-card animate-on-scroll">
                 <div class="value-number">01</div>
                 <h4>Integrity</h4>
             <p>We operate with honesty, transparency, and accountability in everything we do.</p>
             </div>
-            
             <div class="value-card animate-on-scroll" style="transition-delay: 0.1s;">
                 <div class="value-number">02</div>
                 <h4>Excellence</h4>
@@ -1206,7 +1203,7 @@
                 <div class="team-image"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
                 <h4>Mr. Chadayappan R</h4>
                 <div class="team-role">Head of Operations</div>
-                <p>10+ years of experience in operations.</p>
+                <p>5+ years of experience in operations.</p>
             </div>
 
             <div class="team-card animate-on-scroll" style="transition-delay: 0.2s;">
@@ -1220,38 +1217,36 @@
                 <div class="team-image"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
                 <h4>Mr. Suresh Kumar K S</h4>
                 <div class="team-role">Head of CMS</div>
+                <p>2+ years of experience in CMS.</p>
             </div>
-
-              <div class="team-card animate-on-scroll" style="transition-delay: 0.5s;">
+            <div class="team-card animate-on-scroll" style="transition-delay: 0.5s;">
                 <div class="team-image"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
                 <h4>Ms. Blessy Linda B</h4>
                 <div class="team-role">HR & Admin</div>
-                <p>2+ years of experience in human resources and administration.</p>
+                <p>1+ years of experience in human resources and administration.</p>
             </div>
 
             <div class="team-card animate-on-scroll" style="transition-delay: 0.6s;">
                 <div class="team-image"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
-                <h4>Mr. Madhulekha M</h4>
+                <h4>Ms. Madhulekha M</h4>
                 <div class="team-role">Digital Marketing </div>
                 <p>1+ years of experience in digital marketing.</p>
             </div>
 
-             <div class="team-card animate-on-scroll" style="transition-delay: 0.4s;">
+            <div class="team-card animate-on-scroll" style="transition-delay: 0.4s;">
                 <div class="team-image"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
                 <h4>Mr. Selladurai S</h4>
                 <div class="team-role">Software Developer</div>
-                <p>1+ years of experience in software development and programming.</p>
+                <p>1.5+ years of experience in software development and programming.</p>
             </div>
 
             <div class="team-card animate-on-scroll" style="transition-delay: 0.4s;">
                 <div class="team-image"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
                 <h4>Mr. Ram Kumar</h4>
                 <div class="team-role">Material Sections Head</div>
+                <p>1+ years of experience in material management.</p>
             </div>
 
-            
-
-           
         </div>
     </section>
 
@@ -1259,7 +1254,7 @@
         <div class="cta-card animate-on-scroll">
             <h2>Ready to Secure Your Business?</h2>
             <p>Connect with our experts and get a customized security solution tailored to your specific needs and budget. Join 500+ businesses who trust RF Solutions.</p>
-            <button class="btn-cta">Request Free Consultation</button>
+            <button class="btn-cta" onclick="window.location.href='./contact.html'">Request Free Consultation</button>
         </div>
     </section>
 
@@ -1278,7 +1273,7 @@
                         <li><a href="./services.html" style="color: inherit; text-decoration: none;">Services</a></li>
                         <li><a href="./products.html" style="color: inherit; text-decoration: none;">Products</a></li>
                         <li><a href="./careers.html" style="color: inherit; text-decoration: none;">Careers</a></li>
-                        <li><a href="#contact" style="color: inherit; text-decoration: none;">Contact</a></li>
+                        <li><a href="./contact.html" style="color: inherit; text-decoration: none;">Contact</a></li>
                     </ul>
                 </div>
 
@@ -1308,14 +1303,22 @@
                             <a href="tel:+919600009724" style="color: inherit; text-decoration: none;">+91 96000 09724</a>
                             <span class="tooltip">Copy Phone</span>
                         </li>
-                        <li style="color: var(--gray-400); cursor: default; margin-bottom: 8px;">Plot 30, Ram Nager</li>
-                        <li style="color: var(--gray-400); cursor: default;">Chennai, Tamil Nadu 600100</li>
+                        <li style="color: var(--gray-400); cursor: default; margin-bottom: 8px; font-size: 0.9rem;">Plot No. 30, 1st Floor, 1st Main Rd,</li>
+                        <li style="color: var(--gray-400); cursor: default; margin-bottom: 8px; font-size: 0.9rem;">Ram Nagar South Ext, Madipakkam,</li>
+                        <li style="color: var(--gray-400); cursor: default; font-size: 0.9rem;">Chennai - 600100</li>
                     </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Location Map</h4>
+                    <div style="width: 100%; height: 130px; border-radius: 12px; overflow: hidden; margin-top: 15px; border: 1px solid rgba(255,255,255,0.1);">
+                        <iframe src="https://maps.google.com/maps?q=12.951159,80.207632&t=&z=14&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <span>© 2026 RF Solutions India. All Rights Reserved.</span>
+                <span>© 2026 RF SOLUTIONS. All Rights Reserved.</span>
                 <div class="footer-dots">
                     <div class="footer-dot" title="Blue Theme"></div>
                     <div class="footer-dot" title="Emerald Theme"></div>
@@ -1805,5 +1808,17 @@
             initRippleHeadings();
         }
     </script>
+<script>
+        // Auto-set active link
+        document.addEventListener("DOMContentLoaded", () => {
+            const currentPath = window.location.pathname.split("/").pop() || "index.html";
+            document.querySelectorAll(".nav-links a").forEach(link => {
+                link.classList.remove("active");
+                if (link.getAttribute("href").includes(currentPath)) {
+                    link.classList.add("active");
+                }
+            });
+        });
+</script>
 </body>
 </html>
