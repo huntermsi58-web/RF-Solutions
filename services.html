@@ -625,10 +625,8 @@
         /* ============ SERVICE CONTAINER ROW ============ */
         .service-row-card {
             display: flex;
-            background: rgba(255, 255, 255, 0.65);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(29, 92, 229, 0.08);
+            background: rgba(255, 255, 255, 0.85);
+            border: 1px solid rgba(29, 92, 229, 0.12);
             border-radius: 24px;
             overflow: hidden;
             box-shadow: 0 16px 48px rgba(0, 0, 0, 0.04);
@@ -997,6 +995,7 @@
             border: none;
             width: 100%;
             height: 100dvh;
+            font-family: 'DM Sans', sans-serif;
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
             transform: translateY(50px);
             opacity: 0;
@@ -1011,11 +1010,9 @@
             display: flex;
             gap: 32px;
             padding: 32px 48px;
-            border-bottom: 1px solid rgba(0,0,0,0.06);
+            border-bottom: 1px solid rgba(37, 99, 235, 0.1);
             flex-shrink: 0;
-            background: rgba(255,255,255,0.6);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.98);
             align-items: center;
         }
         .drawer-header-content {
@@ -1054,17 +1051,20 @@
             margin-bottom: 10px;
         }
         .drawer-glass-card h2 {
-            font-size: 1.8rem;
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(1.55rem, 2.5vw, 2.15rem);
             font-weight: 800;
             color: #0f172a;
             margin: 0 0 6px;
-            line-height: 1.2;
+            line-height: 1.15;
+            letter-spacing: 0;
         }
         .drawer-glass-card #drawer-subtitle {
-            font-size: 1rem;
-            color: #64748b;
+            font-size: 1.02rem;
+            color: #475569;
             margin: 0;
-            font-weight: 600;
+            font-weight: 500;
+            line-height: 1.55;
         }
 
         .drawer-close-btn {
@@ -1106,14 +1106,18 @@
             padding: 48px;
             width: 100%;
             box-sizing: border-box;
+            font-family: 'DM Sans', sans-serif;
         }
 
         .drawer-desc-text {
-            font-size: 1.05rem;
-            color: #334155;
-            line-height: 1.8;
-            margin: 0 0 36px;
+            max-width: 980px;
+            font-size: 1.1rem;
+            color: #1e293b;
+            line-height: 1.9;
+            margin: 0 0 40px;
             white-space: pre-wrap;
+            font-weight: 500;
+            letter-spacing: 0.3px;
         }
 
 
@@ -1124,19 +1128,18 @@
             margin-bottom: 36px;
         }
         .drawer-col {
-            background: rgba(255, 255, 255, 0.5);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.7);
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid rgba(37, 99, 235, 0.15);
             border-radius: 20px;
             padding: 28px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.06);
         }
         .drawer-section-label {
             display: flex;
             align-items: center;
             gap: 8px;
-            font-size: 0.8rem;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.78rem;
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 0.08em;
@@ -1154,11 +1157,11 @@
             gap: 10px;
         }
         .drawer-list li {
-            font-size: 0.92rem;
-            color: #475569;
-            padding-left: 20px;
+            font-size: 1rem;
+            color: #1e293b;
+            padding-left: 24px;
             position: relative;
-            line-height: 1.5;
+            line-height: 1.75;
             font-weight: 500;
         }
         .drawer-list li::before {
@@ -1182,9 +1185,9 @@
         }
         .drawer-note-box svg { color: #2563eb; flex-shrink: 0; margin-top: 2px; }
         .drawer-note-box p {
-            font-size: 0.92rem;
-            color: #1e293b;
-            line-height: 1.65;
+            font-size: 0.96rem;
+            color: #243447;
+            line-height: 1.75;
             margin: 0;
             font-weight: 500;
         }
@@ -1261,26 +1264,32 @@
 
         /* ===== RICH CONTENT SECTIONS & 3D EFFECTS ===== */
         .drawer-rich-heading {
-            font-size: 1.3rem;
+            font-size: clamp(1.25rem, 1.8vw, 1.55rem);
             font-weight: 800;
             color: #0a1f4a;
-            margin: 0 0 18px 0;
-            padding-bottom: 12px;
-            border-bottom: 2px solid rgba(37,99,235,0.15);
+            margin: 0 0 24px 0;
+            padding-bottom: 16px;
+            border-bottom: 2.5px solid rgba(37, 99, 235, 0.2);
             font-family: 'Poppins', sans-serif;
+            line-height: 1.3;
+            letter-spacing: -0.5px;
         }
         .drawer-rich-paras p {
-            font-size: 0.95rem;
-            color: #475569;
-            line-height: 1.75;
-            margin: 0 0 14px 0;
+            max-width: 980px;
+            font-size: 1.02rem;
+            color: #243447;
+            line-height: 1.88;
+            margin: 0 0 16px 0;
+            font-weight: 500;
+            letter-spacing: 0.3px;
         }
         .drawer-rich-paras p:last-child { margin-bottom: 0; }
         .drawer-rich-note {
-            font-size: 0.93rem;
-            color: #475569;
-            line-height: 1.7;
+            font-size: 0.98rem;
+            color: #334155;
+            line-height: 1.76;
             margin: 14px 0 0 0;
+            font-weight: 500;
         }
         .drawer-detail-grid {
             display: grid;
@@ -1288,13 +1297,11 @@
             gap: 16px;
         }
         .drawer-detail-card {
-            background: rgba(255,255,255,0.55);
-            border: 1px solid rgba(255,255,255,0.8);
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid rgba(37, 99, 235, 0.15);
             border-radius: 16px;
-            padding: 20px 22px;
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+            padding: 22px 24px;
+            box-shadow: 0 4px 16px rgba(37, 99, 235, 0.08);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
         .drawer-detail-card:hover {
@@ -1302,17 +1309,20 @@
             box-shadow: 0 8px 24px rgba(37,99,235,0.08);
         }
         .drawer-detail-card h4 {
-            font-size: 0.95rem;
-            font-weight: 700;
-            color: #1e3a8a;
-            margin: 0 0 8px 0;
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin: 0 0 10px 0;
             font-family: 'Poppins', sans-serif;
+            line-height: 1.35;
+            letter-spacing: -0.5px;
         }
         .drawer-detail-card p {
-            font-size: 0.87rem;
-            color: #64748b;
-            line-height: 1.6;
+            font-size: 0.98rem;
+            color: #334155;
+            line-height: 1.75;
             margin: 0;
+            font-weight: 500;
         }
         .drawer-choose-list {
             list-style: none;
@@ -1322,16 +1332,16 @@
             gap: 10px;
         }
         .drawer-choose-list li {
-            font-size: 0.93rem;
+            font-size: 0.99rem;
             color: #1e293b;
             font-weight: 600;
             display: flex;
             align-items: center;
-            gap: 10px;
-            padding: 10px 16px;
-            background: rgba(37,99,235,0.05);
-            border-radius: 10px;
-            border-left: 3px solid #3b82f6;
+            gap: 12px;
+            padding: 12px 18px;
+            background: rgba(37, 99, 235, 0.08);
+            border-radius: 12px;
+            border-left: 4px solid #2563eb;
         }
         .drawer-choose-list li::before {
             content: '✓';
@@ -1348,23 +1358,27 @@
             text-align: center;
         }
         .drawer-survey-heading {
-            font-size: 1.3rem;
+            font-size: clamp(1.2rem, 1.8vw, 1.45rem);
             font-weight: 800;
             color: #0a1f4a;
             margin: 0 0 12px 0;
             font-family: 'Poppins', sans-serif;
+            line-height: 1.3;
+            letter-spacing: 0;
         }
         .drawer-survey-intro {
-            font-size: 0.95rem;
-            color: #334155;
+            font-size: 1rem;
+            color: #243447;
             font-weight: 600;
             margin: 0 0 10px 0;
+            line-height: 1.65;
         }
         .drawer-survey-body {
-            font-size: 0.92rem;
-            color: #64748b;
-            line-height: 1.7;
+            font-size: 0.98rem;
+            color: #475569;
+            line-height: 1.78;
             margin: 0 0 28px 0;
+            font-weight: 500;
         }
         .drawer-survey-actions {
             display: flex;
@@ -1403,7 +1417,7 @@
         
         /* 3D Effects */
         .text-3d-effect {
-            text-shadow: 1px 1px 0 #cbd5e1, 2px 2px 0 #94a3b8;
+            text-shadow: none;
             transition: transform 0.3s ease;
         }
         .text-3d-effect:hover {
@@ -1442,6 +1456,27 @@
             max-width: 100%;
         }
 
+        @media (max-width: 1180px) {
+            .navbar {
+                padding-left: 28px;
+                padding-right: 28px;
+                gap: 18px;
+            }
+
+            .nav-links {
+                gap: 18px;
+            }
+
+            .nav-links a {
+                font-size: 0.86rem;
+            }
+
+            .btn-nav {
+                padding: 12px 18px;
+                font-size: 0.82rem;
+            }
+        }
+
         @media (max-width: 1100px) {
             .hero-container,
             .services-intro,
@@ -1462,6 +1497,50 @@
 
             .footer-grid {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 920px) {
+            .navbar {
+                height: auto;
+                min-height: 76px;
+                padding: 12px 22px;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .logo {
+                flex: 1 1 auto;
+                min-width: 0;
+            }
+
+            .nav-links {
+                order: 3;
+                display: flex !important;
+                width: 100%;
+                gap: 8px;
+                overflow-x: auto;
+                padding: 4px 0 2px;
+                scrollbar-width: none;
+            }
+
+            .nav-links::-webkit-scrollbar {
+                display: none;
+            }
+
+            .nav-links a {
+                flex: 0 0 auto;
+                padding: 8px 10px;
+                font-size: 0.84rem;
+                white-space: nowrap;
+            }
+
+            .hero,
+            .page-hero,
+            .services-hero,
+            .products-hero,
+            .contact-hero {
+                padding-top: 150px;
             }
         }
 
@@ -1692,12 +1771,12 @@
             RF SOLUTIONS
         </a>
         <div class="nav-links">
-            <a href="./index.html" class="active">Home</a>
-            <a href="./services.html">Services</a>
+            <a href="./index.html">Home</a>
             <a href="./products.html">Products</a>
-            <a href="./about.html">About</a>
+            <a href="./services.html" class="active">Services</a>
             <a href="./careers.html">Careers</a>
-            <a href="./contact.html">Contact</a>
+            <a href="./about.html">About</a>
+            <a href="./contact.html">Contact Us</a>
         </div>
         <button class="btn-nav">Get Quote</button>
     </nav>
@@ -1954,8 +2033,8 @@
                     <h4>Company</h4>
                     <ul>
                         <li><a href="./about.html" style="color: inherit; text-decoration: none;">About Us</a></li>
-                        <li><a href="./services.html" style="color: inherit; text-decoration: none;">Services</a></li>
                         <li><a href="./products.html" style="color: inherit; text-decoration: none;">Products</a></li>
+                        <li><a href="./services.html" style="color: inherit; text-decoration: none;">Services</a></li>
                         <li><a href="./careers.html" style="color: inherit; text-decoration: none;">Careers</a></li>
                         <li><a href="./contact.html" style="color: inherit; text-decoration: none;">Contact</a></li>
                     </ul>
@@ -1965,6 +2044,7 @@
                     <h4>Solutions</h4>
                     <ul>
                         <li><a href="./products.html" style="color: inherit; text-decoration: none;">CCTV Systems</a></li>
+                        <li><a href="./products.html" style="color: inherit; text-decoration: none;">Intrusion Alarms</a></li>
                         <li><a href="./products.html" style="color: inherit; text-decoration: none;">Fire Alarms</a></li>
                         <li><a href="./products.html" style="color: inherit; text-decoration: none;">Access Control</a></li>
                         <li><a href="./products.html" style="color: inherit; text-decoration: none;">Video Door Phones</a></li>
@@ -1975,8 +2055,8 @@
                 <div class="footer-col">
                     <h4>Contact</h4>
                     <ul class="footer-contact-list">
-                        <li class="interactive-contact" data-copy="enquires@rfsolutionsindia.in" style="margin-bottom: 12px;">
-                            <a href="mailto:enquires@rfsolutionsindia.in" style="color: inherit; text-decoration: none;">enquires@rfsolutionsindia.in</a>
+                        <li class="interactive-contact" data-copy="enquiries@rfsolutionsindia.in" style="margin-bottom: 12px;">
+                            <a href="mailto:enquiries@rfsolutionsindia.in" style="color: inherit; text-decoration: none;">enquiries@rfsolutionsindia.in</a>
                             <span class="tooltip">Copy Email</span>
                         </li>
                         <li class="interactive-contact" data-copy="support@rfsolutionsindia.com" style="margin-bottom: 12px;">
@@ -2767,13 +2847,13 @@
                     <h3>Get a Quote</h3>
                     <p>Get in touch with us via phone or email, and our experts will help you with a customized security proposal.</p>
                     <div class="quote-contact-info">
-                        <a href="mailto:enquires@rfsolutionsindia.in" class="quote-contact-card">
+                        <a href="mailto:enquiries@rfsolutionsindia.in" class="quote-contact-card">
                             <div class="quote-card-icon">
                                 <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                             </div>
                             <div class="quote-card-details">
                                 <span>Email Us</span>
-                                <strong>enquires@rfsolutionsindia.in</strong>
+                                <strong>enquiries@rfsolutionsindia.in</strong>
                             </div>
                         </a>
                         <a href="tel:+919600009724" class="quote-contact-card">

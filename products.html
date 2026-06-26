@@ -1455,6 +1455,27 @@
             max-width: 100%;
         }
 
+        @media (max-width: 1180px) {
+            .navbar {
+                padding-left: 28px;
+                padding-right: 28px;
+                gap: 18px;
+            }
+
+            .nav-links {
+                gap: 18px;
+            }
+
+            .nav-links a {
+                font-size: 0.86rem;
+            }
+
+            .btn-nav {
+                padding: 12px 18px;
+                font-size: 0.82rem;
+            }
+        }
+
         @media (max-width: 1100px) {
             .hero-container,
             .services-intro,
@@ -1475,6 +1496,50 @@
 
             .footer-grid {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 920px) {
+            .navbar {
+                height: auto;
+                min-height: 76px;
+                padding: 12px 22px;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .logo {
+                flex: 1 1 auto;
+                min-width: 0;
+            }
+
+            .nav-links {
+                order: 3;
+                display: flex !important;
+                width: 100%;
+                gap: 8px;
+                overflow-x: auto;
+                padding: 4px 0 2px;
+                scrollbar-width: none;
+            }
+
+            .nav-links::-webkit-scrollbar {
+                display: none;
+            }
+
+            .nav-links a {
+                flex: 0 0 auto;
+                padding: 8px 10px;
+                font-size: 0.84rem;
+                white-space: nowrap;
+            }
+
+            .hero,
+            .page-hero,
+            .services-hero,
+            .products-hero,
+            .contact-hero {
+                padding-top: 150px;
             }
         }
 
@@ -1705,12 +1770,12 @@
             RF SOLUTIONS
         </a>
         <div class="nav-links">
-            <a href="./index.html" class="active">Home</a>
+            <a href="./index.html">Home</a>
+            <a href="./products.html" class="active">Products</a>
             <a href="./services.html">Services</a>
-            <a href="./products.html">Products</a>
-            <a href="./about.html">About</a>
             <a href="./careers.html">Careers</a>
-            <a href="./contact.html">Contact</a>
+            <a href="./about.html">About</a>
+            <a href="./contact.html">Contact Us</a>
         </div>
         <button class="btn-nav">Get Quote</button>
     </nav>
@@ -1948,8 +2013,8 @@
                     <h4>Company</h4>
                     <ul>
                         <li><a href="./about.html" style="color: inherit; text-decoration: none;">About Us</a></li>
-                        <li><a href="./services.html" style="color: inherit; text-decoration: none;">Services</a></li>
                         <li><a href="./products.html" style="color: inherit; text-decoration: none;">Products</a></li>
+                        <li><a href="./services.html" style="color: inherit; text-decoration: none;">Services</a></li>
                         <li><a href="./careers.html" style="color: inherit; text-decoration: none;">Careers</a></li>
                         <li><a href="./contact.html" style="color: inherit; text-decoration: none;">Contact</a></li>
                     </ul>
@@ -1959,6 +2024,7 @@
                     <h4>Solutions</h4>
                     <ul>
                         <li><a href="./products.html" style="color: inherit; text-decoration: none;">CCTV Systems</a></li>
+                        <li><a href="./products.html" style="color: inherit; text-decoration: none;">Intrusion Alarms</a></li>
                         <li><a href="./products.html" style="color: inherit; text-decoration: none;">Fire Alarms</a></li>
                         <li><a href="./products.html" style="color: inherit; text-decoration: none;">Access Control</a></li>
                         <li><a href="./products.html" style="color: inherit; text-decoration: none;">Video Door Phones</a></li>
@@ -1969,8 +2035,8 @@
                 <div class="footer-col">
                     <h4>Contact</h4>
                     <ul class="footer-contact-list">
-                        <li class="interactive-contact" data-copy="enquires@rfsolutionsindia.in" style="margin-bottom: 12px;">
-                            <a href="mailto:enquires@rfsolutionsindia.in" style="color: inherit; text-decoration: none;">enquires@rfsolutionsindia.in</a>
+                        <li class="interactive-contact" data-copy="enquiries@rfsolutionsindia.in" style="margin-bottom: 12px;">
+                            <a href="mailto:enquiries@rfsolutionsindia.in" style="color: inherit; text-decoration: none;">enquiries@rfsolutionsindia.in</a>
                             <span class="tooltip">Copy Email</span>
                         </li>
                         <li class="interactive-contact" data-copy="support@rfsolutionsindia.com" style="margin-bottom: 12px;">
@@ -2939,13 +3005,13 @@
                     <h3>Get a Quote</h3>
                     <p>Get in touch with us via phone or email, and our experts will help you with a customized security proposal.</p>
                     <div class="quote-contact-info">
-                        <a href="mailto:enquires@rfsolutionsindia.in" class="quote-contact-card">
+                        <a href="mailto:enquiries@rfsolutionsindia.in" class="quote-contact-card">
                             <div class="quote-card-icon">
                                 <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                             </div>
                             <div class="quote-card-details">
                                 <span>Email Us</span>
-                                <strong>enquires@rfsolutionsindia.in</strong>
+                                <strong>enquiries@rfsolutionsindia.in</strong>
                             </div>
                         </a>
                         <a href="tel:+919600009724" class="quote-contact-card">

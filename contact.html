@@ -1198,6 +1198,27 @@
             max-width: 100%;
         }
 
+        @media (max-width: 1180px) {
+            .navbar {
+                padding-left: 28px;
+                padding-right: 28px;
+                gap: 18px;
+            }
+
+            .nav-links {
+                gap: 18px;
+            }
+
+            .nav-links a {
+                font-size: 0.86rem;
+            }
+
+            .btn-nav {
+                padding: 12px 18px;
+                font-size: 0.82rem;
+            }
+        }
+
         @media (max-width: 1100px) {
             .hero-container,
             .services-intro,
@@ -1218,6 +1239,50 @@
 
             .footer-grid {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 920px) {
+            .navbar {
+                height: auto;
+                min-height: 76px;
+                padding: 12px 22px;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .logo {
+                flex: 1 1 auto;
+                min-width: 0;
+            }
+
+            .nav-links {
+                order: 3;
+                display: flex !important;
+                width: 100%;
+                gap: 8px;
+                overflow-x: auto;
+                padding: 4px 0 2px;
+                scrollbar-width: none;
+            }
+
+            .nav-links::-webkit-scrollbar {
+                display: none;
+            }
+
+            .nav-links a {
+                flex: 0 0 auto;
+                padding: 8px 10px;
+                font-size: 0.84rem;
+                white-space: nowrap;
+            }
+
+            .hero,
+            .page-hero,
+            .services-hero,
+            .products-hero,
+            .contact-hero {
+                padding-top: 150px;
             }
         }
 
@@ -1449,12 +1514,12 @@
             RF SOLUTIONS
         </a>
         <div class="nav-links">
-            <a href="./index.html" class="active">Home</a>
-            <a href="./services.html">Services</a>
+            <a href="./index.html">Home</a>
             <a href="./products.html">Products</a>
-            <a href="./about.html">About</a>
+            <a href="./services.html">Services</a>
             <a href="./careers.html">Careers</a>
-            <a href="./contact.html">Contact</a>
+            <a href="./about.html">About</a>
+            <a href="./contact.html" class="active">Contact Us</a>
         </div>
         <button class="btn-nav">Get Quote</button>
     </nav>
@@ -1473,7 +1538,7 @@
             <div class="info-grid">
                 
                 <!-- General Sales Card -->
-                <a href="mailto:enquires@rfsolutionsindia.in" class="info-card animate-3d-scroll">
+                <a href="mailto:enquiries@rfsolutionsindia.in" class="info-card animate-3d-scroll">
                     <div class="info-icon">
                         <svg viewBox="0 0 24 24">
                             <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
@@ -1482,7 +1547,7 @@
                     <div class="info-details">
                         <h3>General & Sales Enquiries</h3>
                         <p>For custom security systems design, quotes, and commercial partnerships.</p>
-                        <p style="margin-top: 8px; font-weight: 700; color: var(--primary-600);" class="contact-value">enquires@rfsolutionsindia.in</p>
+                        <p style="margin-top: 8px; font-weight: 700; color: var(--primary-600);" class="contact-value">enquiries@rfsolutionsindia.in</p>
                     </div>
                 </a>
 
@@ -1692,6 +1757,7 @@
                     <h4>Solutions</h4>
                     <ul>
                         <li><a href="./products.html" style="color: inherit; text-decoration: none;">CCTV Systems</a></li>
+                        <li><a href="./products.html" style="color: inherit; text-decoration: none;">Intrusion Alarms</a></li>
                         <li><a href="./products.html" style="color: inherit; text-decoration: none;">Fire Alarms</a></li>
                         <li><a href="./products.html" style="color: inherit; text-decoration: none;">Access Control</a></li>
                         <li><a href="./products.html" style="color: inherit; text-decoration: none;">Video Door Phones</a></li>
@@ -1702,8 +1768,8 @@
                 <div class="footer-col">
                     <h4>Contact</h4>
                     <ul class="footer-contact-list">
-                        <li class="interactive-contact" data-copy="enquires@rfsolutionsindia.in" style="margin-bottom: 12px;">
-                            <a href="mailto:enquires@rfsolutionsindia.in" style="color: inherit; text-decoration: none;">enquires@rfsolutionsindia.in</a>
+                        <li class="interactive-contact" data-copy="enquiries@rfsolutionsindia.in" style="margin-bottom: 12px;">
+                            <a href="mailto:enquiries@rfsolutionsindia.in" style="color: inherit; text-decoration: none;">enquiries@rfsolutionsindia.in</a>
                             <span class="tooltip">Copy Email</span>
                         </li>
                         <li class="interactive-contact" data-copy="support@rfsolutionsindia.com" style="margin-bottom: 12px;">

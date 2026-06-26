@@ -1087,6 +1087,27 @@
             max-width: 100%;
         }
 
+        @media (max-width: 1180px) {
+            .navbar {
+                padding-left: 28px;
+                padding-right: 28px;
+                gap: 18px;
+            }
+
+            .nav-links {
+                gap: 18px;
+            }
+
+            .nav-links a {
+                font-size: 0.86rem;
+            }
+
+            .btn-nav {
+                padding: 12px 18px;
+                font-size: 0.82rem;
+            }
+        }
+
         @media (max-width: 1100px) {
             .hero-container,
             .services-intro,
@@ -1107,6 +1128,50 @@
 
             .footer-grid {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 920px) {
+            .navbar {
+                height: auto;
+                min-height: 76px;
+                padding: 12px 22px;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .logo {
+                flex: 1 1 auto;
+                min-width: 0;
+            }
+
+            .nav-links {
+                order: 3;
+                display: flex !important;
+                width: 100%;
+                gap: 8px;
+                overflow-x: auto;
+                padding: 4px 0 2px;
+                scrollbar-width: none;
+            }
+
+            .nav-links::-webkit-scrollbar {
+                display: none;
+            }
+
+            .nav-links a {
+                flex: 0 0 auto;
+                padding: 8px 10px;
+                font-size: 0.84rem;
+                white-space: nowrap;
+            }
+
+            .hero,
+            .page-hero,
+            .services-hero,
+            .products-hero,
+            .contact-hero {
+                padding-top: 150px;
             }
         }
 
@@ -1335,12 +1400,12 @@
             RF SOLUTIONS
         </a>
         <div class="nav-links">
-            <a href="./index.html" class="active">Home</a>
-            <a href="./services.html">Services</a>
+            <a href="./index.html">Home</a>
             <a href="./products.html">Products</a>
-            <a href="./about.html">About</a>
+            <a href="./services.html">Services</a>
             <a href="./careers.html">Careers</a>
-            <a href="./contact.html">Contact</a>
+            <a href="./about.html" class="active">About</a>
+            <a href="./contact.html">Contact Us</a>
         </div>
         <button class="btn-nav">Get Quote</button>
     </nav>
@@ -1431,58 +1496,58 @@
 
         <div class="team-grid">
             <div class="team-card animate-on-scroll">
-                <div class="team-image"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
-                <h4>Mr. RajaGuru R.C</h4>
+                <div class="team-image"><img src="./assets/image/persons/RajaGuru R.C.png" alt="Mr. RajaGuru R.C" style="width: 140%; height: 130%; object-fit: cover; border-radius: 50%;"/></div>
+                  <h4>Mr. RajaGuru R.C</h4>
                 <div class="team-role">Managing Director</div>
                 <p>8+ years of experience in the security industry.</p>
             </div>
 
             <div class="team-card animate-on-scroll" style="transition-delay: 0.1s;">
-                <div class="team-image"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+                <div class="team-image"><img src="./assets/image/persons/Chadayappan R.png" alt="Chadayappan R" style="width: 100%; height: 110%; object-fit: cover; border-radius: 50%;"/></div>
                 <h4>Mr. Chadayappan R</h4>
                 <div class="team-role">Head of Operations</div>
-                <p>5+ years of experience in operations.</p>
+                <p>10+ years of experience in operations.</p>
             </div>
 
             <div class="team-card animate-on-scroll" style="transition-delay: 0.2s;">
                 <div class="team-image"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
                 <h4>Mr. Prakash M</h4>
                 <div class="team-role">Head of Sales</div>
-                <p>5+ years of experience in sales and marketing.</p>
+                <p>10+ years of experience in sales and marketing.</p>
             </div>
 
             <div class="team-card animate-on-scroll" style="transition-delay: 0.3s;">
-                <div class="team-image"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+                <div class="team-image"><img src="./assets/image/persons/Suresh Kumar K.png" alt="Suresh Kumar K S" style="width: 100%; height: 110%; object-fit: cover; border-radius: 50%;"/></div>
                 <h4>Mr. Suresh Kumar K S</h4>
                 <div class="team-role">Head of CMS</div>
                 <p>2+ years of experience in CMS.</p>
             </div>
             <div class="team-card animate-on-scroll" style="transition-delay: 0.5s;">
-                <div class="team-image"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+                <div class="team-image"><img src="./assets/image/persons/Blessy Linda B.png" alt="Ms. Blessy Linda B" style="width: 100%; height: 120%; object-fit: cover; border-radius: 50%;"/></div>
                 <h4>Ms. Blessy Linda B</h4>
                 <div class="team-role">HR & Admin</div>
-                <p>1+ years of experience in human resources and administration.</p>
+                <p>2+ years of experience in human resources and administration.</p>
             </div>
 
             <div class="team-card animate-on-scroll" style="transition-delay: 0.6s;">
-                <div class="team-image"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+                <div class="team-image"><img src="./assets/image/persons/Madhulekha.png" alt="Ms. Madhulekha M" style="width: 100%; height: 115%; object-fit: cover; border-radius: 50%;"/></div>
                 <h4>Ms. Madhulekha M</h4>
                 <div class="team-role">Digital Marketing </div>
-                <p>1+ years of experience in digital marketing.</p>
+                <p>2+ years of experience in digital marketing.</p>
             </div>
 
             <div class="team-card animate-on-scroll" style="transition-delay: 0.4s;">
-                <div class="team-image"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+                <div class="team-image"><img src="./assets/image/persons/Selladurai S.png" alt="Mr. Selladurai S" style="width: 100%; height: 120%; object-fit: cover; border-radius: 50%;"/></div>
                 <h4>Mr. Selladurai S</h4>
                 <div class="team-role">Software Developer</div>
-                <p>1.5+ years of experience in software development and programming.</p>
+                <p>2+ years of experience in software development and programming.</p>
             </div>
 
             <div class="team-card animate-on-scroll" style="transition-delay: 0.4s;">
-                <div class="team-image"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
-                <h4>Mr. Ram Kumar</h4>
+                <div class="team-image"><img src="./assets/image/persons/Ram Kumar B.png" alt="Mr. Ram Kumar" style="width: 100%; height: 110%; object-fit: cover; border-radius: 50%;"/></div>
+                <h4>Mr. Ram Kumar B</h4>
                 <div class="team-role">Material Sections Head</div>
-                <p>1+ years of experience in material management.</p>
+                <p>4+ years of experience in material management.</p>
             </div>
 
         </div>
@@ -1508,8 +1573,8 @@
                     <h4>Company</h4>
                     <ul>
                         <li><a href="./about.html" style="color: inherit; text-decoration: none;">About Us</a></li>
-                        <li><a href="./services.html" style="color: inherit; text-decoration: none;">Services</a></li>
                         <li><a href="./products.html" style="color: inherit; text-decoration: none;">Products</a></li>
+                        <li><a href="./services.html" style="color: inherit; text-decoration: none;">Services</a></li>
                         <li><a href="./careers.html" style="color: inherit; text-decoration: none;">Careers</a></li>
                         <li><a href="./contact.html" style="color: inherit; text-decoration: none;">Contact</a></li>
                     </ul>
@@ -1519,6 +1584,7 @@
                     <h4>Solutions</h4>
                     <ul>
                         <li><a href="./products.html" style="color: inherit; text-decoration: none;">CCTV Systems</a></li>
+                        <li><a href="./products.html" style="color: inherit; text-decoration: none;">Intrusion Detection</a></li>
                         <li><a href="./products.html" style="color: inherit; text-decoration: none;">Fire Alarms</a></li>
                         <li><a href="./products.html" style="color: inherit; text-decoration: none;">Access Control</a></li>
                         <li><a href="./products.html" style="color: inherit; text-decoration: none;">Video Door Phones</a></li>
@@ -1529,8 +1595,8 @@
                 <div class="footer-col">
                     <h4>Contact</h4>
                     <ul class="footer-contact-list">
-                        <li class="interactive-contact" data-copy="enquires@rfsolutionsindia.in" style="margin-bottom: 12px;">
-                            <a href="mailto:enquires@rfsolutionsindia.in" style="color: inherit; text-decoration: none;">enquires@rfsolutionsindia.in</a>
+                        <li class="interactive-contact" data-copy="enquiries@rfsolutionsindia.in" style="margin-bottom: 12px;">
+                            <a href="mailto:enquiries@rfsolutionsindia.in" style="color: inherit; text-decoration: none;">enquiries@rfsolutionsindia.in</a>
                             <span class="tooltip">Copy Email</span>
                         </li>
                         <li class="interactive-contact" data-copy="support@rfsolutionsindia.com" style="margin-bottom: 12px;">
@@ -1925,13 +1991,13 @@
                     <h3>Get a Quote</h3>
                     <p>Get in touch with us via phone or email, and our experts will help you with a customized security proposal.</p>
                     <div class="quote-contact-info">
-                        <a href="mailto:enquires@rfsolutionsindia.in" class="quote-contact-card">
+                        <a href="mailto:enquiries@rfsolutionsindia.in" class="quote-contact-card">
                             <div class="quote-card-icon">
                                 <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                             </div>
                             <div class="quote-card-details">
                                 <span>Email Us</span>
-                                <strong>enquires@rfsolutionsindia.in</strong>
+                                <strong>enquiries@rfsolutionsindia.in</strong>
                             </div>
                         </a>
                         <a href="tel:+919600009724" class="quote-contact-card">
