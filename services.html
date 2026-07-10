@@ -619,7 +619,7 @@
         .services-container-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 60px;
+            gap: 24px; /* reduced for even spacing */
         }
 
         /* ============ SERVICE CONTAINER ROW ============ */
@@ -1253,14 +1253,23 @@
             font-family: inherit;
             letter-spacing: 0.02em;
         }
+        /* Disable read-more button animations */
         .read-more-btn:hover {
             background: var(--primary-600);
             color: #fff;
             border-color: var(--primary-600);
-            transform: translateY(-1px);
-            box-shadow: 0 4px 14px rgba(29,92,229,0.25);
+            transform: none !important;
+            box-shadow: none !important;
         }
-        .read-more-btn svg { transition: transform 0.3s ease; }
+        .read-more-btn svg { transition: none !important; transform: none !important; }
+
+        /* Disable animations inside the read-more/drawer area */
+        .drawer-glass-card, .drawer-glass-card *,
+        #product-drawer, #product-drawer * {
+            transition: none !important;
+            animation: none !important;
+            transform: none !important;
+        }
 
         /* ===== RICH CONTENT SECTIONS & 3D EFFECTS ===== */
         .drawer-rich-heading {
@@ -1876,7 +1885,7 @@
         <div class="services-container-grid">
             
             <!-- Service 1: AMC -->
-            <div class="service-row-card animate-on-scroll">
+            <div class="service-row-card">
                 <div class="service-image-block">
                     <img src="./assets/image/amc_service.png" alt="Annual Maintenance Service (AMC)"/>
                 </div>
@@ -1907,7 +1916,7 @@
             </div>
 
             <!-- Service 2: CMS -->
-            <div class="service-row-card animate-on-scroll">
+            <div class="service-row-card">
                 <div class="service-image-block">
                     <img src="./assets/image/cms_monitoring.png" alt="Central Monitoring System (CMS)"/>
                 </div>
@@ -1938,7 +1947,7 @@
             </div>
 
             <!-- Service 3: Networking Solutions -->
-            <div class="service-row-card animate-on-scroll">
+            <div class="service-row-card">
                 <div class="service-image-block">
                     <img src="./assets/image/networking_solutions.png" alt="Networking Solutions"/>
                 </div>
@@ -1969,7 +1978,7 @@
             </div>
 
             <!-- Service 4: Product Support -->
-            <div class="service-row-card animate-on-scroll">
+            <div class="service-row-card">
                 <div class="service-image-block">
                     <img src="./assets/image/product_support.png" alt="Product Support & AMC"/>
                 </div>
@@ -2298,11 +2307,11 @@
                 title: 'Central Monitoring System (CMS)',
                 subtitle: 'Centralized Security Monitoring for Complete Protection',
                 img: './assets/image/cms_monitoring.png',
-                desc: 'At RF Solutions India, we provide advanced Central Monitoring System (CMS) solutions that enable real-time monitoring and centralized management of security systems from a single platform. Our solutions integrate CCTV surveillance, fire alarm systems, intrusion alarms, and access control systems to improve security visibility and operational efficiency. Designed for commercial, industrial, residential, and institutional facilities, CMS solutions help organizations monitor critical events, receive instant alerts, and respond quickly to incidents while ensuring continuous protection of people, property, and assets.',
+                desc: 'At RF Solutions India, we deliver advanced Central Monitoring System (CMS) solutions that provide real-time monitoring and centralized management of security infrastructure through a single, unified platform. Our CMS integrates CCTV surveillance, fire alarm systems, intrusion detection, and access control systems to deliver comprehensive security visibility and streamlined operations.Designed for commercial, industrial, residential, and institutional environments, our CMS enables organizations to monitor critical events continuously, receive instant alerts, and respond rapidly to security incidents. This centralized approach enhances operational efficiency while ensuring the safety of people, protection of assets, and security of critical infrastructure.',
                 whyEssential: {
                     title: 'Why Central Monitoring Systems are Important',
                     paras: [
-                        'Managing multiple security systems independently can be complex and time-consuming. A Central Monitoring System simplifies security operations by bringing all monitoring functions into one centralized platform. It enables real-time event tracking, faster incident response, and improved control over security infrastructure. By providing instant alerts and continuous monitoring, CMS solutions help reduce risks, improve operational efficiency, and ensure that security personnel can respond effectively to emergencies, unauthorized access attempts, or other critical incidents.'
+                        'Managing multiple security systems independently can be complex, time-consuming, and prone to delays in incident response. A Central Monitoring System (CMS) simplifies security operations by consolidating all monitoring functions into a single, centralized platform. It provides real-time event monitoring, instant alerts, and a unified view of the entire security infrastructure, enabling faster decision-making and improved operational control. With continuous monitoring and automated notifications, a CMS helps organizations reduce security risks, improve operational efficiency, and respond promptly to emergencies, unauthorized access attempts, fire alarms, and other critical incidents. The result is enhanced situational awareness, stronger asset protection, and greater confidence in day-to-day security operations.'
                     ]
                 },
                 solutionDetails: {
@@ -2364,14 +2373,11 @@
                 title: 'Networking Solutions',
                 subtitle: 'Reliable Network Infrastructure for Seamless Connectivity',
                 img: './assets/image/networking_solutions.png',
-                desc: 'At RF Solutions India, we provide professional networking solutions designed to deliver secure, reliable, and high-performance connectivity for businesses and organizations. Our networking services help create a strong communication infrastructure that supports daily operations, improves productivity, and ensures seamless data transmission across your facility. From structured cabling and LAN setup to wireless networking and network management, we deliver customized solutions tailored to the specific requirements of commercial, industrial, educational, healthcare, and residential environments.',
+                desc: 'At RF Solutions India, we deliver secure, reliable, and high-performance networking solutions that provide the foundation for seamless business communication and connectivity. Our services include structured cabling, LAN and WAN implementation, wireless networking, network infrastructure, and network management, tailored to meet the needs of commercial, industrial, educational, healthcare, and residential environments.',
                 whyEssential: {
                     title: 'Why Networking Solutions are Important',
-                    paras: [
-                        'A reliable network infrastructure is essential for modern business operations. Whether it\'s communication, data sharing, security monitoring, or cloud connectivity, a well-designed network ensures smooth and uninterrupted performance.',
-                        'Professional networking solutions help organizations improve connectivity, enhance data security, reduce downtime, and support future growth. A properly structured network also enables seamless integration of CCTV systems, access control systems, servers, and other business applications.',
-                        'By investing in a robust networking infrastructure, businesses can improve efficiency, collaboration, and overall operational performance.'
-                    ]
+                    paras: [ 'A robust network infrastructure is the backbone of modern businesses, enabling uninterrupted communication, secure data transfer, cloud connectivity, and seamless integration of critical systems such as CCTV, access control, servers, and business applications. By investing in a robust networking infrastructure, businesses can improve efficiency, collaboration, and overall operational performance.',
+                ]
                 },
                 solutionDetails: {
                     title: 'Networking Solutions We Offer',
@@ -2501,11 +2507,44 @@
         /* ======= OPEN DRAWER ======= */
         function openModal(key) {
             const d = productData[key];
-            document.getElementById('drawer-img').src = d.img;
-            document.getElementById('drawer-img').alt = d.title;
-            document.getElementById('drawer-title').textContent = d.title;
-            document.getElementById('drawer-subtitle').textContent = d.subtitle;
-            document.getElementById('drawer-desc').textContent = d.desc;
+            const imgEl = document.getElementById('drawer-img');
+            const titleEl = document.getElementById('drawer-title');
+            const subtitleEl = document.getElementById('drawer-subtitle');
+            const descEl = document.getElementById('drawer-desc');
+
+            // Populate content first
+            imgEl.alt = d.title || '';
+            titleEl.textContent = d.title || '';
+            subtitleEl.textContent = d.subtitle || '';
+            descEl.textContent = d.desc || '';
+
+            const drawer = document.getElementById('product-drawer');
+            const drawerBody = drawer.querySelector('.drawer-body-scroll');
+
+            // Ensure drawer content scroll starts at top each open
+            function showDrawer() {
+                if (drawerBody) drawerBody.scrollTop = 0;
+                resetScrollAnimations();
+                drawer.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            // Load image and then show drawer to avoid content jump/partial render
+            if (d.img) {
+                // assign src last so load event fires for new image
+                imgEl.onload = () => {
+                    imgEl.onload = null;
+                    showDrawer();
+                };
+                imgEl.onerror = () => {
+                    imgEl.onerror = null;
+                    // still show drawer even if image fails
+                    showDrawer();
+                };
+                imgEl.src = d.img;
+            } else {
+                showDrawer();
+            }
 
             // Handle Why Essential
             const whyEssEl = document.getElementById('drawer-why-essential');
@@ -2577,11 +2616,7 @@
                 surveyEl.style.display = 'block';
             } else { surveyEl.style.display = 'none'; }
 
-            resetScrollAnimations();
-
-            const drawer = document.getElementById('product-drawer');
-            drawer.classList.add('active');
-            document.body.style.overflow = 'hidden';
+            // NOTE: showing drawer moved to image load handler above
         }
 
         /* ======= CLOSE DRAWER ======= */
