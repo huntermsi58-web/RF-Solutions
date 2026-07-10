@@ -1433,13 +1433,13 @@
             transform: translateZ(5px) rotateX(2deg);
         }
         .scroll-3d-element {
-            opacity: 0;
-            transform: perspective(1000px) rotateX(25deg) translateY(30px) scale(0.95);
-            transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.7s ease;
+            opacity: 1 !important;
+            transform: none !important;
+            transition: none !important;
         }
         .scroll-3d-element.visible-3d {
-            opacity: 1;
-            transform: perspective(1000px) rotateX(0deg) translateY(0) scale(1);
+            opacity: 1 !important;
+            transform: none !important;
         }
 
         @media (max-width: 768px) {
@@ -2375,12 +2375,12 @@
                 img: './assets/image/networking_solutions.png',
                 desc: 'At RF Solutions India, we deliver secure, reliable, and high-performance networking solutions that provide the foundation for seamless business communication and connectivity. Our services include structured cabling, LAN and WAN implementation, wireless networking, network infrastructure, and network management, tailored to meet the needs of commercial, industrial, educational, healthcare, and residential environments.',
                 whyEssential: {
-                    title: 'Why Networking Solutions Matter',
+                    title: 'Why Networking Solutions are Important',
                     paras: [ 'A robust network infrastructure is the backbone of modern businesses, enabling uninterrupted communication, secure data transfer, cloud connectivity, and seamless integration of critical systems such as CCTV, access control, servers, and business applications. By investing in a robust networking infrastructure, businesses can improve efficiency, collaboration, and overall operational performance.',
                 ]
                 },
                 solutionDetails: {
-                    title: 'Networking Solutions We Offer',
+                    title: 'Why Networking Solutions Matter',
                     items: [
                         { name: 'Structured Cabling Systems', desc: 'Organized and scalable cabling solutions that support efficient communication and future network expansion.' },
                         { name: 'LAN (Local Area Network) Solutions', desc: 'Reliable wired networking solutions that connect computers, servers, printers, and other devices within a facility.' },
@@ -2531,17 +2531,19 @@
 
             // Load image and then show drawer to avoid content jump/partial render
             if (d.img) {
-                // assign src last so load event fires for new image
-                imgEl.onload = () => {
+                function imageReady() {
                     imgEl.onload = null;
-                    showDrawer();
-                };
-                imgEl.onerror = () => {
                     imgEl.onerror = null;
-                    // still show drawer even if image fails
                     showDrawer();
-                };
+                }
+
+                imgEl.onload = imageReady;
+                imgEl.onerror = imageReady;
                 imgEl.src = d.img;
+
+                if (imgEl.complete && imgEl.naturalWidth !== 0) {
+                    imageReady();
+                }
             } else {
                 showDrawer();
             }
